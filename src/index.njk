@@ -1,0 +1,9 @@
+---
+layout: base.njk
+showTitle: false
+---
+{% for item in collections.syllabus %}
+<article class="content-article">
+  {{ item.templateContent | safe }}
+</article>
+{% endfor %}

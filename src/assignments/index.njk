@@ -1,0 +1,14 @@
+---
+layout: base.njk
+title: Assignments
+---
+<ul class="content-list">
+{% for assignment in collections.assignments %}
+  <li class="content-list-item">
+    <a href="{{ environment.baseUrl }}{{ assignment.url }}">
+      <span class="sequence">{{ assignment.data.sequence }}.</span>
+      {{ assignment.data.title }}
+    </a>
+  </li>
+{% endfor %}
+</ul>
