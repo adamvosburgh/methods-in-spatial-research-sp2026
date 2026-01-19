@@ -5,7 +5,7 @@ title: Resources
 <ul class="content-list">
 {% for resource in collections.resources %}
   <li class="content-list-item">
-    <a href="{{ environment.baseUrl }}{{ resource.url }}">
+    <a href="{{ resource.url | url }}">
       {{ resource.data.title }}
     </a>
   </li>

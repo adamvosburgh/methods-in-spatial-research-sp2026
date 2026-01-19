@@ -5,7 +5,7 @@ title: Tutorials
 <ul class="content-list">
 {% for tutorial in collections.tutorials %}
   <li class="content-list-item">
-    <a href="{{ environment.baseUrl }}{{ tutorial.url }}">
+    <a href="{{ tutorial.url | url }}">
       <span class="sequence">{{ tutorial.data.sequence }}.</span>
       {{ tutorial.data.title }}
     </a>

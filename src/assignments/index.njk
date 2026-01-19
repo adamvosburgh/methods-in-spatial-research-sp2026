@@ -5,7 +5,7 @@ title: Assignments
 <ul class="content-list">
 {% for assignment in collections.assignments %}
   <li class="content-list-item">
-    <a href="{{ environment.baseUrl }}{{ assignment.url }}">
+    <a href="{{ assignment.url | url }}">
       <span class="sequence">{{ assignment.data.sequence }}.</span>
       {{ assignment.data.title }}
     </a>

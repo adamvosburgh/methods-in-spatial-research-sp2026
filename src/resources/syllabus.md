@@ -11,14 +11,14 @@ Hans Haacke *Shapolsky et al. Manhattan Real Estate Holdings, a Real-Time Social
 
 ## Syllabus
 
-**Spring** 2025
-Friday 9-11, session A
-1.5 credits
+**Spring** 2026
+Friday 9-11
+3 credits
 300 Buell South
 
 Adam Vosburgh
 adam (dot) vosburgh (at) columbia.edu
-office hours by appointment, sign up [here](https://calendar.app.google/iLNgGU6wNgEsbXcY9)
+office hours by appointment, sign up [here](https://calendar.app.google/xCpgY7ue27L9TWpC6)
 
 ## Description
 
@@ -45,11 +45,11 @@ After completing the course participants will:
 | Date | Week |  Topic | Tutorial due |  Assignment due |
 | ----------- | ----------- | ----------- | ----------- | ----------- |
 | 1/24 | 1 | Introduction to Critical GIS + Spatial Data Types |  |   |
-| 1/31 | 2 |  Cartographic Projections + Mapping Existing Datasets | Tutorial 1 & 2 |  Assignment 0  |
-| 2/07 | 3 |   Making Data from Archives |  |  Assignment 1 |
-| 2/14 | 4 | Making Data From Observation & Sensing | Tutorial 3 |  Assignment 2 |
-| 2/21 | 5 |  Making Data from Satellites | Tutorial 4 OR Tutorial 5 |  Assignment 3 |
-| 2/28 | 6 |  Maps & Narrative | Tutorial 6 OR Tutorial 7 |  Assignment 4 |
+| 1/31 | 2 |  Cartographic Projections | Tutorial 1 & 2 |  Assignment 0  |
+| 2/07 | 3 |  Georeferencing and Digitizing Archives |  |  Assignment 1 |
+| 2/14 | 4 | Using and Collecting Data | Tutorial 3 |  Assignment 2 |
+| 2/21 | 5 |  Remote Sensing | Tutorial 4 OR Tutorial 5 |  Assignment 3 |
+| 2/28 | 6 |  Narrative & Design | Tutorial 6 OR Tutorial 7 |  Assignment 4 |
 | 3/28 |  | Portfolio Due | | Assignment 5 (for extra credit) |
 
 

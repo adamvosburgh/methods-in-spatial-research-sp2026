@@ -11,25 +11,25 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
 
-  <link rel="stylesheet" href="{{ environment.baseUrl }}/assets/css/main.css">
+  <link rel="stylesheet" href="{{ '/assets/css/main.css' | url }}">
 </head>
 <body>
   <header class="site-header">
-    <a href="{{ environment.baseUrl }}/" class="site-title">{{ site.title }}</a>
+    <a href="{{ '/' | url }}" class="site-title">{{ site.title }}</a>
   </header>
 
   <nav class="main-nav">
     <div class="nav-items">
-      <a href="{{ environment.baseUrl }}/" class="nav-item{% if page.url == '/' %} active{% endif %}">
+      <a href="{{ '/' | url }}" class="nav-item{% if page.url == '/' %} active{% endif %}">
         <span class="nav-text">Home</span>
       </a>
-      <a href="{{ environment.baseUrl }}/tutorials/" class="nav-item{% if '/tutorials/' in page.url %} active{% endif %}">
+      <a href="{{ '/tutorials/' | url }}" class="nav-item{% if '/tutorials/' in page.url %} active{% endif %}">
         <span class="nav-text">Tutorials</span>
       </a>
-      <a href="{{ environment.baseUrl }}/assignments/" class="nav-item{% if '/assignments/' in page.url %} active{% endif %}">
+      <a href="{{ '/assignments/' | url }}" class="nav-item{% if '/assignments/' in page.url %} active{% endif %}">
         <span class="nav-text">Assignments</span>
       </a>
-      <a href="{{ environment.baseUrl }}/resources/" class="nav-item{% if '/resources/' in page.url %} active{% endif %}">
+      <a href="{{ '/resources/' | url }}" class="nav-item{% if '/resources/' in page.url %} active{% endif %}">
         <span class="nav-text">Resources</span>
       </a>
       <a href="https://miro.com/app/board/uXjVLpMXxuo=/" class="nav-item external" target="_blank" rel="noopener noreferrer">
