@@ -7,7 +7,7 @@ cat: assignment
 ---
 
 
-### Due: 2/07
+### Due: 2/06
 
 
 *"Data are always collected for a specific purpose, by a combination of people, technology, money, commerce, and government."* (Kurgan 2013, 35)

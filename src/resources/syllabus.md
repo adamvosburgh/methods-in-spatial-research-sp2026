@@ -18,7 +18,7 @@ Friday 9-11
 
 Adam Vosburgh
 adam (dot) vosburgh (at) columbia.edu
-office hours by appointment, sign up [here](https://calendar.app.google/xCpgY7ue27L9TWpC6)
+office hours by appointment, sign up at the link on the top of the page.
 
 ## Description
 
@@ -26,7 +26,10 @@ This course provides an introduction to the critical use of geographic informati
 
 Maps and geographic analysis are key tools for interpreting the built environment and the social conditions it contains. GIS methods allow for the analysis of geographic features together with attributes (environmental, social, demographic, political) of those places. The thoughtful use of spatial data can reveal previously unseen patterns, changing the way we see and engage with our world. However, maps are never just representations, they are nearly always active agents in shaping the worlds they describe. With this in mind, students will be introduced to a range of approaches for creating and manipulating spatial data with a focus on the forms of authorship, design, subjectivity embedded in spatial data and its uses.
 
-This is a "making & doing" workshop course that is open to students from within GSAPP, GSAS and the Columbia and Barnard Colleges and is designed to expand the disciplinary locations in which spatial data analysis takes place. Through hands-on exercises and weekly assignments participants will develop basic fluency with open-source mapping software, QGIS, methods of data collection and creation, and approaches and concepts in critical spatial analysis and map design.
+This course is divided into two halves:
+
+- In the first, participants will develop basic fluency with open-source mapping software, QGIS, methods of data collection and creation, and approaches and concepts in critical spatial analysis and map design through hands on exercises and weekly assignments.
+- In the second, particpants will form groups and develop their own proposals with data and methodologies of their own selection. This work will culminate in a series of two "Show and Tells" at the end of the class, and a final public-facing website. 
 
 ## Learning Objectives
 
@@ -55,28 +58,27 @@ After completing the course participants will:
 | 3/20 | 9 | Spring Break | | |
 | 3/27 | 10 | "Spatial Intelligence" | Tutorial 9 OR Tutorial 10 + 11 | Assignment 5 |
 | 4/03 | 11 | Simulations | Tutorial 12 | Assignment 6 (for extra credit) |
-| 4/10 | 12 | Show and Tell Day 1 | |  |
-| 4/17 | 13 | Show and Tell Day 2 | | |
+| 4/10 | 12 | Show and Tell Day 1 | | Group 1 Final Presentation |
+| 4/17 | 13 | Show and Tell Day 2 | | Group 2 Final Presentation |
 | 5/06 |  | Portfolio Due | | | 
-
-
-
 
 ## Weekly Schedule, Readings, & Assignments
 All course tutorials and assignments will be posted here on the course website.
 
-All readings and previous lecture slides will be posted on Canvas and in the [course drive](https://drive.google.com/open?id=1G0S6lEdIPNVhYg3yqhHY72PjEwA_mfdH&usp=drive_fs).
+All readings and previous lecture slides will be posted in the course dropbox (linked at the top of the page).
 
-###  1/24 | Week 1 | Introduction to Critical GIS + Spatial Data Types
+Assignments should be submitted on the course Canvas and the course Miro (linked at the top of the page.)
+
+### 1/23 | Week 1 | Introduction to Critical GIS + Spatial Data Types
 #### In class
 Group map critiques. Examples to be distributed during class
 
 
-### 1/31 | Week 2 | Cartographic Projections + Mapping Existing Datasets
+### 1/30 | Week 2 | Cartographic Projections
 
 #### Assignment 0 due – NYC Trees
 
-#### Readings (available in [course Drive](https://drive.google.com/open?id=1G0S6lEdIPNVhYg3yqhHY72PjEwA_mfdH&usp=drive_fs))
+#### Readings (available in course dropbox)
 Corner, James. "The Agency of Mapping." 2014.
 
 Couclelis, Helen. "People Manipulate Objects (but Cultivate Fields): Beyond the Raster-Vector Debate in GIS." 1992.
@@ -87,60 +89,67 @@ Cooper, Danika. "Drawing Deserts, Making Worlds." Essay. In Deserts Are Not Empt
 
 Optional: Rankin, William. "Introduction Territory and the Mapping Sciences" in *After The Map: Cartography, Navigation, and the Transformation of Territory in the Twentieth Century*. Chicago: University of Chicago Press. 2016.  [available online via CLIO [here](https://clio.columbia.edu/catalog/12582759?counter=1)]
 
-### 2/07 | Week 3 | Making Data from Archives
+### 2/06 | Week 3 | Georeferencing and Digitizing Archives
 
 #### Assignment 1 due – Intentional Misuse
 
 
-#### Readings (available in [course Drive](https://drive.google.com/open?id=1G0S6lEdIPNVhYg3yqhHY72PjEwA_mfdH&usp=drive_fs))
+#### Readings (available in course dropbox)
 Baics, Gergely, and Leah Meisterlin. "Zoning Before Zoning: Land Use and Density in Mid-Nineteenth-Century New York City." 2016.
 
-- This is an interdisciplinary paper with insights about both the history of land use in New York City and new methods for uncovering such histories with GIS. The link between these two aspects of the paper is really key and helpful, I think, as an illustration of how to develop spatial projects. They discuss three different sets of methods about three different urban land use phenomena. If you need to skim this piece read the introduction/conclusion and then pick at one of the sections on methods to focus on.
+[Parshina-Kottas, Yuliya, Anjali Singhvi, Audra D.S. Burch, Troy Griggs, Mika Gröndahl, Lingdong Huang, Tim Wallace, Jeremy White, and Josh Williams. "What the Tulsa Race Massacre Destroyed." New York Times, May 24, 2021.](https://www.nytimes.com/interactive/2021/05/24/us/tulsa-race-massacre.html)
+For further research, Tulsa data files are located [here](https://github.com/nytimes/tulsa-1921-data).
+
+<!--
+Consider whether to list these as optional in the syllabus, or just make them in the drive only
 
 Wilson, Mabel. "The Cartography of W.E.B. Du Bois's Color Line" in *W.E.B. Du Bois's Data Portraits: Visualizing Black America: The Color Line at the Turn of the Twentieth Century.* Battle-Baptiste, Whitney, and Britt Rusert, eds. Princeton Architectural Press, 2018. [selections]
-
--  This is a short essay on the significance and context of the cartographic work of W.E.B. Du Bois, a scholar and civil rights leader working in the United States in the early-mid 20th century. This essay discusses a historical mapping project, but unlike the other readings/projects for this week, it does not re-draw or further develop GIS methods/data from that historical material. Instead a key point this article brings to our conversations in class is the importance of interrogating historical/archival materials in relation to the context in which they were created.
-- Scan includes required short essay by Mabel Wilson as well as optional introduction to the scanned plates and a selection of a few of the maps/data visualizations that were included in the exhibition discussed.
-
 
 Digital Scholarship Lab, University of Richmond. *Mapping Inequality* 2015-ongoing
 
 - explore the [interactive maps](https://dsl.richmond.edu/panorama/redlining/) & be sure to read [the introduction](https://dsl.richmond.edu/panorama/redlining/#loc=5/39.1/-94.58&text=intro)
 
+-->
 
 
-### 2/14 | Week 4 | Making Data From Observation & Sensing
+### 2/13 | Week 4 | Using and Collecting Data
 
 #### Assignment 2 due – Selective Digitization
 
-#### Readings (available in [course Drive](https://drive.google.com/open?id=1G0S6lEdIPNVhYg3yqhHY72PjEwA_mfdH&usp=drive_fs))
-
-[House, Brian. "Stalking the Smart City." 2019](https://urbanomnibus.net/2019/05/stalking-smart-city/)
+#### Readings (available in course dropbox)
 
 [Folder. *Italian Limes*. 2014](http://www.italianlimes.net/)
 
 Ferrari, Marco, Elisa Pasqual, Alessandro Busi, Aaron Gillett. *A Moving Border: Alpine Cartographies of Climate Change* [Selections]. 2019
 
-Williams, Sarah, Jacqueline Klopp, Daniel Orwa, Peter Waiganjo, and Adam White. "Digital Matatus: Using Mobile Technology to Visualize Informality." 2015.
+<!-- Williams, Sarah, Jacqueline Klopp, Daniel Orwa, Peter Waiganjo, and Adam White. "Digital Matatus: Using Mobile Technology to Visualize Informality." 2015.
+Would like to replace Matatus - need something else methods focused.-->
+
+[Wood, Denis. "Everything Sings: Maps for a Narrative Atlas." In Places Journal](https://placesjournal.org/article/everything-sings-maps-for-a-narrative-atlas/?cn-reloaded=1&cn-reloaded=1). 2011.
 
 
-### 2/21 | Week 5 | Making Data from Satellites
+### 2/20 | Week 5 | Remote Sensing
 
 #### Assignment 3 due – Mapping Observations
 
-#### Readings (available in [course Drive](https://drive.google.com/open?id=1G0S6lEdIPNVhYg3yqhHY72PjEwA_mfdH&usp=drive_fs))
+#### Readings (available in course dropbox)
 
 Kurgan, Laura. "Mapping Considered as a Problem of Theory and Practice." 2013.
 
 *Please also review from week 2: Couclelis, Helen. "People Manipulate Objects (but Cultivate Fields): Beyond the Raster-Vector Debate in GIS." 1992*
 
-### 2/28 | Week 6 | (last day of Session A) | Maps & Narrative
+### 2/27 | Week 6 | Narrative & Design
 
 #### Assignment 4 due – Mapping Remotely
 
 #### Readings
 
 Please watch: [*In Plain Sight.* by Diller Scofidio + Renfro, Laura Kurgan, Robert Gerard Pietrusko with Columbia Center for Spatial Research at the 2018 U.S. Pavilion.](https://dsrny.com/project/in-plain-sight)
+
+
+<!--
+
+Note to self: replace with new references. Definitely tulsa, perhaps others.
 
 Please read these map-based articles from the New York Times:
 
@@ -152,6 +161,62 @@ Please read these map-based articles from the New York Times:
 
 - Columbia University Libraries provides access to NYTimes.com for all students. Please see instructions [here](https://guides.library.columbia.edu/nytimes) to set up an account
 
+-->
+
+### 3/06 | Week 7 | Proposal Workshop
+
+#### Proposal Due
+
+Sign-up for a workshop time on the day of class to go over your proposal.
+
+### 3/13 | Week 8 | Kinne Week - No Class?
+
+Depending on the amount of people traveling, we may not hold class this week. 
+
+### 3/20 | Week 9 | Spring Break - No Class
+
+### 3/27 | Week 10 | "Spatial Intelligence"
+
+#### Assignment 5 due 
+<!--Note to self - it may make sense to have a portion of this lecture on Kinne week, and to have assignment 5 be the mining natural language for place relationships-->
+
+#### Readings
+
+[House, Brian. "Stalking the Smart City." 2019](https://urbanomnibus.net/2019/05/stalking-smart-city/)
+
+<!--
+The City article mapping story 
+
+Something about Overture maps
+
+Others - research
+-->
+
+### 4/03 | Week 11 | Simulations + Living in the Map
+
+#### Assignment 6 due (for extra credit)
+
+#### Readings
+
+<!--
+The Curse of Dimensionality
+Either 972 mag or something else. Maybe anything interesting written on palantir?
+
+Two Sides
+Humans have shaped the world for at least 10,000 years 
+-->
+
+### 4/10 | Week 12 | Show and Tell Day 1
+
+#### Group 1 Presentations
+
+### 4/17 | Week 13 | Show and Tell Day 2
+
+#### Group 2 Presentations
+
+### 5/06 | Website Due
+
+<!-- 
 ### 3/28 | Mapping Portfolio Due
 
 Combine all of your assignments in one PDF. This is also your chance to catch up on assignments that may have stumped you, or refine them now that you have a bit better control of the software.
@@ -163,23 +228,26 @@ All assignments are grade on completion. That said, they must answer the prompts
 
 Assignment 5 is available for those who would like an extra credit point (as described below).
 
+-->
+
 ## Class Requirements and Grading
 
 Grading for the class is as follows:
 
-There are a total of 12 possible points, attendance for each session, assignments and in class contribution each count for one point.
-12 points is a HP, 10 points is a P, 8 points is a LP, and anything below that is a F.
+There are a total of 21 possible points. Attendance for each session, assignments and in class contribution each count for one point. The final project is worth four points.
+19 points and above is a HP, 15 points and above is a P, 12 points and above is a LP, and anything below that is a F.
 
-Attendance (6 points)
-Attendance at all six class sessions is required. Per GSAPP attendance policy, three unexcused absences is an automatic Unofficial Withdrawal (UW).
+Attendance (11 points)
+Attendance at all class sessions is required. Per GSAPP attendance policy, three unexcused absences is an automatic Unofficial Withdrawal (UW).
 
 In-class participation (1 point)
 You are expected to give engaged and generous participation in class discussions and in critique workshops with your peers.
 
-Assignments + Portfolio (5 points, 1 point each)
-Weekly map assignments will allow you to apply the skills acquired via tutorials and begin to experiment with creative applications of spatial methods. Five map assignments will be completed over the course of the six week course and as such are intended to be limited in scope; experimental; and geared towards learning and creative engagement rather than demonstrating advanced skills. Assignment descriptions and associated assessment rubrics can be found on the assignments tab of the course site.
+Assignments (5 points, 1 point each)
+Weekly map assignments will allow you to apply the skills acquired via tutorials and begin to experiment with creative applications of spatial methods. Assignments are graded on completion and are intended to be limited in scope; experimental; and geared towards learning and creative engagement rather than demonstrating advanced skills. Assignment descriptions and associated assessment rubrics can be found on the assignments tab of the course site.
 
-For the final course session you will assemble your map assignments into a single document/portfolio/atlas.
+Final Project + Presentation (4 points)
+The final project is worth four total points. Two points will be awarded based on the show and tell presentation, and two points will be awarded for the final submission on the course website.
 
 Extra Credit (1 point each)
 Extra credit will be given for the completion of assignment 5, and additional extra credit can be assigned by the instructor in the even that a student has a LP or F.
@@ -190,10 +258,6 @@ Geographic Information Systems is not a software. As such this course will not s
 Tutorial resources will be primarily provided for QGIS LTR. This is an open source software program for geographic analysis that runs on Windows, Mac, and Linux operating systems. All students will be expected to download and install QGIS LTR. Documentation for QGIS is available [here](https://docs.qgis.org/3.34/en/docs/user_manual/index.html), and a training manual with good basic tutorials is available [here](https://docs.qgis.org/3.34/en/docs/training_manual/) and an introduction to GIS methods using QGIS is available [here](https://docs.qgis.org/3.34/en/docs/gentle_gis_introduction/).
 Information regarding other GIS softwares will be provided in course resources.
 Knowledge of design and layout programs (Adobe Illustrator, and InDesign) may be useful to you but is not required.
-
-## Course google drive folder
-
-All readings and course data will be available via Google Drive [here](https://drive.google.com/open?id=1G0S6lEdIPNVhYg3yqhHY72PjEwA_mfdH&usp=drive_fs).
 
 ## Academic Integrity
 
@@ -252,3 +316,5 @@ Williams, Sarah, Jacqueline Klopp, Daniel Orwa, Peter Waiganjo, and Adam White. 
 Wood, Dennis. "Everything Sings: Maps for a Narrative Atlas." In Places Journal. 2011.
 
 Woods, Clyde Adrian., and Katherine. McKittrick. "No One Knows the Mysteries at the Bottom of the Ocean." In Black Geographies and the Politics of Place. Toronto, Ont. : Cambridge, Mass.: Between the Lines ; South End Press, 2007.
+
+Parshina-Kottas, Yuliya, Anjali Singhvi, Audra D.S. Burch, Troy Griggs, Mika Gröndahl, Lingdong Huang, Tim Wallace, Jeremy White, and Josh Williams. "What the Tulsa Race Massacre Destroyed." New York Times, May 24, 2021. https://www.nytimes.com/interactive/2021/05/24/us/tulsa-race-massacre.html.

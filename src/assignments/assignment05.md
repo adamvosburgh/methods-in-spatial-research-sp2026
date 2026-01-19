@@ -2,31 +2,15 @@
 title: "Where Next?"
 date: "2023-03-08"
 author: Adam Vosburgh
-sequence: 5
+sequence: 6
 cat: assignment
 ---
 
-### Due: 3/28, with Mapping Portfolio
+### Due: 3/27
 
 ### What
 
-**This is an extra credit assignment.** Completing this assignment will add one point to the rubric explained in 'Class Requirements and Grading' on the syllabus.
-
-Complete either tutorial 8, 9, or 10+11 (as a pair) and complete the corresponding assignment:
-
-### Tutorial 8: Making Data from Street View
-
-Use the Google Street View Static API to download street view images for 20 - 100 significant locations of your choosing. Also pay attention to the camera bearing/orientation.
-
-Design a layout to present the images on one or more pages (or GIFs)
-
-Submission Materials:
-
-A multi page PDF with:
-- Page 1: the layout you designed, and a link to your google colab notebook.
-- Page 2: A screenshot of the directory on your computer where you have saved your downloaded images
-
-- A downloaded csv or geojson of your final dataset (on canvas)
+Complete either tutorial 9, or 10+11 (as a pair) and complete the corresponding assignment:
 
 ### Tutorial 9: Making Data in Python:
 
@@ -50,8 +34,4 @@ A multi-page PDF with:
 ### Submission
 
 - Upload your work on Canvas (refer to specific instructions above)
-- Include it in your finalized Mapping Portfolio
-
-### Optional additional exercise
-
-Do all three!
+- add your map to "Pin-Up Assignment 5" on the Miro board
