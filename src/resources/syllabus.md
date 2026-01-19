@@ -44,13 +44,21 @@ After completing the course participants will:
 
 | Date | Week |  Topic | Tutorial due |  Assignment due |
 | ----------- | ----------- | ----------- | ----------- | ----------- |
-| 1/24 | 1 | Introduction to Critical GIS + Spatial Data Types |  |   |
-| 1/31 | 2 |  Cartographic Projections | Tutorial 1 & 2 |  Assignment 0  |
-| 2/07 | 3 |  Georeferencing and Digitizing Archives |  |  Assignment 1 |
-| 2/14 | 4 | Using and Collecting Data | Tutorial 3 |  Assignment 2 |
-| 2/21 | 5 |  Remote Sensing | Tutorial 4 OR Tutorial 5 |  Assignment 3 |
-| 2/28 | 6 |  Narrative & Design | Tutorial 6 OR Tutorial 7 |  Assignment 4 |
-| 3/28 |  | Portfolio Due | | Assignment 5 (for extra credit) |
+| 1/23 | 1 | Introduction to Critical GIS + Spatial Data Types |  |   |
+| 1/30 | 2 |  Cartographic Projections | Tutorial 1 & 2 |  Assignment 0  |
+| 2/06 | 3 |  Georeferencing and Digitizing Archives |  |  Assignment 1 |
+| 2/13 | 4 | Using and Collecting Data | Tutorial 3 |  Assignment 2 |
+| 2/20 | 5 |  Remote Sensing | Tutorial 4 OR Tutorial 5 |  Assignment 3 |
+| 2/27 | 6 |  Narrative & Design | Tutorial 6 +7 OR Tutorial 8 |  Assignment 4 |
+| 3/06 | 7 | Proposal Workshop | | Draft Proposal |
+| 3/13 | 8 | Kinne Week | | |
+| 3/20 | 9 | Spring Break | | |
+| 3/27 | 10 | "Spatial Intelligence" | Tutorial 9 OR Tutorial 10 + 11 | Assignment 5 |
+| 4/03 | 11 | Simulations | Tutorial 12 | Assignment 6 (for extra credit) |
+| 4/10 | 12 | Show and Tell Day 1 | |  |
+| 4/17 | 13 | Show and Tell Day 2 | | |
+| 5/06 |  | Portfolio Due | | | 
+
 
 
 
