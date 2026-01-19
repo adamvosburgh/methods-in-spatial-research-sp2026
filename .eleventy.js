@@ -3,8 +3,8 @@ const markdownIt = require("markdown-it");
 const markdownItAttrs = require("markdown-it-attrs");
 
 module.exports = function(eleventyConfig) {
-  // Path prefix for GitHub Pages deployment
-  const pathPrefix = '/methods-in-spatial-research-sp2026';
+  // Path prefix - empty for custom domain, set to repo name for github.io subdirectory
+  const pathPrefix = '';
 
   // Plugins
   eleventyConfig.addPlugin(syntaxHighlight);

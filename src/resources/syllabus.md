@@ -3,7 +3,7 @@ title: Methods in Spatial Research
 cat: syllabus
 ---
 
-![sample maps](/methods-in-spatial-research-sp2026/resources/images/header_img.png)
+![sample maps](/resources/images/header_img.png)
 
 From left:
 [Dennis Wood. 2011. "Everything Sings: Maps for a Narrative Atlas" via Places Journal](https://placesjournal.org/article/everything-sings-maps-for-a-narrative-atlas/?cn-reloaded=1);
