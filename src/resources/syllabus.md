@@ -5,9 +5,7 @@ cat: syllabus
 
 ![sample maps](/resources/images/header_img.png)
 
-From left:
-[Dennis Wood. 2011. "Everything Sings: Maps for a Narrative Atlas" via Places Journal](https://placesjournal.org/article/everything-sings-maps-for-a-narrative-atlas/?cn-reloaded=1);
-Hans Haacke *Shapolsky et al. Manhattan Real Estate Holdings, a Real-Time Social System, as of May 1, 1971*. 1971; [Folder. *Italian Limes*. 2014](http://www.italianlimes.net)
+From left: Brian Clifton, Sam Lavigne, and Francis Tseng. ["White Collar Crime Risk Zones." The New Inquiry, 2017.](https://whitecollar.thenewinquiry.com/); Dennis Wood. 2011. ["Everything Sings: Maps for a Narrative Atlas" via Places Journal](https://placesjournal.org/article/everything-sings-maps-for-a-narrative-atlas/?cn-reloaded=1); Laura Kurgan, Dan Miller, and Adam Vosburgh. ["Two Sides of the Same Coin." Milan Triennale, 2015.](https://c4sr.columbia.edu/projects/two-sides-same-coin)
 
 ## Syllabus
 
@@ -30,18 +28,6 @@ This course is divided into two halves:
 
 - In the first, participants will develop basic fluency with open-source mapping software, QGIS, methods of data collection and creation, and approaches and concepts in critical spatial analysis and map design through hands on exercises and weekly assignments.
 - In the second, particpants will form groups and develop their own proposals with data and methodologies of their own selection. This work will culminate in a series of two "Show and Tells" at the end of the class, and a final public-facing website. 
-
-## Learning Objectives
-
-After completing the course participants will:
-
-- Develop robust familiarity with QGIS and its functions
-- Gain fluency with foundational GIS concepts (including how the GIS data model abstracts geographic phenomena)
-- Understand GIS spatial data types and the kinds of analysis that are possible with each
-- Create new spatial datasets from field observation and participatory sensing
-- Create new spatial datasets from archival sources
-- Access and use multispectral satellite imagery
-- Acquire fluency with visual design concepts central to cartographic representations
 
 ## Course Overview
 
@@ -187,6 +173,8 @@ Depending on the amount of people traveling, we may not hold class this week.
 <!--
 The City article mapping story 
 
+Gemini for google earth
+
 Something about Overture maps
 
 Others - research
@@ -251,6 +239,28 @@ The final project is worth four total points. Two points will be awarded based o
 
 Extra Credit (1 point each)
 Extra credit will be given for the completion of assignment 5, and additional extra credit can be assigned by the instructor in the even that a student has a LP or F.
+
+## Learning Objectives
+
+After completing the course participants will:
+
+- Develop robust familiarity with QGIS and its functions
+- Gain fluency with foundational GIS concepts (including how the GIS data model abstracts geographic phenomena)
+- Understand GIS spatial data types and the kinds of analysis that are possible with each
+- Create new spatial datasets from field observation and participatory sensing
+- Create new spatial datasets from archival sources
+- Access and use multispectral satellite imagery
+- Acquire fluency with visual design concepts central to cartographic representations
+
+## AI Policy
+
+Students are welcome to use AI tools in the class, except for the purpose of:
+- Developing maps or images for the purpose of turning them in as a student's own work. 
+- Producing original writing that the student turns in as their own work. 
+- Prompting a LLM to produce data for them. This will ALWAYS result in fabricated data.
+- Asking a LLM to analyze data for you. This is only permissible if complimented with a robust human analysis.
+
+Uses of AI in these ways is counter to the critical objectives in this class. Work that uses AI in these ways, and in other ways that the instructor determines are counter to the objectives of the class, will not be awarded points.
 
 ## Software
 
@@ -318,3 +328,7 @@ Wood, Dennis. "Everything Sings: Maps for a Narrative Atlas." In Places Journal.
 Woods, Clyde Adrian., and Katherine. McKittrick. "No One Knows the Mysteries at the Bottom of the Ocean." In Black Geographies and the Politics of Place. Toronto, Ont. : Cambridge, Mass.: Between the Lines ; South End Press, 2007.
 
 Parshina-Kottas, Yuliya, Anjali Singhvi, Audra D.S. Burch, Troy Griggs, Mika Gröndahl, Lingdong Huang, Tim Wallace, Jeremy White, and Josh Williams. "What the Tulsa Race Massacre Destroyed." New York Times, May 24, 2021. https://www.nytimes.com/interactive/2021/05/24/us/tulsa-race-massacre.html.
+
+Brian Clifton, Sam Lavigne, and Francis Tseng. "White Collar Crime Risk Zones." The New Inquiry, 2017. https://whitecollar.thenewinquiry.com/.
+
+Laura Kurgan, Dan Miller, and Adam Vosburgh. "Two Sides of the Same Coin." Milan Triennale, 2015. https://c4sr.columbia.edu/projects/two-sides-same-coin.
