@@ -1,7 +1,7 @@
 ---
-title: "Intentional Re/Mis Use"
-date: "2022-01-19"
-author: Dare Brawley
+title: "Proposal"
+date: "2025-01-20"
+author: Adam Vosburgh
 sequence: 5
 cat: assignment
 ---

@@ -1,8 +1,8 @@
 ---
-title: "Where Next?"
+title: "Spatial Intelligence"
 date: "2023-03-08"
 author: Adam Vosburgh
-sequence: 6
+sequence: 7
 cat: assignment
 ---
 
