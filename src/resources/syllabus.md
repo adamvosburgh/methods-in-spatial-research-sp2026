@@ -5,7 +5,7 @@ cat: syllabus
 
 ![sample maps](/resources/images/header_img.png)
 
-From left: Brian Clifton, Sam Lavigne, and Francis Tseng. ["White Collar Crime Risk Zones." The New Inquiry, 2017.](https://whitecollar.thenewinquiry.com/); Dennis Wood. 2011. ["Everything Sings: Maps for a Narrative Atlas" via Places Journal](https://placesjournal.org/article/everything-sings-maps-for-a-narrative-atlas/?cn-reloaded=1); Laura Kurgan, Dan Miller, and Adam Vosburgh. ["Two Sides of the Same Coin." Milan Triennale, 2015.](https://c4sr.columbia.edu/projects/two-sides-same-coin)
+From left: Brian Clifton, Sam Lavigne, and Francis Tseng. ["White Collar Crime Risk Zones." The New Inquiry, 2017.](https://whitecollar.thenewinquiry.com/); Dennis Wood. 2011. ["Everything Sings: Maps for a Narrative Atlas" via Places Journal](https://placesjournal.org/article/everything-sings-maps-for-a-narrative-atlas/?cn-reloaded=1); Laura Kurgan, Dan Miller, and Adam Vosburgh. ["Two Sides of the Same Coin." Milan Triennale, 2025.](https://c4sr.columbia.edu/projects/two-sides-same-coin)
 
 ## Syllabus
 
