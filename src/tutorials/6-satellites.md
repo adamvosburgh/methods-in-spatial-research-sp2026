@@ -170,19 +170,19 @@ Create a map using Landsat Satellite imagery that shows land use change over tim
 ---
 Module by Dare Brawley, fall 2021. Updated by Adam Vosburgh, Spring 2024.  
 
-[satellite12a]: images/156/satellite12.png
-[spectrum]: images/156/Landsat8_SpectralBands.jpg
-[compare]: images/156/satellite13.png
-[coordinates]: images/156/satellite001.png
-[datasets]: images/156/satellite002.png
-[install]: images/156/Satellite01.png
-[dock]: images/156/satellite02.png
-[Preprocessing]: images/156/satellite04.png
-[Bandlist]: images/156/satellite06.png
+[satellite12a]: /tutorials/images/156/satellite12.png
+[spectrum]: /tutorials/images/156/Landsat8_SpectralBands.jpg
+[compare]: /tutorials/images/156/satellite13.png
+[coordinates]: /tutorials/images/156/satellite001.png
+[datasets]: /tutorials/images/156/satellite002.png
+[install]: /tutorials/images/156/Satellite01.png
+[dock]: /tutorials/images/156/satellite02.png
+[Preprocessing]: /tutorials/images/156/satellite04.png
+[Bandlist]: /tutorials/images/156/satellite06.png
 
 
-[RGB]: images/156/satellite05.png
-[natural]: images/156/satellite09.png
-[agriculture]: images/156/satellite14.png
-[infrared]: images/156/satellite10.png
-[download]: images/156/satellite003.png
+[RGB]: /tutorials/images/156/satellite05.png
+[natural]: /tutorials/images/156/satellite09.png
+[agriculture]: /tutorials/images/156/satellite14.png
+[infrared]: /tutorials/images/156/satellite10.png
+[download]: /tutorials/images/156/satellite003.png

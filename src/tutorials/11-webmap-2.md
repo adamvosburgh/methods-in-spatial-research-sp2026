@@ -906,12 +906,12 @@ Written for Methods in Spatial Research, Spring 2022.
 
 
 [SCROLLYTELLING]: https://assets.website-files.com/5e871c608892778f95e77820/5e887e1306f6708ca4cb341c_5dc071f85102da6d50a33dcc_glaciers.gif
-[FILESETUP]: images/161/webmap_2_01.png
-[MAPBOXTEMPLATE]: images/161/webmap_2_02.png
-[MBSTUDIOSTYLE]: images/161/webmap_2_03.png
-[STYLEURL]: images/161/webmap_2_04.png
-[TILESETID]: images/161/webmap_2_05.png
-[DATARANGE]: images/161/webmap_2_06.png
-[BLOCKSTYLE]: images/161/webmap_2_07.png
-[TREESTYLE]: images/161/webmap_2_08.png
-[STORYMAP]: images/161/webmap_2_09.png
+[FILESETUP]: /tutorials/images/161/webmap_2_01.png
+[MAPBOXTEMPLATE]: /tutorials/images/161/webmap_2_02.png
+[MBSTUDIOSTYLE]: /tutorials/images/161/webmap_2_03.png
+[STYLEURL]: /tutorials/images/161/webmap_2_04.png
+[TILESETID]: /tutorials/images/161/webmap_2_05.png
+[DATARANGE]: /tutorials/images/161/webmap_2_06.png
+[BLOCKSTYLE]: /tutorials/images/161/webmap_2_07.png
+[TREESTYLE]: /tutorials/images/161/webmap_2_08.png
+[STORYMAP]: /tutorials/images/161/webmap_2_09.png

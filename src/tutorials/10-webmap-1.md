@@ -64,7 +64,7 @@ At this stage, you should:
         -  `git push`  
 9. view the result on your online github repository (the url should be `github.com/yourusername/webmap_1`) github page (the url should be `yourgithubusername.github.io/webmap_1` but you can also find this in the settings of the repository you created on github). You should see something like this:  
 
-![initial webpage](images/160/webmap_1_21.png)
+![initial webpage](/tutorials/images/160/webmap_1_21.png)
 
 ## A web page
 
@@ -521,7 +521,7 @@ map.on('mouseleave', 'trees', function() {
 
 Now you should see a popup appear with the tree's species name whenever you click a tree on the map. Clicking another tree or clicking the 'x' on the popup should make the last popup disappear. Not bad for a couple lines of code. Notice that we can also control the appearance of the cursor to give the user a hint that some kind of interactivity is now built into the tree symbols. Thanks to the features in the library, we're able to do a surprising amount of work with just a couple of lines of code.
 
-![Street trees with popup tags](images/160/mapboxgl_popup.png)
+![Street trees with popup tags](/tutorials/images/160/mapboxgl_popup.png)
 
 ## Other Mapbox GL Examples
 
@@ -641,22 +641,22 @@ Adapted from tutorial written by Dare Brawley, Spring 2020 & by Brian House for 
 
 
 
-[DIRECTORY]: images/160/webmap_1_01.png
-[HELLOWORLD]: images/160/webmap_1_02.png
-[WORLDMAP]: images/160/webmap_1_03.png
-[3DMAP]: images/160/webmap_1_04.png
-[CONTROLS]: images/160/webmap_1_05.png
-[GEOLOCATE]: images/160/webmap_1_06.png
-[COORDINATES]: images/160/webmap_1_07.png
-[INFO]: images/160/webmap_1_08.png
-[MARKER]: images/160/webmap_1_09.png
-[IMAGE]: images/160/webmap_1_10.png
-[MULTI]: images/160/webmap_1_11.png
-[TOKEN]: images/160/webmap_1_2-1.png
-[BLOCKS]: images/160/webmap_1_12.png
-[TREES]: images/160/webmap_1_13.png
-[BLOCKDATASTYLE]: images/160/webmap_1_14.png
-[TREEDATASTYLE]: images/160/webmap_1_15.png
-[REPO]: images/160/webmap_1_16.png
-[FOLDER]: images/160/webmap_1_17.png
-[WEB]: images/160/webmap_1_18.png
+[DIRECTORY]: /tutorials/images/160/webmap_1_01.png
+[HELLOWORLD]: /tutorials/images/160/webmap_1_02.png
+[WORLDMAP]: /tutorials/images/160/webmap_1_03.png
+[3DMAP]: /tutorials/images/160/webmap_1_04.png
+[CONTROLS]: /tutorials/images/160/webmap_1_05.png
+[GEOLOCATE]: /tutorials/images/160/webmap_1_06.png
+[COORDINATES]: /tutorials/images/160/webmap_1_07.png
+[INFO]: /tutorials/images/160/webmap_1_08.png
+[MARKER]: /tutorials/images/160/webmap_1_09.png
+[IMAGE]: /tutorials/images/160/webmap_1_10.png
+[MULTI]: /tutorials/images/160/webmap_1_11.png
+[TOKEN]: /tutorials/images/160/webmap_1_2-1.png
+[BLOCKS]: /tutorials/images/160/webmap_1_12.png
+[TREES]: /tutorials/images/160/webmap_1_13.png
+[BLOCKDATASTYLE]: /tutorials/images/160/webmap_1_14.png
+[TREEDATASTYLE]: /tutorials/images/160/webmap_1_15.png
+[REPO]: /tutorials/images/160/webmap_1_16.png
+[FOLDER]: /tutorials/images/160/webmap_1_17.png
+[WEB]: /tutorials/images/160/webmap_1_18.png

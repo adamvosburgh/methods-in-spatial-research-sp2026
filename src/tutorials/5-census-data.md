@@ -18,7 +18,7 @@ As a reminder, the 'census data' that we use is really the *summary* of individu
 
 The data that we will access in this tutorial is a *summary* of those individaul responses. That said, the individual responses themselves, called 'Microdata', are accessible via the Census Bureau's 'Public Use Microdata Sample'. These surveys are stripped of their identifiying charasteristics and only accessible within the PUMA (Public Use Microdata Area) geography, so that they cannot (likely) be used to identify any individuals. The census bureau's [microdata portal](https://data.census.gov/mdat/#/search?ds=ACSPUMS5Y2018) is here, but I also recommend the [iPUMS service](https://www.ipums.org/) from the the University of Minnesota.
 
-![A sample of a microdata set](images/155/00-microdata-sample.png)
+![A sample of a microdata set](/tutorials/images/155/00-microdata-sample.png)
 
 This tutorial is not a comprehensive guide through census data, but rather a quick tour through finding data, and working with it in QGIS. Within it, we will choose datasets that shed light on the difference between sampled and projected population from the most recently available ACS (2023) 5-year estimate. This tutorial is written from the perspective of someone who does not yet know which specific datasets they want to access, and is searching in an exploratory manner.
 
@@ -38,11 +38,11 @@ There are multiple ways to search on data.census.gov. The first is called `simpl
 
 Search for “sample size” in the simple search.
 
-![Homepage of the census site](images/155/01-census-site.png)
+![Homepage of the census site](/tutorials/images/155/01-census-site.png)
 
 After our search, we see a number of datasets show up:
 
-![Search Results for sample size](images/155/02-search-result.png)
+![Search Results for sample size](/tutorials/images/155/02-search-result.png)
 
 ### Looking at a datasets
 
@@ -56,13 +56,13 @@ Click "Geos" on the dataset menu, select `Country`, and select `All Counties wit
 
 Once you have that, click on the `B98001` dataset again. Usually it would display all of the columns and rows, but because it is too large there will be a different message. You can force load it if you wish, but as we are about to download it anyway, it is not necessary.
 
-![Screenshot of completed filters](images/155/03-geographies.png)
+![Screenshot of completed filters](/tutorials/images/155/03-geographies.png)
 
 ### Downloading the Data, Selecting a Vintage
 
 Make sure your screen looks like mine above (and if it doesn't, make sure that you click the 'B98001' dataset again). Now, click 'Download Table', at the next menu you select which vintage you want to download. Let's do the 2023 ACS 5-year estimates, meaning that the data is from 2019-2023.
 
-![Screenshot of dataset](images/155/04-B98001.png)
+![Screenshot of dataset](/tutorials/images/155/04-B98001.png)
 
 ### Downloading a TIGER/line shapefile
 
@@ -70,7 +70,7 @@ Census data is designed to work with shapefiles of administrative geographies. T
 
 Go to the Census Bureau's [website](https://www.census.gov/geographies/mapping-files/time-series/geo/tiger-line-file.html). Navigate to “Download”, click web interface, or follow this [link](https://www.census.gov/cgi-bin/geo/shapefiles/index.php). Once you are there, select `2023` for year, and `Counties (and equivalent)` for layer type. Download the shapefile, and put it in your `processed` folder.
 
-![Screenshot of TIGER/Line data portal](images/155/05-TIGER.png)
+![Screenshot of TIGER/Line data portal](/tutorials/images/155/05-TIGER.png)
 
 ### Importing dataset, specifying datatype
 
@@ -84,7 +84,7 @@ Next, add the tabular `B98001` census dataset, a .csv of which you have in your 
 
 In the resulting window, check the options here. The first row in the dataset is a description of the columns, so in this case we will set `Number of header lines to discard` to 1. This will change the names of the columns to whatever is in the first row, so `GEO_ID` to `Geography`, for exampple. You can leave it too, but you will then have to deal with it later when you go to make your map. I usually discard this row manually in my text editor before adding it, so I can keep the original headers, but for the purpose of this exercise I will not. Next, there is no geometry, so under the `Geometry Definition` section, mark the appropriate option. Make sure that you mark column `B98001_001E` and `B98001_002E` as an `integer`. Either 32 or 64 bit will do in this case, but if it was a number in the tens of millions, you would want it to be 64. You really can't go wrong with 64 ever, although it uses more memory (which does not matter for most cases, but you should keep in mind if you start working with very large dataset and compute becomes an issue.)
 
-![screenshot of delimited text layer window](images/155/06-B98001-add.png)
+![screenshot of delimited text layer window](/tutorials/images/155/06-B98001-add.png)
 
 ### Performing a vector join
 
@@ -94,7 +94,7 @@ As a reminder, you will be joining the tabular dataset **to** the vector dataset
 
 Here you'll want to join the geographic identifiers together. In the tabular dataset from the census, that dataset is `Geography`, and in the vector dataset, that is `GEOID`. Let's select those two and hit join. 
 
-![Screenshot of join window](images/155/07-B98001-firstjoin.png)
+![Screenshot of join window](/tutorials/images/155/07-B98001-firstjoin.png)
 
 ### Troubleshooting
 
@@ -102,13 +102,13 @@ And... it didn't work! If you try to visualize the data with a layer fill - you 
 
 Let's open up the `attribute table` with a right click on the vector layer that we joined to. We see that two new columns were joined to this dataset, however they all have `null` for a value.
 
-![screenshot of table with lots of null values](images/155/08-B98001-nullvalue.png)
+![screenshot of table with lots of null values](/tutorials/images/155/08-B98001-nullvalue.png)
 
 So what happened here? Let's open up both of our attribute tables, and see if we can figure out why the join failed. We see that the `Geography` and `GEOID` fields look pretty different - specifically that the one from the census has a `1400000US` appended to the front of it. However, after that looks to be the exact same. 
 
 You will run into this all the time with census data. The tabular datasets don't have this, but the TIGER shapefiles do. Even with different datasets and different problems, get used to this process of troubleshooting - if something isn't working, look at the original data and try to think as you are asking the computer to.
 
-![mismatched datasets](images/155/09-geo-id-mismatch.png)
+![mismatched datasets](/tutorials/images/155/09-geo-id-mismatch.png)
 
 ### Adding a new GEOID
 
@@ -118,13 +118,13 @@ To do that, we should open up the attribute table, and open the field calculator
 
 Hit OK, it may take a second to complete.
 
-![field calculator expression](images/155/10-B98001-expression.png)
+![field calculator expression](/tutorials/images/155/10-B98001-expression.png)
 
 ### Mapping the result
 
 Perform the join again by matching the new field `GEOID` from the tabular dataset, with `GEOID` from the vector dataset. After that, let's map the result. I am going to use the `Final Number of housing unit interviews` column. I will skip describing the steps to perform a graduated fill layer on the sample estimate field, but if you need a recap, check out tutorial 1. 
 
-![graduated sample size map](images/155/11-B98001-map.png)
+![graduated sample size map](/tutorials/images/155/11-B98001-map.png)
 
 Looking at our map - what do we have? The intervews in each county range from 3 to 223722. Quite a range. Each county has different populations demographics and densities, so on its own this dataset does not tell us much. 
 
@@ -143,7 +143,7 @@ All we have to put in the expression editor is the division of our two datasets.
 Now, let's map our result. I am going to stick with a blue ramp for now, because a higher percentage of interviews is better. That being said, I don't fully understand the goals of the census bureau here - it actually may be the case that they select a higher amount of households relative to a population if they anticipate difficulty in getting a response. So this metric is definitely telling us differences in how housholds in a geography might be receptive to interviews by the census bureau, but it may not be indicative of data quality.
 **However, this might be a good metric to revisit later for the assignment.**
 
-![Interview percentage map](images/155/12-interview-per-map.png)
+![Interview percentage map](/tutorials/images/155/12-interview-per-map.png)
 
 ### Getting Another Dataset to Compare
 
@@ -155,7 +155,7 @@ We only need information on population, so either will do, but I am going to dow
 
 Download the dataset, select ACT 5-year estimates, and select `2023` for the year. Put the folder in your `original` data folder.
 
-![dp05 dataset on data portal](images/155/13-dp05-site.png)
+![dp05 dataset on data portal](/tutorials/images/155/13-dp05-site.png)
 
 ### Adding demographic dataset
 
@@ -163,13 +163,13 @@ Let's add our new csv to the project the same as before. We'll be using very sim
 
 Also, make sure that the `Total Population` field is set to integer. We're only going to use that one, but now would be a good time to look through some of the other fields and make sure that you're importing any you might like to use with the correct datatype.
 
-![importing dp05](images/155/14-dp05-add.png)
+![importing dp05](/tutorials/images/155/14-dp05-add.png)
 
 ### Making GEO IDS match, Joining to vector dataset
 
 Same as before, let's strip the `050000US` from the beginning of the `Geography` field using the field calculator. I'll name this new field `GEOID`, same as with the last dataset.
 
-![dp05 expression](images/155/15-dp05-expression.png)
+![dp05 expression](/tutorials/images/155/15-dp05-expression.png)
 
 Now that that is done, let's join this dataset to our shapefile - the same one that we have already joined one dataset to. Match the GEOID's as before (you may have to scroll to the bottom of your tabular dataset,) and it may take a few minutes, this is a large dataset.
 
@@ -179,7 +179,7 @@ Now let's open up the attribute table of the joined dataset, and check to make s
 
 Our joined dataset now has many, many fields, and is kind of difficult to read. I recommend click on `Organize Columns` next the field calculator, and positioning the two datasets that we are interested in right next to each other, and after the `GEOID`. You don't have to do this, but I just recommend it both for the next step, and for ease of reading. In the image below, the square around the red fields are the ones I moved up to the front.
 
-![organizing the attribute table](images/155/16-table-organize.png)
+![organizing the attribute table](/tutorials/images/155/16-table-organize.png)
  
 Comparing the two datasets - we immediately see that the ratio is not consistent. Looking at the first two rows, the sample size vs actualy population is 12% and 8% respectively. It seems like this might be worthy of looking into a bit more.
 
@@ -201,7 +201,7 @@ Now, lets visualize our data. Go to `symbology`, select graduated from the drop 
 
 One thing I am noticing is that we have some values above 1 - for a metric reflected sampled population against total, that does not make any sense. What is likely going on here is that we are getting outliers from counties where there are very few people, and of the people that are there, near 100% of them are being sampled. What I am going to do is very simplistic, but from looking at the data I can see that there are very few census tracts above 60%. I am going to increase my number of classes, and Natural Breaks will automatically catch where there is a big jump in values, and I will just simply turn that one off. If we were doing this more properly, we would likely want to delete those rows, or constrain our dataset to counties with more than a certain amount of people (and we could make a graduated map with total population to get a sense of what a good cutoff value would be.)
 
-![final map styling](images/155/18-sample-per-map.png)
+![final map styling](/tutorials/images/155/18-sample-per-map.png)
 
 As a side note, if you ever need help picking the right colors for maps in the future, I highly recommmend [Color Brewer 2](https://colorbrewer2.org/#type=sequential&scheme=BuGn&n=3)
 

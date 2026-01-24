@@ -9,7 +9,7 @@ From left: Brian Clifton, Sam Lavigne, and Francis Tseng. ["White Collar Crime R
 
 ## Syllabus
 
-**Spring** 2026
+Spring 2026
 Friday 9-11
 3 credits
 300 Buell South
@@ -22,11 +22,11 @@ office hours by appointment, sign up at the link on the top of the page.
 
 This course provides an introduction to the critical use of geographic information systems (GIS) and the use of spatial methods for urban humanities research.
 
-Maps and geographic analysis are key tools for interpreting the built environment and the social conditions it contains. GIS methods allow for the analysis of geographic features together with attributes (environmental, social, demographic, political) of those places. The thoughtful use of spatial data can reveal previously unseen patterns, changing the way we see and engage with our world. However, maps are never just representations, they are nearly always active agents in shaping the worlds they describe. With this in mind, students will be introduced to a range of approaches for creating and manipulating spatial data with a focus on the forms of authorship, design, subjectivity embedded in spatial data and its uses.
+Maps and geographic analysis are key tools for interpreting the built environment and the social conditions it contains. GIS methods allow for the analysis of geographic features together with attributes (environmental, social, demographic, political) of those places. The thoughtful use of spatial data can reveal previously unseen patterns, changing the way we see and engage with our world. However, maps are never just representations; they are nearly always active agents in shaping the worlds they describe. With this in mind, students will be introduced to a range of approaches for creating and manipulating spatial data with a focus on the forms of authorship, design, subjectivity embedded in spatial data and its uses.
 
 This course is divided into two halves:
 
-- In the first, participants will develop basic fluency with open-source mapping software, QGIS, methods of data collection and creation, and approaches and concepts in critical spatial analysis and map design through hands on exercises and weekly assignments.
+- In the first, participants will develop basic fluency with open-source mapping software, QGIS, methods of data collection and creation, and approaches and concepts in critical spatial analysis and map design through hands-on exercises and weekly assignments.
 - In the second, particpants will form groups and develop their own proposals with data and methodologies of their own selection. This work will culminate in a series of two "Show and Tells" at the end of the class, and a final public-facing website. 
 
 ## Course Overview
@@ -38,7 +38,7 @@ This course is divided into two halves:
 | 2/06 | 3 |  Georeferencing and Digitizing Archives |  |  Assignment 1 |
 | 2/13 | 4 | Using and Collecting Data | Tutorial 3 |  Assignment 2 |
 | 2/20 | 5 |  Remote Sensing | Tutorial 4 OR Tutorial 5 |  Assignment 3 |
-| 2/27 | 6 |  Narrative & Design | Tutorial 6 +7 OR Tutorial 8 |  Assignment 4 |
+| 2/27 | 6 |  Narrative & Design | Tutorial 6 OR Tutorial 7 + 8 |  Assignment 4 |
 | 3/06 | 7 | Proposal Workshop | | Draft Proposal |
 | 3/13 | 8 | Kinne Week | | |
 | 3/20 | 9 | Spring Break | | |
@@ -46,7 +46,7 @@ This course is divided into two halves:
 | 4/03 | 11 | Simulations | Tutorial 12 | Assignment 6 (for extra credit) |
 | 4/10 | 12 | Show and Tell Day 1 | | Group 1 Final Presentation |
 | 4/17 | 13 | Show and Tell Day 2 | | Group 2 Final Presentation |
-| 5/06 |  | Portfolio Due | | | 
+| 5/06 |  | Website Due | | | 
 
 ## Weekly Schedule, Readings, & Assignments
 All course tutorials and assignments will be posted here on the course website.
