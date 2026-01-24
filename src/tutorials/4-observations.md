@@ -66,7 +66,7 @@ Choose `Online-Offline(multiple submissions)` as the collection method. As the s
 
 ## Collect data 
 
-![kobo on a phone](/tutorials/images/154/07-kobo-phone.png#img-right)
+![kobo on a phone](/tutorials/images/154/07-kobo-phone.png)
 To begin collecting data in the field, copy the link to your survey (using the `Copy` button shown above) and send it to yourself so that you can open it on your smart phone.  
 
 Using the GoogleChrome browser on your phone (**note you must use GoogleChrome, KoboCollect isn't supported on other browsers**) open the link to your survey. You are ready to collect data. After collecting each entry click submit. The recorded data will be stored and will be uploaded to your Kobo Toolbox account whenever you phone has a working internet connection. So, if you have opened the Kobo Toolbox collection link on your phone but go out to collect data in the field in an area without cell service (or have turned off cellular data) you will still be able to collect observations which will then be uploaded once your phone is connected to the internet. 
@@ -95,7 +95,7 @@ Once you have made the selections shown for the custom delimiters you should see
 Click `Add` and then `Close` your collected data points should be visible in your QGIS project. Open the attribute table for the new layer you have added to see all of the information you collected about each point. 
 
 ![kobo import](/tutorials/images/154/10-kobo-import.png#img-full)  
-![coordinate reference systems](/tutorials/images/154/11-crs.png#img-right)
+![coordinate reference systems](/tutorials/images/154/11-crs.png)
 
 
 Remember from the Projections and Coordinate Reference Systems module that all GPS coordinates are collected in WGS84 coordinate reference system. If you look at the CRS for your newly collected data points you will see it is EPSG 4326, WGS84.  

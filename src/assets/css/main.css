@@ -164,31 +164,10 @@ body {
   border-radius: 4px;
 }
 
-/* Image attribute styles (from #img-full, #img-right, etc.) */
+/* Full-width images */
 .content-article img[src*="#img-full"] {
   width: 100%;
   max-width: 100%;
-}
-
-.content-article img[src*="#img-right"] {
-  float: right;
-  max-width: 300px;
-  margin-left: 1.5rem;
-  margin-bottom: 1rem;
-}
-
-.content-article img[src*="#img-left"] {
-  float: left;
-  max-width: 300px;
-  margin-right: 1.5rem;
-  margin-bottom: 1rem;
-}
-
-/* Clear floats after images */
-.content-article p::after {
-  content: "";
-  display: table;
-  clear: both;
 }
 
 /* Code blocks */
@@ -370,13 +349,6 @@ pre code {
     font-size: 1.25rem;
   }
 
-  .content-article img[src*="#img-right"],
-  .content-article img[src*="#img-left"] {
-    float: none;
-    max-width: 100%;
-    margin-left: 0;
-    margin-right: 0;
-  }
 }
 
 @media (max-width: 480px) {

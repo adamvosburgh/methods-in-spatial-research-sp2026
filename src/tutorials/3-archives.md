@@ -69,12 +69,12 @@ Now you are ready to begin georeferencing!
 Open the `Georeferencer` tool via the `Raster` menu in the top menu bar.  
 ![geo referencer](/tutorials/images/153/04-georef.png)
 
-![geo referencer raster](/tutorials/images/153/05-georef.png#img-right)
+![geo referencer raster](/tutorials/images/153/05-georef.png)
 When the Georeferencer window opens select the `Open Raster` button (far left side, looks like a chess board). Navigate to where you have save the 1874 map of Manhattan and select it. You will now create `control points` by selecting location on the scanned map and then corresponding location on the reference dataset. This is much more of an art than a science and requires you to look carefully at the historical source and then think critically about what features are likely to still be visible in the reference data you are using.  
 
 We'll start with the north side of Central Park, at the corner of 7th Avenue and the park. Use the `Add point` tool then select a corner of the block at the intersection of 7th Ave and Central Park North. 
 ![select control point](/tutorials/images/153/06-addpt.png)
-![select from canvas](/tutorials/images/153/06-2-canvas.png#img-right)
+![select from canvas](/tutorials/images/153/06-2-canvas.png)
 
 After you select this point the `Enter Map Coordinates` dialog window should open. Choose `From Map Canvas`. The Georeferencer window should then automatically minimize and your map canvas should become visible. If it doesn't navigate to the map canvas. Zoom and pan to this area north of Central Park and select the same corner. 
 ![points](/tutorials/images/153/07-onmap.png)
@@ -86,7 +86,7 @@ Continue to find locations in the 1874 map that you can location in present day 
 ## Transformation settings
 
 Once you have created all of your control points you need to define the transformation settings for the georectifying process. In this step you are specifying what kind of mathematical transformation QGIS should execute in order to warp the scanned map based on the control points you have set.  
-![transformation settings](/tutorials/images/153/09-transformation.png#img-right)
+![transformation settings](/tutorials/images/153/09-transformation.png)
 A bit of background on types of transformations:  
 
 - Linear
@@ -105,7 +105,7 @@ A bit of background on types of transformations:
 
 For this map you can either a Helmert or Polynomial 1 transformation will work well. Set the Target Spatial Reference System (SRS) to the projected coordinate reference system for New York City (EPSG: 2263, NY State Plane LI). QGIS will automatically save your georeferenced GeoTIFF output raster in the same folder as the original scanned map. It is a good idea to save your GCP points in case you wish to use the same points but change the transformation type for a subsequent georectification of the same scanned map.  
 
-![geo results](/tutorials/images/153/10-georef.png#img-right)
+![geo results](/tutorials/images/153/10-georef.png)
 Click `OK`. You have now set the transformation settings and can run the georectification. Back in the Georeferencer window, select the `Start georeferencing button`. A progress bar should open. This may take several minutes depending on the size of your scanned map.  
 
 Once the process finishes your scanned map will be added to your QGIS project. It will look like the image at the right. The black pixels surrounding the scanned map are raster cells with no data. Remember that raster data is composed of a grid of cells. This grid must always be rectangular, so because the scanned map needed to rotate to match the coordinate reference system we have chosen, the resulting raster is surrounded by cells with a value of 0 to create this rectangular shape. In the layer properties for the georectified scanned map we can tell QGIS to render these cells as transparent and eliminate the black triangles. Set the `Additional no data value` as 0 then click `Apply` and `OK`.
@@ -124,7 +124,7 @@ Digitizing is the process of creating new vector datasets based on features trac
 
 In this example we will digitize these streams as line features, however you could also choose to digitize them as polygon features, or could digitize each stream head as a point (data types are all representations and how you choose to represent is indeed a choice).  
 
-![lines](/tutorials/images/153/14-newshapefile.png#img-right)
+![lines](/tutorials/images/153/14-newshapefile.png)
 To begin create a new vector layer by selecting `Layer`>`Create Layer`>`New Shapefile Layer`. In the dialogue box that opens specify a name and location where the file should be saved using the `...` button. Specify the geometry type as Line, then choose the correct projected coordinate reference system for New York City (EPSG: 2263). Add any fields you wish to have in the attribute table. For this example we will specify an **outlet** for each stream so that we can name the location that each stream flows into. Specify the type of this new field as Text, and `Add to Fields List`. Click `OK`
 
 With the **streams_uws** layer selected in the layers panel begin an edit session by clicking the pencil icon in the Digitizing Toolbar (circled in magenta below). Then select the Add Line Features tool (circled in green below) to begin to trace a new stream.  

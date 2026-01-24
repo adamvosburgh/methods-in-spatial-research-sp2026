@@ -36,7 +36,7 @@ Open QGIS and create a new project.
 
 The QGIS interface consists of a selection of **Panels** and **Toolbars** and a **Map canvas**.  
 
-All toolbars and panels can be moved or removed from the QGIS interface. If you need to access a specific panel or toolbar right click anywhere within the grey areas surrounding a panel or toolbar to open the toolbar and panels browser (shown at right).  ![qgis panels toolbars](/tutorials/images/151/02-qgis-interface-panel-options.png#img-right)
+All toolbars and panels can be moved or removed from the QGIS interface. If you need to access a specific panel or toolbar right click anywhere within the grey areas surrounding a panel or toolbar to open the toolbar and panels browser (shown at right).  ![qgis panels toolbars](/tutorials/images/151/02-qgis-interface-panel-options.png)
 
 The **Browser Panel** provides the ability to browse, search and inspect spatial datasets from your local file system, database connections, and online sources.  
 
@@ -57,7 +57,7 @@ Before completing the steps below review the introduction to raster and vector d
 
 From the top menu bar select `Layer` and then `Add Layer` > `Add Raster Layer`.  
 
-![add raster dataset data source manager](/tutorials/images/151/03-land-cover.png#img-right)
+![add raster dataset data source manager](/tutorials/images/151/03-land-cover.png)
 
 When the `Data Soursce Manager` menu appears select the Source Type as `File` then click on the `...` and navigate to the `Land_cover_2010` folder within data folder you created for this series of modules. Select the file named `landcover_2010_nyc_3ft.img`. Take care to select the file with the **.img** file extension. The five files with the same name except for their file extension together comprise this particular raster dataset (for more on the specific file format that this dataset uses see [here](https://www.loc.gov/preservation/digital/formats/fdd/fdd000420.shtml)). QGIS will do the work of interpreting each of the five files together. Click `Add`. Then click `Close`.  
 
@@ -70,13 +70,13 @@ Open the `Layer Properties` menu for this dataset to look at its source and coor
 Notice that the coordinate reference system is already defined as EPSG:2263 which refers to the New York State Plane Coordinate reference system for the Long Island region. This is the projected coordinate reference system that produces the smallest level of distortion for NYC and should be used for all local maps of NYC. Because the dataset already uses this coordinate reference system  
 
 ![land cover properties menu](/tutorials/images/151/05-land-cover-properties.png)
-![land cover zoom](/tutorials/images/151/06-land-cover.png#img-right)
+![land cover zoom](/tutorials/images/151/06-land-cover.png)
 
 Save your project within the folder you created for this series of modules. Save the QGIS project as a `.qgz` file.  
 
 Use the map navigation tools (circled above in green) to zoom to an area that interests you. The view on the right shows Harlem between Morningside and Marcus Garvey parks.  
 
-![land cover individual raster cells](/tutorials/images/151/07-land-cover.png#img-right)
+![land cover individual raster cells](/tutorials/images/151/07-land-cover.png)
 
 Continue to zoom in until individual raster cells are visible.  
 
@@ -94,7 +94,7 @@ To do this we will manipulate the symbology for this land cover layer. Right cli
 
 Select all of the values except for 1. Right click to change their color.  
 
-![land use change symbology](/tutorials/images/151/09-land-cover-symbology.png#img-right)
+![land use change symbology](/tutorials/images/151/09-land-cover-symbology.png)
 
 Change them all to white. Click `OK` on the change color menu then click `Apply` on the layer properties symbology menu. You should now see a map showing just those areas classified as tree canopy in this land cover dataset. Click `OK` to close the layer properties menu. 
 
@@ -140,7 +140,7 @@ Click `Add`. It may take a few seconds to render the street tree locations.
 
 Turn off the blocks and land cover datasets in the layers panel (uncheck the box next to the name of each) so that only the street tree locations are visible. Zoom in until you see an area that is a few blocks wide so that the individual trees are more visible.  
 
-![street tree locations](/tutorials/images/151/13-street-trees-viz.png#img-right)
+![street tree locations](/tutorials/images/151/13-street-trees-viz.png)
 
 Notice how the outlines of streets are visible in the patterns formed by the trees. It is also clear that some blocks have many trees and others have very few.  
 
@@ -152,7 +152,7 @@ To do this we will export a copy of the dataset and specify the new projected co
 
 Again right click on the street trees layer in the layers panel. Select `Export`>`Save features as` then in the Save vector features as dialogue window opens use the `...` button to choose a location to save the new dataset you are creating (within the data>original folder you created for this project is a good spot). Specify the correct coordinate reference system for NYC (New York State Plane - Long Island with EPSG:2263). If it is not visible in the drop down menu click the `Select CRS` button to open the coordinate reference system dialog box and search for the correct coordinate reference system for NYC. Make sure `Add saved file to map` is selected and click `OK`. It may take a few minutes for this action to finish processing (there are a lot of street trees!).
 
-![save as vector layer diaglog box](/tutorials/images/151/14-save-as.png#img-right)
+![save as vector layer diaglog box](/tutorials/images/151/14-save-as.png)
 
 Once the new dataset of street trees in the correct projected coordinate reference system you can remove the original street trees dataset from your project. Right click on its name in the Layers Panel and select `remove layer`.  
 
@@ -168,11 +168,11 @@ Take our street trees and census blocks as an example: we are hoping to learn wh
 Before we execute a spatial join in QGIS for the first time, consider the diagram below to have a stronger conceptual grasp of spatial joins. The diagram shows the geometry and the attribute tables for two layers: trees and blocks. There are three three trees and two blocks. The trees and the blocks are spatially co-located so it is possible to perform a spatial join between the two layers.  
 ![spatial join in concept](/tutorials/images/151/15-spatial_join-01.png)
 
-![attribute tables of spatial join demo](/tutorials/images/151/16-spatial_join-02.png#img-right)
+![attribute tables of spatial join demo](/tutorials/images/151/16-spatial_join-02.png)
 
 The diagram at the right shows the results of a spatial join from the dataset of blocks to the dataset of street trees. This operation results in adding new information to the attributes of each tree based on which block each tree overlaps. In other words we will add new columns to the attribute table for the street trees and the values in these new columns will correspond with the attribute information for the block that each tree grows within.  
 
-![spatial join table illustrated](/tutorials/images/151/17-spatial_join-03.png#img-left)
+![spatial join table illustrated](/tutorials/images/151/17-spatial_join-03.png)
 
 If instead, we join the street trees to the blocks we will add new information to the attributes of each block based on the attributes of the trees within that block. The diagram to the left illustrates these results. In this scenario however there are multiple trees within each block. Because each block corresponds with exactly 1 row in the attribute table this means that we must summarize the information about the trees that we are joining to the blocks. In this example we have chosen to count the trees, however a number of other summary methods could have been used for any numeric values in the dataset (minimum, maximum, average, etc.).
 
@@ -194,7 +194,7 @@ Specify a location to save the resulting new dataset (the processed folder withi
 
 ![spatial join dialogue box](/tutorials/images/151/18-spatial-join-dialog.png)
 
-![spatial join results](/tutorials/images/151/19-spatial-join.png#img-right)
+![spatial join results](/tutorials/images/151/19-spatial-join.png)
 
 
 Once the spatial join has completed the results (a new dataset) should have a new dataset added to your project.  
@@ -203,7 +203,7 @@ This new dataset will have the geometry of the census blocks and should have two
 
 Open the attribute table to check.  
 
-![attribute table of join results](/tutorials/images/151/20-spatial-join.png#img-left)
+![attribute table of join results](/tutorials/images/151/20-spatial-join.png)
 
 You can now remove the original NYC census blocks dataset from your project.  
 
@@ -237,11 +237,11 @@ Make the selections shown below and click `Apply`.
 
 ![symbology](/tutorials/images/151/23-symbology.png)
 
-![histogram view](/tutorials/images/151/23-symbology-natural-breaks.png#img-right)
+![histogram view](/tutorials/images/151/23-symbology-natural-breaks.png)
 
 The classification mode determines the groups that your data are assembled into. The classification mode you choose will greatly influence the argument that you map conveys. The `Histogram` menu helps to show you the relationship between the distribution of your data and the classification mode you have chosen. Compare a few different classification modes by changing the mode and then returning to the histogram (you may need to select `Load Values`) to see how the groupings change across the distribution of your data. For more on data classification see [Mark Monmonier's *How to Lie With Maps*](https://clio.columbia.edu/catalog/2668118).
 
-![tree diameter](/tutorials/images/151/24-natural-breaks.png#img-left)
+![tree diameter](/tutorials/images/151/24-natural-breaks.png)
 
 ### On your own
 
