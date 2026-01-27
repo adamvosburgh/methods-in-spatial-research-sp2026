@@ -268,18 +268,18 @@ Now that we have recreated a portion of Tutorial 1 in Python, for the assignment
 ---
 Module by Adam Vosburgh, Spring 2024.
 
-[uploading data]:images/159/1-python_upload_data.png
+[uploading data]:/tutorials/images/159/1-python_upload_data.png
 
-[street tree data frame]:images/159/2-python_dfstreettree.png
+[street tree data frame]:/tutorials/images/159/2-python_dfstreettree.png
 
-[street tree map]:images/159/3-python_mapstreettree.png
+[street tree map]:/tutorials/images/159/3-python_mapstreettree.png
 
-[block group map]:images/159/4-python_mapblockgroup.png
+[block group map]:/tutorials/images/159/4-python_mapblockgroup.png
 
-[combined map]:images/159/5-python_mapcombined.png
+[combined map]:/tutorials/images/159/5-python_mapcombined.png
 
-[spatial join]:images/159/6-python_spatialjoin.png
+[spatial join]:/tutorials/images/159/6-python_spatialjoin.png
 
-[tree blocks]:images/159/7-python_maptreeblocks.png
+[tree blocks]:/tutorials/images/159/7-python_maptreeblocks.png
 
-[final map]:images/159/8-python_finalmap.png
+[final map]:/tutorials/images/159/8-python_finalmap.png

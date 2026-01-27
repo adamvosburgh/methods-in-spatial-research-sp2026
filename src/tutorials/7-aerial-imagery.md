@@ -233,8 +233,8 @@ Module by Dare Brawley, fall 2021. Updated by Adam Vosburgh, spring 2024.
 
 
 
-[grid of satellite images]:images/157/satellite_grids_01.png
+[grid of satellite images]:/tutorials/images/157/satellite_grids_01.png
 
-[diagram process]:images/157/satellite_grids_explained.png
+[diagram process]:/tutorials/images/157/satellite_grids_explained.png
 
-[URL diagram]:images/157/satellite_grids_url.png
+[URL diagram]:/tutorials/images/157/satellite_grids_url.png

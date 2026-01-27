@@ -183,4 +183,4 @@ Design a layout to present the images on one or more slides (or GIFs)
 ---
 Module by Adam Vosburgh, spring 2024.
 
-[URL diagram]:images/158/street_view_url.png
+[URL diagram]:/tutorials/images/158/street_view_url.png
