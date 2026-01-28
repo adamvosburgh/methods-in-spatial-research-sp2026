@@ -51,7 +51,7 @@ This course is divided into two halves:
 ## Weekly Schedule, Readings, & Assignments
 All course tutorials and assignments will be posted here on the course website.
 
-All readings and previous lecture slides will be posted in the course dropbox (linked at the top of the page).
+All readings and previous lecture slides will be posted in the course drive (linked at the top of the page).
 
 Assignments should be submitted on the course Canvas and the course Miro (linked at the top of the page.)
 
@@ -64,7 +64,7 @@ Group map critiques. Examples to be distributed during class
 
 #### Assignment 0 due – NYC Trees
 
-#### Readings (available in course dropbox)
+#### Readings (available in course drive)
 Corner, James. "The Agency of Mapping." 2014.
 
 Couclelis, Helen. "People Manipulate Objects (but Cultivate Fields): Beyond the Raster-Vector Debate in GIS." 1992.
@@ -80,7 +80,7 @@ Optional: Rankin, William. "Introduction Territory and the Mapping Sciences" in 
 #### Assignment 1 due – Intentional Misuse
 
 
-#### Readings (available in course dropbox)
+#### Readings (available in course drive)
 Baics, Gergely, and Leah Meisterlin. "Zoning Before Zoning: Land Use and Density in Mid-Nineteenth-Century New York City." 2016.
 
 [Parshina-Kottas, Yuliya, Anjali Singhvi, Audra D.S. Burch, Troy Griggs, Mika Gröndahl, Lingdong Huang, Tim Wallace, Jeremy White, and Josh Williams. "What the Tulsa Race Massacre Destroyed." New York Times, May 24, 2021.](https://www.nytimes.com/interactive/2021/05/24/us/tulsa-race-massacre.html)
@@ -102,7 +102,7 @@ Digital Scholarship Lab, University of Richmond. *Mapping Inequality* 2015-ongoi
 
 #### Assignment 2 due – Selective Digitization
 
-#### Readings (available in course dropbox)
+#### Readings (available in course drive)
 
 [Folder. *Italian Limes*. 2014](http://www.italianlimes.net/)
 
@@ -118,7 +118,7 @@ Would like to replace Matatus - need something else methods focused.-->
 
 #### Assignment 3 due – Mapping Observations
 
-#### Readings (available in course dropbox)
+#### Readings (available in course drive)
 
 Kurgan, Laura. "Mapping Considered as a Problem of Theory and Practice." 2013.
 
