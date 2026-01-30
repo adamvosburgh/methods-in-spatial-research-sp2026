@@ -83,7 +83,7 @@ Optional: Rankin, William. "Introduction Territory and the Mapping Sciences" in 
 #### Readings (available in course drive)
 Baics, Gergely, and Leah Meisterlin. "Zoning Before Zoning: Land Use and Density in Mid-Nineteenth-Century New York City." 2016.
 
-Gergely Baics, Wright Kennedy, Rebecca Kobrin, Laura Kurgan, Leah Meisterlin, Dan Miller, Mae Ngai.[Mapping Historical New York: A Digital Atlas. New York, NY: Columbia University. 2021.](https://mappinghny.com)
+Gergely Baics, Wright Kennedy, Rebecca Kobrin, Laura Kurgan, Leah Meisterlin, Dan Miller, Mae Ngai.[Mapping Historical New York: A Digital Atlas. New York, NY: Columbia University. 2025.](https://mappinghny.com)
 Go through a case study or two, and then explore the data on your own.
 
 Parshina-Kottas, Yuliya, Anjali Singhvi, Audra D.S. Burch, Troy Griggs, Mika Gröndahl, Lingdong Huang, Tim Wallace, Jeremy White, and Josh Williams. ["What the Tulsa Race Massacre Destroyed." New York Times, May 24, 2021.](https://www.nytimes.com/interactive/2021/05/24/us/tulsa-race-massacre.html)
