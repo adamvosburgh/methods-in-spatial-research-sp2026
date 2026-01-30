@@ -25,6 +25,13 @@ sequence: 3
 
 - [Adam Loften & Emmanuel Vaughan-Lee, "Counter Mapping" Emergence Magazine](https://emergencemagazine.org/story/counter-mapping/) on Maps of the Zuni world.
 
+- [This is not an Atlas](https://notanatlas.org/#atlas-maps)
+
+## General Critical GIS/Counter Cartography Projects
+
+- Brian Clifton, Sam Lavigne, and Francis Tseng. ["White Collar Crime Risk Zones." The New Inquiry, 2017.](https://whitecollar.thenewinquiry.com/)
+
+- Estudio Teddy Cruz, Fonna Forman. ["MEXUS: A Geography of Interdependence"](http://dimensionsofcitizenship.org/participants/estudio-teddy-cruz-plus-fonna-forman/index.html)
 
 ## Cartographic Projections + Mapping Existing Datasets
 
@@ -39,6 +46,9 @@ sequence: 3
 - [NYC Parks. "NYC's Street Trees."](https://tree-map.nycgovparks.org/)
 
 - [Hubley, Jill. "Languages of NYC."](https://www.jillhubley.com/project/nyclanguages/)
+
+- [“Uneven Digital Geographies” 2012 by Mark Graham, Stefano De Sabbata, Ralph Straumann, Sanna Ojanperä.](https://notanatlas.org/maps/uneven-digital-geographies-2/)
+
 
 
 ## Making Data from Archives
@@ -57,6 +67,9 @@ sequence: 3
 
 - Price Fishback et al. "New Evidence on Redlining by Federal Housing Programs in the 1930s". September 2021. Working paper. [New research complicating the narrative on HOLC (aka "redlining") maps.](https://www.nber.org/papers/w29244?utm_campaign=ntwh&utm_medium=email&utm_source=ntwg12). Uses data from University of Richmond.
 
+- Gergely Baics, Wright Kennedy, Rebecca Kobrin, Laura Kurgan, Leah Meisterlin, Dan Miller, Mae Ngai.[Mapping Historical New York: A Digital Atlas. New York, NY: Columbia University. 2021.](https://mappinghny.com)
+
+- Parshina-Kottas, Yuliya, Anjali Singhvi, Audra D.S. Burch, Troy Griggs, Mika Gröndahl, Lingdong Huang, Tim Wallace, Jeremy White, and Josh Williams. ["What the Tulsa Race Massacre Destroyed." New York Times, May 24, 2021.](https://www.nytimes.com/interactive/2021/05/24/us/tulsa-race-massacre.html). For further research, Tulsa data files are located [here](https://github.com/nytimes/tulsa-1921-data).
 
 
 ## Making Data From Observation & Sensing
@@ -154,6 +167,10 @@ Beatrixpark, Amsterdam. Site specific artwork.](http://www.jeremywood.net/artwor
 
   - [Plumer, Brad, Nadja Popovich, and Brian Palmer. 2020. "How Decades of Racist Housing Policy Left Neighborhoods Sweltering." The New York Times, August 31, 2020, sec. Climate.](https://www.nytimes.com/interactive/2020/08/24/climate/racism-redlining-cities-global-warming.html)
 
+
+## Spatial Intelligence / AI + Maps
+
+- [Tazbia Fatima. “We asked an AI to map our stories." The City, 2024.](https://projects.thecity.nyc/thecity-coverage-map/)
 
 
 

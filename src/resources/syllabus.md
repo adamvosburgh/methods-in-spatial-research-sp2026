@@ -83,13 +83,16 @@ Optional: Rankin, William. "Introduction Territory and the Mapping Sciences" in 
 #### Readings (available in course drive)
 Baics, Gergely, and Leah Meisterlin. "Zoning Before Zoning: Land Use and Density in Mid-Nineteenth-Century New York City." 2016.
 
-[Parshina-Kottas, Yuliya, Anjali Singhvi, Audra D.S. Burch, Troy Griggs, Mika Gröndahl, Lingdong Huang, Tim Wallace, Jeremy White, and Josh Williams. "What the Tulsa Race Massacre Destroyed." New York Times, May 24, 2021.](https://www.nytimes.com/interactive/2021/05/24/us/tulsa-race-massacre.html)
+Gergely Baics, Wright Kennedy, Rebecca Kobrin, Laura Kurgan, Leah Meisterlin, Dan Miller, Mae Ngai.[Mapping Historical New York: A Digital Atlas. New York, NY: Columbia University. 2021.](https://mappinghny.com)
+Go through a case study or two, and then explore the data on your own.
+
+Parshina-Kottas, Yuliya, Anjali Singhvi, Audra D.S. Burch, Troy Griggs, Mika Gröndahl, Lingdong Huang, Tim Wallace, Jeremy White, and Josh Williams. ["What the Tulsa Race Massacre Destroyed." New York Times, May 24, 2021.](https://www.nytimes.com/interactive/2021/05/24/us/tulsa-race-massacre.html)
 For further research, Tulsa data files are located [here](https://github.com/nytimes/tulsa-1921-data).
 
-<!--
-Consider whether to list these as optional in the syllabus, or just make them in the drive only
+Optional: "The Cartography of W.E.B. Du Bois's Color Line" in *W.E.B. Du Bois's Data Portraits: Visualizing Black America: The Color Line at the Turn of the Twentieth Century.* Battle-Baptiste, Whitney, and Britt Rusert, eds. Princeton Architectural Press, 2018. [selections]
 
-Wilson, Mabel. "The Cartography of W.E.B. Du Bois's Color Line" in *W.E.B. Du Bois's Data Portraits: Visualizing Black America: The Color Line at the Turn of the Twentieth Century.* Battle-Baptiste, Whitney, and Britt Rusert, eds. Princeton Architectural Press, 2018. [selections]
+<!--
+archived:
 
 Digital Scholarship Lab, University of Richmond. *Mapping Inequality* 2015-ongoing
 
