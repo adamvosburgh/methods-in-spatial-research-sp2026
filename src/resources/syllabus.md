@@ -111,10 +111,9 @@ Digital Scholarship Lab, University of Richmond. *Mapping Inequality* 2015-ongoi
 
 Ferrari, Marco, Elisa Pasqual, Alessandro Busi, Aaron Gillett. *A Moving Border: Alpine Cartographies of Climate Change* [Selections]. 2019
 
-<!-- Williams, Sarah, Jacqueline Klopp, Daniel Orwa, Peter Waiganjo, and Adam White. "Digital Matatus: Using Mobile Technology to Visualize Informality." 2015.
-Would like to replace Matatus - need something else methods focused.-->
-
 [Wood, Denis. "Everything Sings: Maps for a Narrative Atlas." In Places Journal](https://placesjournal.org/article/everything-sings-maps-for-a-narrative-atlas/?cn-reloaded=1&cn-reloaded=1). 2011.
+
+Optional: Williams, Sarah, Jacqueline Klopp, Daniel Orwa, Peter Waiganjo, and Adam White. "Digital Matatus: Using Mobile Technology to Visualize Informality." 2015.
 
 
 ### 2/20 | Week 5 | Remote Sensing

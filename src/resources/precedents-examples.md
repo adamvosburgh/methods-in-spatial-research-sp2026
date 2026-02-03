@@ -74,8 +74,10 @@ sequence: 3
 
 ## Making Data From Observation & Sensing
 
-- [Wood, Jeremy. *Data Cloud*. 2008/2009.
-Beatrixpark, Amsterdam. Site specific artwork.](http://www.jeremywood.net/artworks/data-cloud.html)
+- Buchanan, Larry, Josh Katz, Rumsey Taylor, and Eve Washington. [“An Extremely Detailed Map of New York City Neighborhoods.” The New York Times, October 29, 2023.](https://www.nytimes.com/interactive/2023/upshot/extremely-detailed-nyc-neighborhood-map.html)
+    - [see here for more on the process behind this map](https://www.nytimes.com/interactive/2023/10/29/upshot/new-york-neighborhood-guide.html)
+
+- [Wood, Jeremy. *Data Cloud*. 2008/2009. Beatrixpark, Amsterdam. Site specific artwork.](http://www.jeremywood.net/artworks/data-cloud.html)
     - see also [conversation with Jeremy Wood by Tracey P. Lauriault: Lauriault, Tracey P., and Jeremy Wood. "GPS Tracings – Personal Cartographies." Cartographic Journal 46, no. 4 (November 2009): 360–65. https://doi.org/10.1179/000870409X12549997389628.](http://rd8hp6du2b.search.serialssolutions.com/?ctx_ver=Z39.88-2004&ctx_enc=info%3Aofi%2Fenc%3AUTF-8&rfr_id=info%3Asid%2Fsummon.serialssolutions.com&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&rft.genre=article&rft.atitle=GPS+Tracings+-+Personal+Cartographies&rft.jtitle=Cartographic+journal&rft.au=Lauriault%2C+Tracey+P&rft.au=Wood%2C+Jeremy&rft.date=2009-11-01&rft.pub=Taylor+%26+Francis&rft.issn=0008-7041&rft.eissn=1743-2774&rft.volume=46&rft.issue=4&rft.spage=360&rft.epage=365&rft_id=info:doi/10.1179%2F000870409X12549997389628&rft.externalDocID=11703670)
 
 - [Fawaz, Mona, Dounia Salamé and Isabela Serhan. "Seeing the City as a Delivery Driver: Practices of Syrian Men in Beirut, Lebanon." in *Refugees as City Makers* eds. Fawaz, Mona, Ahmad Gharbieh, Mona Harb, and Dounia Salamé. Beirut: Lebanon. 2018.](https://www.aub.edu.lb/ifi/Documents/publications/research_reports/2018-2019/20180910_refugees_as_city_makers.pdf) **See page 62 of PDF**.
@@ -101,6 +103,13 @@ Beatrixpark, Amsterdam. Site specific artwork.](http://www.jeremywood.net/artwor
 - [Svarre, Birgitte and Jan Gehl. *How to Study Public Life*. 2013. ebook via Columbia Library](https://clio.columbia.edu/catalog/14098130?counter=1)
 
 - [MIT Sensable City Lab. "Trash Track." 2008](https://senseable.mit.edu/trashtrack/how-it-works.php?id=3)
+
+- [Dewey-Hagborg, H. (2015). Stranger visions. Heather Dewey-Hagborg.](https://deweyhagborg.com/projects/stranger-visions)
+
+- [McElroy, Vergerio, Garcia-Salazar. Landlord Technologies of Gentrification in NYC. 2022](https://static1.squarespace.com/static/52b7d7a6e4b0b3e376ac8ea2/t/63601bd6c1d8e23287357db0/1667242990765/AEMP-LLTech-Final-r2.pdf)
+
+- [Campaign Zero. Mapping Police Violence. 2026](https://mappingpoliceviolence.org/)
+
 
 ## Making Data from Satellites
 
