@@ -4,6 +4,7 @@ date: "2023-01-25"
 author: Adam Vosburgh
 sequence: 5
 cat: tutorial
+published: true
 ---
 
 # Census Data

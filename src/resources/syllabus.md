@@ -1,6 +1,7 @@
 ---
 title: Methods in Spatial Research
 cat: syllabus
+published: true
 ---
 
 ![sample maps](/resources/images/header_img.png)
@@ -120,6 +121,8 @@ Optional: Williams, Sarah, Jacqueline Klopp, Daniel Orwa, Peter Waiganjo, and Ad
 
 #### Assignment 3 due – Mapping Observations
 
+#### Deadline to make group selections
+
 #### Readings (available in course drive)
 
 Kurgan, Laura. "Mapping Considered as a Problem of Theory and Practice." 2013.
@@ -157,9 +160,9 @@ Please read these map-based articles from the New York Times:
 
 Sign-up for a workshop time on the day of class to go over your proposal.
 
-### 3/13 | Week 8 | Kinne Week - No Class?
+### 3/13 | Week 8 | Kinne Week 
 
-Depending on the amount of people traveling, we may not hold class this week. 
+We may or may not have class depending on people's travel plans.
 
 ### 3/20 | Week 9 | Spring Break - No Class
 

@@ -2,6 +2,7 @@
 title: Precedents & Project Examples
 cat: resource
 sequence: 3
+published: true
 ---
 
 # Living document of precedent projects....
