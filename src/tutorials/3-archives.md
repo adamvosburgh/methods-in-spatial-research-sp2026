@@ -138,26 +138,6 @@ Continue to digitize streams the rest of the stream of the Upper Westside/Mornin
 Change the layer symbology for your new streams layer so that they are visible on top of the scanned map.  
 ![streams dig](/tutorials/images/153/16-streams-dig.png)
 
-## Challenge
-
-Design a map of NYC's disappeared ecologies.  
-Continue to digitize other natural features, such as marshes, topography, or shorelines. Each feature type should be its own new layer. Experiment with digitizing point, and polygon features.  
-
-Design a basemap using present day data for NYC such as [building footprints](https://data.cityofnewyork.us/Housing-Development/Building-Footprints/nqwf-w8eh), [curblines](https://data.cityofnewyork.us/dataset/Curbs/ikvd-dex8), or other planimetric feature
-
-Present your hidden ecologies map as a designed map composition that includes:  
-- a title
-- scale bar
-- legend
-- north arrow
-
-You do not need to map all of Manhattan but rather should find a location that interests you and make an argument about that location through your map design.  
-
-## Assignment
-
-Research and obtain a scanned map, georeference it, and then digitize selected features in order to produce a new map that has a different focus or narrative.  
-More details over at [Assignment 2](https://centerforspatialresearch.github.io/methods-in-spatial-research-sp2024/assignments/assignment02)
-
 
 ---
-Module by Dare Brawley, fall 2021. Updated by Adam Vosburgh, spring 2024. 
+Module by Dare Brawley, fall 2021. Updated by Adam Vosburgh, spring 2026. 
