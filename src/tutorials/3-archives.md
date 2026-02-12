@@ -113,7 +113,7 @@ Once the process finishes your scanned map will be added to your QGIS project. I
 
 ![no data](/tutorials/images/153/11-nodata.png)
 
-Your map should now look like the image to the right. You can use the same Layer Properties menu to adjust the overall transparency of the scanned map layer and then zoom in to check how good of a fit you were able to achieve with the georeferenced map. If you are pleased with the results you can close the Georeferencer window. Otherwise adjust your control points and re-run the transformation to get a better fit.  
+Your map should now look like the image above. You can use the same Layer Properties menu to adjust the overall transparency of the scanned map layer and then zoom in to check how good of a fit you were able to achieve with the georeferenced map. If you are pleased with the results you can close the Georeferencer window. Otherwise adjust your control points and re-run the transformation to get a better fit.  
 
 ![no data transparent](/tutorials/images/153/12-transparent.png)
 
@@ -139,7 +139,7 @@ Continue to digitize streams the rest of the stream of the Upper Westside/Mornin
 Change the layer symbology for your new streams layer so that they are visible on top of the scanned map.  
 ![streams dig](/tutorials/images/153/16-streams-dig.png)
 
-## Challenge
+## Optional Challenge
 
 Design a map of NYC's disappeared ecologies.  
 Continue to digitize other natural features, such as marshes, topography, or shorelines. Each feature type should be its own new layer. Experiment with digitizing point, and polygon features.  
@@ -157,8 +157,7 @@ You do not need to map all of Manhattan but rather should find a location that i
 ## Assignment
 
 Research and obtain a scanned map, georeference it, and then digitize selected features in order to produce a new map that has a different focus or narrative.  
-More details over at [Assignment 2](https://centerforspatialresearch.github.io/methods-in-spatial-research-sp2024/assignments/assignment02)
-
+More details over at Assignment 2
 
 ---
 Module by Dare Brawley, fall 2021. Updated by Adam Vosburgh, spring 2026. 
