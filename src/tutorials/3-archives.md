@@ -67,7 +67,7 @@ Now you are ready to begin georeferencing!
 
 ## Begin georeferencing: setting control points 
 
-Open the `Georeferencer` tool via the `Raster` menu in the top menu bar.  
+Open the `Georeferencer` tool via the `Layer` menu in the top menu bar.  
 ![geo referencer](/tutorials/images/153/04-georef.png)
 
 ![geo referencer raster](/tutorials/images/153/05-georef.png)
@@ -161,4 +161,4 @@ More details over at [Assignment 2](https://centerforspatialresearch.github.io/m
 
 
 ---
-Module by Dare Brawley, fall 2021. Updated by Adam Vosburgh, spring 2024. 
+Module by Dare Brawley, fall 2021. Updated by Adam Vosburgh, spring 2026. 
