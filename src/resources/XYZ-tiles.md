@@ -2,6 +2,7 @@
 title: XYZ Tiles
 cat: resource
 sequence: 2
+published: true
 ---
 
 # XYZ Tiles

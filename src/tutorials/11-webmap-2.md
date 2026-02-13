@@ -4,6 +4,7 @@ date: "2022-02-13"
 author: Adam Vosburgh
 sequence: 11
 cat: tutorial
+published: false
 ---
 
 # Making a Scrollytelling map with Mapbox Storytelling

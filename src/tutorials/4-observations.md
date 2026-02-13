@@ -1,11 +1,15 @@
 ---
 title: Making Data from Field Observations
-date: "2022-01-19"
-author: Dare Brawley
+date: "2022-02-13"
+author: Adam Vosburgh
 sequence: 4
 cat: tutorial
+published: false
 ---
 
+This tutorial is under revision!
+
+<!--
 
 In this module you will be introduced to basic methods for field data collection through designing a method for recording information about your surroundings. Using the GPS capabilities of your cellphone you will turn this information into data that you can work with in GIS environment.  
 
@@ -108,3 +112,5 @@ You have now collected your own dataset and are ready to begin analyzing what yo
 
 ---
 Module by Dare Brawley, fall 2021. 
+
+-->

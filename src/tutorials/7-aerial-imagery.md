@@ -4,6 +4,7 @@ date: "2022-01-19"
 author: Dare Brawley
 sequence: 7
 cat: tutorial
+published: true
 ---
 ## Satellite Grids & Google Static Maps API
 

@@ -2,6 +2,7 @@
 title: Further GIS learning resources
 cat: resource
 sequence: 1
+published: true
 ---
 
 # Resources

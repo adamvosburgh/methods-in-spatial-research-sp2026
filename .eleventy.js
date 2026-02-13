@@ -40,6 +40,7 @@ module.exports = function(eleventyConfig) {
   // Collections for different content types
   eleventyConfig.addCollection("tutorials", function(collectionApi) {
     return collectionApi.getFilteredByGlob("./src/tutorials/*.md")
+      .filter(item => item.data.published !== false)
       .sort((a, b) => {
         return (a.data.sequence || 0) - (b.data.sequence || 0);
       });
@@ -47,6 +48,7 @@ module.exports = function(eleventyConfig) {
 
   eleventyConfig.addCollection("assignments", function(collectionApi) {
     return collectionApi.getFilteredByGlob("./src/assignments/*.md")
+      .filter(item => item.data.published !== false)
       .sort((a, b) => {
         return (a.data.sequence || 0) - (b.data.sequence || 0);
       });
@@ -55,6 +57,7 @@ module.exports = function(eleventyConfig) {
   eleventyConfig.addCollection("resources", function(collectionApi) {
     return collectionApi.getFilteredByGlob("./src/resources/*.md")
       .filter(item => item.data.cat !== 'syllabus')
+      .filter(item => item.data.published !== false)
       .sort((a, b) => {
         return (a.data.sequence || 0) - (b.data.sequence || 0);
       });
@@ -62,7 +65,8 @@ module.exports = function(eleventyConfig) {
 
   eleventyConfig.addCollection("syllabus", function(collectionApi) {
     return collectionApi.getFilteredByGlob("./src/resources/*.md")
-      .filter(item => item.data.cat === 'syllabus');
+      .filter(item => item.data.cat === 'syllabus')
+      .filter(item => item.data.published !== false);
   });
 
   // Filters

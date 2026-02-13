@@ -4,6 +4,7 @@ date: "2024-02-08"
 author: Adam Vosburgh
 sequence: 2
 cat: assignment
+published: true
 ---
 
 ### Due: 2/13

@@ -4,6 +4,7 @@ date: "2024-03-09"
 author: Adam Vosburgh
 sequence: 8
 cat: tutorial
+published: true
 ---
 
 ## Street View Static Maps API

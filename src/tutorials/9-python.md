@@ -4,6 +4,7 @@ date: "2024-01-25"
 author: Adam Vosburgh
 sequence: 9
 cat: tutorial
+published: true
 ---
 
 ## Mapping with Python Libraries
