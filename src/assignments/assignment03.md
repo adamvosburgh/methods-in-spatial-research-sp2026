@@ -4,7 +4,7 @@ date: "2024-02-09"
 author: Adam Vosburgh
 sequence: 3
 cat: assignment
-published: false
+published: true
 ---
 
 ### Due: 2/20
@@ -21,11 +21,11 @@ Note: you may *not* use maptiles (Stamen, Open Street Maps, XYZ Tiles) as the ba
 
 ### How
 
-After you have a grasp on the process of setting up a form to collect data using Kobo Toolbox as outlined in tutorial 4:
+After you have a grasp on the process of setting up a form to collect data as outlined in tutorial 4:
 
 - Decide on what you would like to collect data about. (Choose a location you can easily travel to and where you will feel comfortable being in public space.)
 - Write out what information you would like to collect about each point location (these will become the fields in the attribute table of the new dataset you are creating)
-- Design a form to collect point locations and each of the attribute fields you are interested in using the Kobo Toolbox website
+- Design a form to collect point locations and each of the attribute fields you are interested in 
 - Go out into the world and collect your data. (Please observe social distancing & wear a mask).
 - Export it as a CSV file, and create a map of it in QGIS
 
@@ -40,13 +40,7 @@ After you have a grasp on the process of setting up a form to collect data using
   - NYC Open Data [homepage](https://opendata.cityofnewyork.us/)
 
 ### Reference
-For reference, look at the precedent projects we reviewed on the Miro board in Class 2.
-
-### Optional additional exercise
-
-Use Field Papers to generate a paper atlas for the area where you are collecting data using Kobo Toolbox. While you are out in the field using your Kobo Toolbox data collection tool, record information about your topic using Field Papers as well.
-
-Create two maps that speak to the different kinds of information that each approach allows you to gather.
+For reference, look at the precedent projects we reviewed on the Miro board in Class 4.
 
 ## Tutorial 5: Using Data for the US Census
 
