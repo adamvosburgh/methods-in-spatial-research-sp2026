@@ -42,6 +42,9 @@ After you have a grasp on the process of setting up a form to collect data as ou
 ### Reference
 For reference, look at the precedent projects we reviewed on the Miro board in Class 4.
 
+### Other tools
+If you prefer to use another tool mentioned in the "Making Data from Field Observations" tutorial, such as Field Papers, that is more than welcome. Just note that the expectation will still be to design a map with your observations, and to design the accompanying basemap. That may mean digitizing the collected features, or some other thought method that results in a final designed map.
+
 ## Tutorial 5: Using Data for the US Census
 
 Construct and map a metric you created using data from the US Census. In our tutorial, we created a sample size vs estimated population percentage using two different datasets, and mapped that result with graduated fill (this is called a Choropleth map). Please choose at least one additional dataset (or a different table from our demographic dataset we downloaded) from the US Census, and create a new metric that you can map using the same method. This does not have to be related to sample size in the way that we completed the tutorial. Feel free to construct an entirely different map using an entirely different geometry.
