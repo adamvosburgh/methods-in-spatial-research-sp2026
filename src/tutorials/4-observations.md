@@ -4,12 +4,8 @@ date: "2022-02-13"
 author: Adam Vosburgh
 sequence: 4
 cat: tutorial
-published: false
+published: true
 ---
-
-This tutorial is under revision!
-
-<!--
 
 In this module you will be introduced to basic methods for field data collection through designing a method for recording information about your surroundings. Using the GPS capabilities of your cellphone you will turn this information into data that you can work with in GIS environment.  
 
@@ -31,7 +27,9 @@ This is a limitation of this type of data collection but can be used productivel
 [Kobo Toolbox](https://www.kobotoolbox.org/) is one of several similar open source tools for field data collection -- others include [EpiCollect5](https://five.epicollect.net/), [OpenDataKit (ODK)](https://getodk.org/), [Ohmage](http://ohmage.org/index.html) & [Magpi](https://www.magpi.com/). All of these tools allow you to easily collect GPS points in connection with a survey that can contain many types of questions. The data can be by multiple people and recorded in a central database. These are great tools for collecting standardized information, and can be used by many users. They all however, require that you decide on what information you will collect prior to starting to collect that information.  
 
 ![field papers](/tutorials/images/154/01-fieldpapers.png#img-full)
-[Field Papers](http://fieldpapers.org/) is another field data collection tool that uses a very different approach. Instead of collecting GPS points and recording answers to pre-defined questions, Field Papers allows you to create a map or series of maps for an area you are interested in that you can print and take into the field to annotate and draw on. The platform allows you to re-upload photographs of your annotated maps. Using a custom barcode printed with the map they are automatically georeferenced and can be downloaded as georeferenced raster data with your annotations. This tool was developed by Stamen Design and has been used in many projects around the world. You can choose to digitize (see previous module) the annotations you recorded to convert them into vector based data. Field Papers is very easy to use and well documented.  
+[Field Papers](http://fieldpapers.org/) is another field data collection tool that uses a very different approach. Instead of collecting GPS points and recording answers to pre-defined questions, Field Papers allows you to create a map or series of maps for an area you are interested in that you can print and take into the field to annotate and draw on. The platform allows you to re-upload photographs of your annotated maps. Using a custom barcode printed with the map they are automatically georeferenced and can be downloaded as georeferenced raster data with your annotations. This tool was developed by Stamen Design and has been used in many projects around the world, since 2023 it is maintained by OpenStreetMap US. 
+
+You can choose to digitize (see previous module) the annotations you recorded to convert them into vector based data. Field Papers is very easy to use and well documented.  
 
 Collecting data through field work can take multiple forms and always involves abstraction and simplification. The most thoughtful projects take this into account and consider the relationship between the form of abstraction/simplification they use and the subject of their work.  
 
@@ -39,11 +37,11 @@ The remainder of this module walks you through the workflow required to work wit
 
 ## Setup & Survey Design
 
-Create a [Kobo Toolbox account](https://www.kobotoolbox.org/). See the `Sign Up` button in top right of webpage.  
+Create a [Kobo Toolbox account](https://www.kobotoolbox.org/). See the `Sign Up` button in top right of webpage. You will have the option of using the Global product or the EU product. The only difference is where the server that your data is stored in is located. Data stored in the EU is subject to GDPR, meaning (in short) that you have more rights over your data. I personally use the EU server, but if there are not security concerns around the data you are collecting, it doesn't really matter.
 
 **Note:** Kobo Toolbox works best on Google Chrome.
 
-Once you have successfully created an account, log in and navigate to your [Kobo Toolbox projects](https://kf.kobotoolbox.org/). It should look something like this but will not have any projects listed yet.  
+Once you have successfully created an account, log in and navigate to your Kobo Toolbox projects. It should look something like this but will not have any projects listed yet.  
 ![kobo projects](/tutorials/images/154/02-kobo-projects.png#img-full)
 
 Select `New` and then to `Build from scratch`. Name your project and give it a short description.  
@@ -73,7 +71,11 @@ Choose `Online-Offline(multiple submissions)` as the collection method. As the s
 ![kobo on a phone](/tutorials/images/154/07-kobo-phone.png)
 To begin collecting data in the field, copy the link to your survey (using the `Copy` button shown above) and send it to yourself so that you can open it on your smart phone.  
 
-Using the GoogleChrome browser on your phone (**note you must use GoogleChrome, KoboCollect isn't supported on other browsers**) open the link to your survey. You are ready to collect data. After collecting each entry click submit. The recorded data will be stored and will be uploaded to your Kobo Toolbox account whenever you phone has a working internet connection. So, if you have opened the Kobo Toolbox collection link on your phone but go out to collect data in the field in an area without cell service (or have turned off cellular data) you will still be able to collect observations which will then be uploaded once your phone is connected to the internet. 
+Using the browser (**see below for notest on which browsers work**) on your phone open the link to your survey. You are ready to collect data. After collecting each entry click submit. The recorded data will be stored and will be uploaded to your Kobo Toolbox account whenever you phone has a working internet connection. So, if you have opened the Kobo Toolbox collection link on your phone but go out to collect data in the field in an area without cell service (or have turned off cellular data) you will still be able to collect observations which will then be uploaded once your phone is connected to the internet. 
+
+**If you are having trouble filling out the form, or collecting your current location:**
+- Check your location settings on your device. If you have your browser setup to never collect your location, it will not prompt you at all. 
+- Not all mobile browsers work. Google Chrome is the best bet, but I have also confimed it works on Safari on iOS 26.
 
 ## Review & download your data
 
@@ -111,6 +113,4 @@ To do this right click the layer name in the layers panel, select `Export` then 
 You have now collected your own dataset and are ready to begin analyzing what you have collected, and to design a map that conveys a narrative based on your work. 
 
 ---
-Module by Dare Brawley, fall 2021. 
-
--->
+Module by Dare Brawley, fall 2021. Updated by Adam Vosburgh, spring 2026. 
