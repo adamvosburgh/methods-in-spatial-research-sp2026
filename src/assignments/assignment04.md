@@ -4,10 +4,10 @@ date: "2023-02-23"
 author: Adam Vosburgh
 sequence: 4
 cat: assignment
-published: false
+published: true
 ---
 
-### Due: 2/28
+### Due: 2/27
 
 ### What
 
@@ -41,21 +41,6 @@ Submission Materials:
 - The layout you designed (add this to Miro too)
 - The csv file you used and
 - A screenshot of the directory on your computer where you have saved your downloaded images
-
-### Tutorial 8: Making Data from Street View
-
-Use the Google Street View Static API to download street view images for 20 - 100 significant locations of your choosing. Also pay attention to the camera bearing/orientation.
-
-Design a layout to present the images on one or more pages (or GIFs)
-
-Submission Materials:
-
-A multi page PDF with:
-- Page 1: the layout you designed, and a link to your google colab notebook.
-- Page 2: A screenshot of the directory on your computer where you have saved your downloaded images
-
-- A downloaded csv or geojson of your final dataset (on canvas)
-
 
 ### Submission
 
