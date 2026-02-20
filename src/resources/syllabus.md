@@ -39,7 +39,7 @@ This course is divided into two halves:
 | 2/06 | 3 |  Georeferencing and Digitizing Archives |  |  Assignment 1 |
 | 2/13 | 4 | Using and Collecting Data | Tutorial 3 |  Assignment 2 |
 | 2/20 | 5 |  Remote Sensing | Tutorial 4 OR Tutorial 5 |  Assignment 3 |
-| 2/27 | 6 |  Narrative & Design | Tutorial 6 OR Tutorial 7 + 8 |  Assignment 4 |
+| 2/27 | 6 |  Narrative & Design | Tutorial 6 OR Tutorial 7 |  Assignment 4 |
 | 3/06 | 7 | Proposal Workshop | | Draft Proposal |
 | 3/13 | 8 | Kinne Week | | |
 | 3/20 | 9 | Spring Break | | |
