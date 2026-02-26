@@ -39,8 +39,8 @@ This course is divided into two halves:
 | 2/06 | 3 |  Georeferencing and Digitizing Archives |  |  Assignment 1 |
 | 2/13 | 4 | Using and Collecting Data | Tutorial 3 |  Assignment 2 |
 | 2/20 | 5 |  Remote Sensing | Tutorial 4 OR Tutorial 5 |  Assignment 3 |
-| 2/27 | 6 |  Narrative & Design | Tutorial 6 OR Tutorial 7 |  Assignment 4 |
-| 3/06 | 7 | Proposal Workshop | | Draft Proposal |
+| 2/27 | 6 |  <del>Narrative & Design</del> Class Cancelled - I am sick :( | <del>Tutorial 6 OR Tutorial 7</del> |  <del>Assignment 4</del> |
+| 3/06 | 7 | Narrative & Design, Proposal Workshop | Tutorial 6 OR Tutorial 7 | Assignment 4, Draft Proposal |
 | 3/13 | 8 | Kinne Week | | |
 | 3/20 | 9 | Spring Break | | |
 | 3/27 | 10 | "Spatial Intelligence" | Tutorial 9 OR Tutorial 10 + 11 | Assignment 5 |
@@ -129,13 +129,13 @@ Kurgan, Laura. "Mapping Considered as a Problem of Theory and Practice." 2013.
 
 *Please also review from week 2: Couclelis, Helen. "People Manipulate Objects (but Cultivate Fields): Beyond the Raster-Vector Debate in GIS." 1992*
 
-### 2/27 | Week 6 | Narrative & Design
+### <del>2/27 | Week 6 | Narrative & Design</del> Class cancelled - I am sick :(
 
-#### Assignment 4 due – Mapping Remotely
+#### <del>Assignment 4 due – Mapping Remotely</del>
 
-#### Readings
+<del>#### Readings</del>
 
-Please watch: [*In Plain Sight.* by Diller Scofidio + Renfro, Laura Kurgan, Robert Gerard Pietrusko with Columbia Center for Spatial Research at the 2018 U.S. Pavilion.](https://dsrny.com/project/in-plain-sight)
+<del>Please watch: [*In Plain Sight.* by Diller Scofidio + Renfro, Laura Kurgan, Robert Gerard Pietrusko with Columbia Center for Spatial Research at the 2018 U.S. Pavilion.](https://dsrny.com/project/in-plain-sight)</del>
 
 
 <!--
@@ -148,13 +148,29 @@ Please read these map-based articles from the New York Times:
 - [Plumer, Brad, Nadja Popovich, and Brian Palmer. 2020. "How Decades of Racist Housing Policy Left Neighborhoods Sweltering." The New York Times, August 31, 2020, sec. Climate.](https://www.nytimes.com/interactive/2020/08/24/climate/racism-redlining-cities-global-warming.html)
 
     - across these articles and when watching *In Plain Sight* try to focus on identifying the core narrative, and then on discerning *how* the narrative is being conveyed via the maps and other media used
-    - there is a longer list of New York Times map-based articles included at the end of the precedents page [here](), please feel free to read several of these in addition to the two listed above (if you choose to read an NYT map article that is not already on cited on the precedents page list, please include a link to the article in your discussion question post on Canvas).
+    - there is a longer list of New York Times map-based articles included at the end of the precedents page, please feel free to read several of these in addition to the two listed above (if you choose to read an NYT map article that is not already on cited on the precedents page list, please include a link to the article in your discussion question post on Canvas).
 
 - Columbia University Libraries provides access to NYTimes.com for all students. Please see instructions [here](https://guides.library.columbia.edu/nytimes) to set up an account
 
 -->
 
 ### 3/06 | Week 7 | Proposal Workshop
+
+#### Assignment 4 due – Mapping Remotely
+
+#### Readings
+
+Please watch: [*In Plain Sight.* by Diller Scofidio + Renfro, Laura Kurgan, Robert Gerard Pietrusko with Columbia Center for Spatial Research at the 2018 U.S. Pavilion.](https://dsrny.com/project/in-plain-sight)
+
+Please read these map-based articles from the New York Times:
+
+- [Serkez, Yaryna. "Opinion: Every Place Under Threat." The New York Times, October 2, 2020, sec. Opinion.](https://www.nytimes.com/interactive/2020/10/02/opinion/amazon-under-threat.html)
+- [Plumer, Brad, Nadja Popovich, and Brian Palmer. 2020. "How Decades of Racist Housing Policy Left Neighborhoods Sweltering." The New York Times, August 31, 2020, sec. Climate.](https://www.nytimes.com/interactive/2020/08/24/climate/racism-redlining-cities-global-warming.html)
+
+    - across these articles and when watching *In Plain Sight* try to focus on identifying the core narrative, and then on discerning *how* the narrative is being conveyed via the maps and other media used
+    - there is a longer list of New York Times map-based articles included at the end of the precedents page, please feel free to read several of these in addition to the two listed above (if you choose to read an NYT map article that is not already on cited on the precedents page list, please include a link to the article in your discussion question post on Canvas).
+
+- Columbia University Libraries provides access to NYTimes.com for all students. Please see instructions [here](https://guides.library.columbia.edu/nytimes) to set up an account
 
 #### Proposal Due
 
