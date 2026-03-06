@@ -1,8 +1,8 @@
 ---
-title: "Draft Proposal"
+title: "Proposal"
 date: "2025-01-20"
 author: Adam Vosburgh
-sequence: 5
+sequence: 7
 cat: assignment
 published: true
 ---

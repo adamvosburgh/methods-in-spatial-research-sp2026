@@ -2,7 +2,7 @@
 title: "Where Next?"
 date: "2023-03-08"
 author: Adam Vosburgh
-sequence: 6
+sequence: 5
 cat: assignment
 published: true
 ---

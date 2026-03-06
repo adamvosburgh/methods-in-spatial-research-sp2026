@@ -2,7 +2,7 @@
 title: "Spatial Intelligence"
 date: "2023-03-08"
 author: Adam Vosburgh
-sequence: 7
+sequence: 6
 cat: assignment
 published: false
 ---
