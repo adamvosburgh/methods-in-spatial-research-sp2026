@@ -1,11 +1,13 @@
 ---
 title: Webmaps Part 2 - Scrollytelling Map
-date: "2022-02-13"
+date: "2026-03-05"
 author: Adam Vosburgh
 sequence: 11
 cat: tutorial
-published: false
+published: true
 ---
+
+***Note: Since these tutorials were originally written in 2022, mapbox and github have changed a lot in regards to their security. I have made all of those updates in the tutorials, but please let me know if you run into issues.**
 
 # Making a Scrollytelling map with Mapbox Storytelling
 
@@ -13,7 +15,7 @@ Now that you have learned QGIS, Git, html, css, javascript and some Mapbox libra
 
 This is a format that has become exponentially more common over the past five years or so for telling stories through maps. While a number of newsrooms have used propietary tools built for this purpose for awhile, recently Mapbox implementation has lowered the barrier to entry a lot.  
 
-The below animation is a fairly simple rendition of what this can look like, but they can easily get pretty immersive. See [this NYT interactive](https://www.nytimes.com/interactive/2020/10/02/opinion/amazon-under-threat.html) for the insanely fancy, and [this WaPo story](https://www.washingtonpost.com/graphics/2020/climate-solutions/wyoming-wildlife-corridor/) for a very clever use of a self-collected dataset to tell a much larger story.
+The below animation is a fairly simple rendition of what this can look like, but they can easily get pretty immersive. See [this NYT interactive](https://www.nytimes.com/interactive/2020/10/02/opinion/amazon-under-threat.html) for the fancy, and [this WaPo story](https://www.washingtonpost.com/graphics/2020/climate-solutions/wyoming-wildlife-corridor/) for a very clever use of a self-collected dataset to tell a much larger story.
 
 ![Scrollytelling][SCROLLYTELLING]
 
@@ -23,13 +25,11 @@ The below animation is a fairly simple rendition of what this can look like, but
 
 Because it reduces the complexity of our setup, we'll be adding our data layers through [mapbox studio](https://studio.mapbox.com/). Make an account if you don't have one already, or login if you do. Later on, we will style our data layers again in mapbox studio, and add them to our map using their `layer-id`.
 
-While this method gets our maps up and running quicker, for those with a bit more experience and interested in a more flexible storytelling format, I recommend [this tutorial](https://pointsunknown.nyc/web%20mapping/mapbox/2021/07/20/11A_MapboxStorytelling.html/) from the GSAPP course Points Unknown (I also recommend taking the course!) 
-
 #### File Setup
 
-We're going to build off of the [last tutorial](https://centerforspatialresearch.github.io/methods-in-spatial-research-sp2022/tutorials/webmap-1) to build this, so make sure you have that up and running first, or download the completed repo [here](https://drive.google.com/file/d/1y-UlR1s98gqxChyfWWo1EimCJ0ln4MXF/view?usp=sharing).
+We're going to build off of the [last tutorial](https://methodsinspatialresearch.xyz/tutorials/10-webmap-1) to build this, so make sure you have that up and running first, or download the completed repo [here](https://drive.google.com/open?id=1cGBcYe3ZA6BU1saOjNsUSNa_nmIvjddS&usp=drive_fs). Note: you will still need to copy the map.template.js, rename it to map.js, and put in your own API key.
 
-We'll start by creating a new repo called `webmap_2_storytelling`, cloning it to your local filesystem, copying over the contents of `webmap_1` into it, and starting a live server. If you have any trouble with this - refer to the beginning of the [previous tutorial](https://centerforspatialresearch.github.io/methods-in-spatial-research-sp2022/tutorials/webmap-1).
+We'll start by creating a new repo called `webmap_2_storytelling`, cloning it to your local filesystem, copying over the contents of `webmap_1` into it, and starting a live server. If you have any trouble with this - refer to the beginning of the [previous tutorial](/tutorials/10-webmap-1).
 
 By now, you should have the same file contents and result as you did from the last tutorial
 
@@ -50,8 +50,8 @@ Copy and paste the entirety of this into your index.html. If your curious, this 
     <meta charset='utf-8' />
     <title>Mapbox Storytelling</title>
     <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
-    <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v2.0.0/mapbox-gl.js'></script>
-    <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v2.0.0/mapbox-gl.css' rel='stylesheet' />
+    <script src='https://api.mapbox.com/mapbox-gl-js/v3.3.0/mapbox-gl.js'></script>
+    <link href='https://api.mapbox.com/mapbox-gl-js/v3.3.0/mapbox-gl.css' rel='stylesheet' />
     <script src="https://unpkg.com/intersection-observer@0.5.1/intersection-observer.js"></script>
     <script src="https://unpkg.com/scrollama"></script>
     <style>
@@ -452,7 +452,11 @@ var config = {
 };
 ```
 
-With those two added, you'll want to add your `accessToken` where it currently says `accessToken: 'YOUR_ACCESS_TOKEN',`.  
+#### Protecting your Access Token
+
+You set up token protection in the previous tutorial — the same approach applies here. Add `config.js` to your `.gitignore` and keep a `config.template.js` with `YOUR_ACCESS_TOKEN` as the committed reference copy.
+
+Once that's done, add your `accessToken` to `config.js` where it currently says `accessToken: 'YOUR_ACCESS_TOKEN',`.
 
 Once you do that, save and possibly refresh, you're all set up! Your `map.js` is no longer of any use to you, and you can feel free to delete it if you would like to keep your repo clean. You should have a template story with some basic animation in your browser, which looks something like this:
 
@@ -470,7 +474,9 @@ In Mapbox Studio, click "New Style" and select your style. I'll go with `Monochr
 
 Now that we have our base style, let's go ahead and add it to our storymap. On the top right, click `Publish`, click through that menu, and then click the `Share` button immediately to it's left. There you can copy the `Style URL` for your map, and then put it in your config.js.
 
-Now, any style changes that you make on your mapbox studio map will show in your storymap. Take note of the menus description of the difference between `draft` and `production` share urls - if you don't see change reflected right away on your map, that may be why. If you haven't done so yet, copy over your `Access Token` too. This should be the same one as you made earlier. 
+Now, any style changes that you make on your mapbox studio map will show in your storymap. Take note of the menus description of the difference between `draft` and `production` share urls - if you don't see change reflected right away on your map, that may be why.
+
+For the `Access Token`: Mapbox Studio will show a token pre-populated in the share dialog — **ignore it**. That is your default public token, which doesn't support URL restrictions. Use the `webmap-tutorial` token you created in Tutorial 10 instead.
 
 ![StyleUrl][STYLEURL]
 
@@ -518,7 +524,7 @@ Now that I have my title, I'll start by editing the titles and bylines. In my `c
 ```javascript
 var config = {
     style: 'mapbox://styles/adamvosburgh/ckzm6ymoc001y15s707imeig0',
-    accessToken: 'pk.eyJ1IjoiYWRhbXZvc2J1cmdoIiwiYSI6ImNrOGE5MDhudzAzcHozbW82cTRnY201ZWEifQ.SyIq-l5sw9Ew6mGRLgfp1w',
+    accessToken: 'YOUR_ACCESS_TOKEN',
     showMarkers: false,
     markerColor: '#3FB1CE',
     theme: 'light',
@@ -699,7 +705,7 @@ Here are my chapters:
     ]
 };
 ```
-Once you have that in and hit save, you should be able to read my story in it's entirety, it should look like [this](https://adamvosburgh.github.io/webmap_2_storytelling/). If you still don't see anything, make sure that you hit `publish` on your map in Mapbox Studio, and then even after that it can take a few minutes to show up.
+Once you have that in and hit save, you should be able to read my story in it's entirety, it should look like [this](https://adamvosburgh.github.io/webmap_2_storytelling/)  (repo [here](https://github.com/adamvosburgh/webmap_2_storytelling)). If you still don't see anything, make sure that you hit `publish` on your map in Mapbox Studio, and then even after that it can take a few minutes to show up.
 
 I'll note a few things going on here:
 - Layers are added to the map using the Layer Name that we defined in Mapbox Studio. That is all we need to reference the data and its respective styling.
@@ -719,12 +725,14 @@ If you're not familiar with css, don't stress about it too much, but if you woul
 
 ## The End
 
-Congratulations! You now have a story map. Just in case there is anything you're troubleshooting, here is a [live demo](https://adamvosburgh.github.io/webmap_2_storytelling/) of what it should look like, and here's the `config.js` in it's entiretly: 
+Congratulations! You now have a story map. Just in case there is anything you're troubleshooting, here is a [live demo](https://adamvosburgh.github.io/webmap_2_storytelling/) of what it should look like and the [repo](https://github.com/adamvosburgh/webmap_2_storytelling). If you have run into a mess of issues and can't figure out what is going wrong, feel free to just download that repository, place it in the directory comitted to github, change the `map.template.js` and `config.template.js` to `map.js` and `config.js`, and swap in your tokens.
+
+Here's the `config.js` in it's entirety: 
 
 ```javascript
 var config = {
     style: 'mapbox://styles/adamvosburgh/ckzm6ymoc001y15s707imeig0',
-    accessToken: 'pk.eyJ1IjoiYWRhbXZvc2J1cmdoIiwiYSI6ImNrOGE5MDhudzAzcHozbW82cTRnY201ZWEifQ.SyIq-l5sw9Ew6mGRLgfp1w',
+    accessToken: 'YOUR_ACCESS_TOKEN',
     showMarkers: false,
     markerColor: '#3FB1CE',
     theme: 'light',

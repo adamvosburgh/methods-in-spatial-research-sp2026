@@ -4,9 +4,10 @@ date: "2022-02-13"
 author: Dare Brawley + Adam Vosburgh
 sequence: 10
 cat: tutorial
-published: false
+published: true
 ---
 
+***Note: Since these tutorials were originally written in 2022, mapbox and github have changed a lot in regards to their security. I have made all of those updates in the tutorials, but please let me know if you run into issues.**
 
 # Step 1: Setting up Github and Mapbox
 
@@ -34,7 +35,9 @@ At this stage, you should:
 
 3. set up your repository as a [GitHub page](https://pages.github.com/) (a project site from scratch)
   - from the new repository you've just created select **Settings**
-  - scroll down to **GitHub Pages** and select `Master Branch` as the **Source**
+  - in the left sidebar, click **Pages**
+  - under **Build and deployment > Source**, select **Deploy from a branch**
+  - under **Branch**, select `main` and `/ (root)`, then click **Save**
 
 4. install [Git](https://git-scm.com/downloads).
     - download and install the git version for your operating system. Follow the instructions of the installer.
@@ -56,14 +59,22 @@ At this stage, you should:
 
 ![initial folder][FOLDER]
 
+If you use VS Code, I would recommend working this way: Once installed, open VS Code and use **File > Open Folder...** to open your `webmap_1` folder. Opening the whole folder (rather than individual files) lets VS Code show your project's file tree in the sidebar, which makes navigation much easier as your project grows. You can also make new text files much easier than in a file explorer, if you are struggling to make the `index.html`, `style.css`, and `map.js` from the last step, try making them through vs code.
+
 7. add the files you just created to your repository, to do this in your Terminal/Git Bash type:
-  - `git add index.html style.css map.js`
+  - `git add .` -> This command adds all changed or new files in the project
 8. "commit" and "push" your changes:
     - in Git Bash or Terminal type:
-        -  `git commit -m 'initial import'`
+        -  `git commit -m "initial commit"` -> This command puts your changes in a "commit" to add to the project. the `-m` flag is just telling git that we will make a commit with the message "initial commit".
         and then
-        -  `git push`  
-9. view the result on your online github repository (the url should be `github.com/yourusername/webmap_1`) github page (the url should be `yourgithubusername.github.io/webmap_1` but you can also find this in the settings of the repository you created on github). You should see something like this:  
+        -  `git push -u origin main` -> This pushes your changes to the repository online. -u sets which branch to push to, after this you can juse use `git push`
+9. If `git push` gave you a login error, don't worry — as of a few years ago, GitHub no longer accepts your account password when pushing from the command line. There are a few ways to fix this, but the easiest is the [GitHub CLI](https://cli.github.com/):
+    - download and install the GitHub CLI for your operating system from [cli.github.com](https://cli.github.com/)
+    - in your Terminal or Git Bash, type: `gh auth login`
+    - follow the prompts — select **GitHub.com**, then **HTTPS**, then choose to authenticate via browser. It will open a browser window where you log into your GitHub account and confirm. Once done, your terminal is authorized to push to GitHub.
+    - run `git push -u origin main` again — it should work now. You only need to do this once per computer.
+
+10. view the result on your online github repository (the url should be `github.com/yourusername/webmap_1`) github page (the url should be `yourgithubusername.github.io/webmap_1` but you can also find this in the settings of the repository you created on github). You should see something like this:  
 
 ![initial webpage](/tutorials/images/160/webmap_1_21.png)
 
@@ -96,11 +107,11 @@ HTML is defined by a series of tags, which are either in the form `<tag />` or `
     <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
 
     <!-- stylesheet links -->
-    <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.50.0/mapbox-gl.css' rel='stylesheet' />     
+    <link href='https://api.mapbox.com/mapbox-gl-js/v3.3.0/mapbox-gl.css' rel='stylesheet' />     
     <link href='style.css' rel='stylesheet' />
 
     <!-- javascript links -->
-    <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.50.0/mapbox-gl.js'></script>
+    <script src='https://api.mapbox.com/mapbox-gl-js/v3.3.0/mapbox-gl.js'></script>
 
 </head>
 <body>      <!-- visible structure of page begins here -->
@@ -206,9 +217,17 @@ However, in your browser open `View > Developer > JavaScript Console` <!--(Chrom
 
 ## Basic Mapbox GL JavaScript
 
-One more setup step: register a [Mapbox](https://www.mapbox.com/signup/) account. Then find your "[Default public token](https://www.mapbox.com/account/)" under the "Access Tokens" tab, which you will use in your code.
+One more setup step: register a [Mapbox](https://www.mapbox.com/signup/) account if you haven't already. Then go to your [Access Tokens](https://account.mapbox.com/access-tokens/) page and create a new token:
 
-![Default Token][TOKEN]
+- Click **+ Create a token**
+- Name it `webmap-tutorial`
+- Select the scopes shown in the screenshot below — public scopes only, no secret scopes are needed for these tutorials
+- Under **Token restrictions**, add your GitHub Pages URL (e.g. `https://yourusername.github.io`) — this ensures the token only works on your site, even if someone finds it in your page source at runtime
+- Click **Create token** and copy the token somewhere safe — you'll use it in both this tutorial and the next one
+
+Given that this token only has public scopes, we are being a bit overkill here in security. Still, at the very least this is good practice should you ever make another web project down the line - you will almost always need an api key for everything, and you will always need to secure it.
+
+![Token Setup][TOKENSETUP]
 
 To begin, replace the debug statement in your map.js file with the following (minus the comments, which in js are designated by a leading `//`):
 
@@ -222,12 +241,32 @@ console.log('Loaded map.js')
 mapboxgl.accessToken = 'YOUR TOKEN HERE BETWEEN THE QUOTES'
 ```
 
+#### Protecting your Access Token
+
+Before committing and pushing, make sure your token doesn't end up in your public GitHub repo, where automated scrapers actively harvest exposed API keys.
+
+**Step 1: Create a `.gitignore` file**
+
+In your `webmap_1` directory, create a file called `.gitignore` and add the following line to it:
+
+```
+map.js
+```
+
+This tells git to never track `map.js`, so your token stays off GitHub.
+
+**Step 2: Keep a template in your repo**
+
+Make a copy of `map.js` and name it `map.template.js` — leave `YOUR TOKEN HERE` in that one. Commit this file. It gives anyone cloning your repo a starting point without exposing a real token.
+
+You only need to do this once — you'll use the same token and same `.gitignore` approach in the next tutorial too.
+
 You might want to reload your page and check the console to make sure there are no errors—you should just see your debug statement. Now add this to the bottom of your js file:
 
 ```javascript
 var map = new mapboxgl.Map({
     container: 'map',
-    style: 'mapbox://styles/mapbox/light-v9',
+    style: 'mapbox://styles/mapbox/light-v11',
     center: [-73.93324, 40.80877],
     zoom: 14
 });
@@ -242,17 +281,13 @@ If you don't see a map, make sure you've followed the syntax exactly, and check 
 Other options for style:
 
 ```javascript
-style: 'mapbox://styles/mapbox/basic-v9',
-style: 'mapbox://styles/mapbox/outdoors-v10',
-style: 'mapbox://styles/mapbox/light-v9',
-style: 'mapbox://styles/mapbox/dark-v9',
+style: 'mapbox://styles/mapbox/streets-v12',
+style: 'mapbox://styles/mapbox/outdoors-v12',
+style: 'mapbox://styles/mapbox/light-v11',
+style: 'mapbox://styles/mapbox/dark-v11',
 style: 'mapbox://styles/mapbox/satellite-v9',
-style: 'mapbox://styles/mapbox/satellite-streets-v10',    
-style: 'mapbox://styles/mapbox/navigation-preview-day-v2',
-style: 'mapbox://styles/mapbox/navigation-preview-night-v2',
-style: 'mapbox://styles/mapbox/navigation-guidance-day-v2',
-style: 'mapbox://styles/mapbox/navigation-guidance-night-v2',
-style: 'mapbox://styles/brianhouse/cjn0u552b52kr2spdz6yhpqj4'
+style: 'mapbox://styles/mapbox/satellite-streets-v12',
+style: 'mapbox://styles/mapbox/standard'
 ```
 
 Notice how the last style here is attached to a user account. You can customize your own styles with [Mapbox Studio](https://www.mapbox.com/studio/). Once you create a style, you'll just need to find your "Style URL" by clicking "Share &amp; use" and then the "Use" tab and scrolling down.
@@ -460,8 +495,8 @@ This is sometimes quicker for simple maps with precise styling, but you lose som
 ## Pushing to Github
 
 Once you have created an map that you like lets publish it online by `pushing` our changes to GitHub. Open your terminal or command prompt. Make sure you are within the folder where you created your web map (in our case `webmap_1`).  
-- Type `git add -A` to 'track' all of the changes you made.   
-- To commit your changes type `git commit -m "some note about the changes you made"` and replace the information within the quotes with some note to yourself about the changes you made.  
+- Type `git add .` to track all of the changes you made.
+- To commit your changes type `git commit -m "some note about the changes you made"` and replace the information within the quotes with some note to yourself about the changes you made.
 - Then push your changes to the server by typing `git push`.
 
 Visit your repository website at `yourgithubusername.github.io/webmap_1` to check that all changes were pushed correctly.
@@ -553,7 +588,7 @@ mapboxgl.accessToken = 'YOUR TOKEN HERE'
 
 var map = new mapboxgl.Map({
     container: 'map',
-    style: 'mapbox://styles/mapbox/light-v9',
+    style: 'mapbox://styles/mapbox/light-v11',
     center: [ -73.94829, 40.80781],
     zoom: 13.75
 });
@@ -654,6 +689,7 @@ Adapted from tutorial written by Dare Brawley, Spring 2020 & by Brian House for 
 [IMAGE]: /tutorials/images/160/webmap_1_10.png
 [MULTI]: /tutorials/images/160/webmap_1_11.png
 [TOKEN]: /tutorials/images/160/webmap_1_2-1.png
+[TOKENSETUP]: /tutorials/images/160/webmap_1_19.png
 [BLOCKS]: /tutorials/images/160/webmap_1_12.png
 [TREES]: /tutorials/images/160/webmap_1_13.png
 [BLOCKDATASTYLE]: /tutorials/images/160/webmap_1_14.png
