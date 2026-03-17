@@ -7,7 +7,7 @@ cat: tutorial
 published: true
 ---
 
-***Note: Since these tutorials were originally written in 2022, mapbox and github have changed a lot in regards to their security. I have made all of those updates in the tutorials, but please let me know if you run into issues.**
+**Note: Since these tutorials were originally written in 2022, mapbox and github have changed a lot in regards to their security. I have made all of those updates in the tutorials, but please let me know if you run into issues.**
 
 # Step 1: Setting up Github and Mapbox
 
@@ -74,9 +74,7 @@ If you use VS Code, I would recommend working this way: Once installed, open VS 
     - follow the prompts — select **GitHub.com**, then **HTTPS**, then choose to authenticate via browser. It will open a browser window where you log into your GitHub account and confirm. Once done, your terminal is authorized to push to GitHub.
     - run `git push -u origin main` again — it should work now. You only need to do this once per computer.
 
-10. view the result on your online github repository (the url should be `github.com/yourusername/webmap_1`) github page (the url should be `yourgithubusername.github.io/webmap_1` but you can also find this in the settings of the repository you created on github). You should see something like this:  
-
-![initial webpage](/tutorials/images/160/webmap_1_21.png)
+10. view the result on your online github repository (the url should be `github.com/yourusername/webmap_1`) github page (the url should be `yourgithubusername.github.io/webmap_1` but you can also find this in the settings of the repository you created on github). 
 
 ## A web page
 

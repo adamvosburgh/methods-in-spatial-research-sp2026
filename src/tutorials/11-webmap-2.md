@@ -7,7 +7,7 @@ cat: tutorial
 published: true
 ---
 
-***Note: Since these tutorials were originally written in 2022, mapbox and github have changed a lot in regards to their security. I have made all of those updates in the tutorials, but please let me know if you run into issues.**
+**Note: Since these tutorials were originally written in 2022, mapbox and github have changed a lot in regards to their security. I have made all of those updates in the tutorials, but please let me know if you run into issues.**
 
 # Making a Scrollytelling map with Mapbox Storytelling
 
