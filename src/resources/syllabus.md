@@ -184,9 +184,7 @@ We may or may not have class depending on people's travel plans.
 
 ### 3/27 | Week 10 | "Spatial Intelligence"
 
-#### Assignment 5 due 
-<!--Note to self - it may make sense to have a portion of this lecture on Kinne week, and to have assignment 5 be the mining natural language for place relationships-->
-
+#### Assignment 5 due
 #### Readings (available in course drive or linked here)
 
 Crawford, Kate. *Atlas of AI.* Yale University Press, 2021. pp. 1-21, 181-209.
