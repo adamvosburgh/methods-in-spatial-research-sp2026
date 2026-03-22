@@ -187,25 +187,46 @@ We may or may not have class depending on people's travel plans.
 #### Assignment 5 due 
 <!--Note to self - it may make sense to have a portion of this lecture on Kinne week, and to have assignment 5 be the mining natural language for place relationships-->
 
+#### Readings (available in course drive or linked here)
+
+Crawford, Kate. *Atlas of AI.* Yale University Press, 2021. pp. 1-21, 181-209.
+
+[Fatima, Tazbia. "We Asked an AI to Map Our Stories Across NYC." The City, 2024.](https://www.thecity.nyc/2024/02/29/chatgpt-map-stories-nyc/)
+
+*Please watch:* [Laura Kurgan, Adeline Chum, Michael Krisch, Adam Vosburgh, Jia Zhang. "The Curse of Dimensionality." Venice Architecture Biennale, 2025.](https://c4sr.columbia.edu/projects/curse-dimensionality) Video Link [Here](https://vimeo.com/1084762935).
+
+Supplemental Readings by Topic:
+
+**General AI**
+Hao, Karen. *Empire of AI: Dreams and Nightmares in Sam Altman's OpenAI.* Penguin Press, 2025. pp. 175–223.
+
+**Targeting Machines**
+- [+972 Magazine. "'Lavender': The AI machine directing Israel's bombing spree in Gaza." April 2024.](https://www.972mag.com/lavender-ai-israeli-army-gaza/)
+- [Khlaaf, Heidy, Sarah Myers West, and Meredith Whittaker. "Mind the Gap: Foundation Models and the Covert Proliferation of Military Intelligence, Surveillance, and Targeting." arXiv, October 2024.](https://arxiv.org/abs/2410.14831)
+- [CNN. "Anthropic sues the Trump administration after it was designated a supply chain risk." March 2026.](https://www.cnn.com/2026/03/09/tech/anthropic-sues-pentagon)
+
+**Location Intelligence**
+- [The Markup. "There's a Multibillion-Dollar Market for Your Phone's Location Data." 2021.](https://themarkup.org/privacy/2021/09/30/theres-a-multibillion-dollar-market-for-your-phones-location-data)
+- [jawg.io. "What does Overture Maps mean for OpenStreetMap and the future of open source mapping?" 2023.](https://blog.jawg.io/what-does-overture-maps-mean-for-openstreetmap-and-the-future-of-open-source-mapping/)
+- [Google DeepMind. "AlphaEarth Foundations helps map our planet in unprecedented detail." 2025.](https://deepmind.google/blog/alphaearth-foundations-helps-map-our-planet-in-unprecedented-detail/)
+
+**Text as Spatial Data**
+- [Fatima, Tazbia. "We Asked an AI to Map Our Stories Across NYC." The City, 2024.](https://www.thecity.nyc/2024/02/29/chatgpt-map-stories-nyc/)
+- [Living with Machines. Machines Reading Maps. Alan Turing Institute + British Library.](https://machines-reading-maps.github.io/)
+
+**Smart Cities**
+- [Wylie, Bianca. "In Toronto, Google's Attempt to Privatize Government Fails—For Now." Boston Review, 2020.](https://www.bostonreview.net/articles/bianca-wylie-sidewalk-labs-toronto/)
+- [Architectural Record. "The End of Sidewalk Labs." 2020.](https://www.architecturalrecord.com/articles/15573-the-end-of-sidewalk-labs)
+- [Greenfield, Adam. "Against the Smart City." Urban Omnibus, 2013.](https://urbanomnibus.net/2013/10/against-the-smart-city/)
+- [Mattern, Shannon. "Interfacing Urban Intelligence." Places Journal, 2014.](https://placesjournal.org/article/interfacing-urban-intelligence/)
+
+### 4/03 | Week 11 | Simulations + Living in the Map
+
 #### Readings
 
 [House, Brian. "Stalking the Smart City." 2019](https://urbanomnibus.net/2019/05/stalking-smart-city/)
 
-<!--
-The City article mapping story 
-
-Gemini for google earth
-
-Something about Overture maps
-
-Others - research
--->
-
-### 4/03 | Week 11 | Simulations + Living in the Map
-
-#### Assignment 6 due (for extra credit)
-
-#### Readings
+[Kurgan, Laura, Dan Miller, and Adam Vosburgh. "Two Sides of the Same Coin." Milan Triennale, 2025.](https://c4sr.columbia.edu/projects/two-sides-same-coin)
 
 <!--
 The Curse of Dimensionality
@@ -224,6 +245,8 @@ Humans have shaped the world for at least 10,000 years
 #### Group 2 Presentations
 
 ### 5/06 | Website Due
+
+#### Assignment 6 due (for extra credit)
 
 <!-- 
 ### 3/28 | Mapping Portfolio Due
