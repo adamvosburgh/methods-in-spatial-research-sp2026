@@ -36,7 +36,7 @@ import io
 import pandas as pd
 import geopandas as gpd
 import altair as alt
-from altair import datum
+
 ```
 
 Go ahead and run the cell.
@@ -128,7 +128,7 @@ You should end up with something like this:
 
 ![street tree map]
 
-### Step 3: Adding and Mapping Block Group Vectors
+### Step 4: Adding and Mapping Block Group Vectors
 
 Now let's add our Block Group TIGER Line shapefile. As a reminder, I converted this to the geopackage in the link above, this will not work if you are just uploading a singular shapefile as has been covered in this class. There are ways to work with shape files, but we'll do this way for simplicity's sake.
 
@@ -176,18 +176,18 @@ You should end up with the map below.
 
 ![combined map]
 
-### Step 4: Performing a Spatial Join
+### Step 5: Performing a Spatial Join
 
 Now that we have our two datasets, let's perform a spatial join on them so that we can see how many trees are in each block group, the same as we did in QGIS in tutorial 1. **Let's go line by line here, don't copy this code just yet:**
 
 This first line will convert our street tree dataframe into a geodataframe, by encoding the point coordinates as geometry:
 ```python 
-gdf_StreetTree = gpd.GeoDataFrame(df_StreetTree, geometry=gpd.points_from_xy(df_StreetTree['longitude'], df_StreetTree['latitude']))
+gdf_StreetTree = gpd.GeoDataFrame(df_StreetTree, geometry=gpd.points_from_xy(df_StreetTree['longitude'], df_StreetTree['latitude']), crs="EPSG:4326")
 ```
 
 This next line will perform the spatial join itself with a function called `sjoin`. We will give the function are two dataframes, and specify `how=right` and `op=contains`. In order, `right` means that we will keep the structure of the dataframe on the right (`df_StreetTrees`), meaning that in the end we will have block group information joined to every row of our street tree dataset. `op=contains` specifies what spatial *operation* we want the function to use - in this case we do `contains` because we want all of the instances where points fall within the polygons. If we had a different geometry other than points, we may choose `intersects` or something else depending on the kind of information we wanted to create.
 ```python
-gdf_joined = gpd.sjoin(gdf_BlockGroup, gdf_StreetTree, how='right', op='contains')
+gdf_joined = gpd.sjoin(gdf_BlockGroup, gdf_StreetTree, how='right', predicate='contains')
 ```
 
 After we join the datasets, we will make a new dataset out of just the block groups (`CT2010`), with the amount of trees in each block group (we are choosing `tree_id` here, but really any column would work). We're going to do this all with the `groupby` function. 
@@ -201,10 +201,10 @@ Okay, here is the full code for joining the dataframes and printing the result. 
 
 ```python
 # Convert df_StreetTree to a GeoDataFrame
-gdf_StreetTree = gpd.GeoDataFrame(df_StreetTree, geometry=gpd.points_from_xy(df_StreetTree['longitude'], df_StreetTree['latitude']))
+gdf_StreetTree = gpd.GeoDataFrame(df_StreetTree, geometry=gpd.points_from_xy(df_StreetTree['longitude'], df_StreetTree['latitude']), crs="EPSG:4326")
 
 # Perform spatial join using sjoin
-gdf_joined = gpd.sjoin(gdf_BlockGroup, gdf_StreetTree, how='right', op='contains')
+gdf_joined = gpd.sjoin(gdf_BlockGroup, gdf_StreetTree, how='right', predicate='contains')
 
 # Group by block group and count the number of trees
 gdf_counts = gdf_joined.groupby('CT2010')['tree_id'].count().reset_index()

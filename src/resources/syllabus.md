@@ -193,7 +193,7 @@ Crawford, Kate. *Atlas of AI.* Yale University Press, 2021. pp. 1-21, 181-209.
 
 *Please watch:* [Laura Kurgan, Adeline Chum, Michael Krisch, Adam Vosburgh, Jia Zhang. "The Curse of Dimensionality." Venice Architecture Biennale, 2025.](https://c4sr.columbia.edu/projects/curse-dimensionality) Video Link [Here](https://vimeo.com/1084762935).
 
-Supplemental Readings by Topic:
+**Supplemental Readings by Topic:**
 
 **General AI**
 Hao, Karen. *Empire of AI: Dreams and Nightmares in Sam Altman's OpenAI.* Penguin Press, 2025. pp. 175–223.
@@ -201,7 +201,8 @@ Hao, Karen. *Empire of AI: Dreams and Nightmares in Sam Altman's OpenAI.* Pengui
 **Targeting Machines**
 - [+972 Magazine. "'Lavender': The AI machine directing Israel's bombing spree in Gaza." April 2024.](https://www.972mag.com/lavender-ai-israeli-army-gaza/)
 - [Khlaaf, Heidy, Sarah Myers West, and Meredith Whittaker. "Mind the Gap: Foundation Models and the Covert Proliferation of Military Intelligence, Surveillance, and Targeting." arXiv, October 2024.](https://arxiv.org/abs/2410.14831)
-- [CNN. "Anthropic sues the Trump administration after it was designated a supply chain risk." March 2026.](https://www.cnn.com/2026/03/09/tech/anthropic-sues-pentagon)
+- [The Independent. "Old intelligence and AI? Behind the deadly attack on an Iranian girls’ school that left 175 dead." March 2026.](https://www.the-independent.com/news/world/americas/us-politics/iran-school-attack-ai-investigation-b2937456.html)
+- [EFF. "The Anthropic-DOD Conflict: Privacy Protections Shouldn't Depend On the Decisions of a Few Powerful People." March 2026.](https://www.eff.org/deeplinks/2026/03/anthropic-dod-conflict-privacy-protections-shouldnt-depend-decisions-few-powerful)
 
 **Location Intelligence**
 - [The Markup. "There's a Multibillion-Dollar Market for Your Phone's Location Data." 2021.](https://themarkup.org/privacy/2021/09/30/theres-a-multibillion-dollar-market-for-your-phones-location-data)
