@@ -219,13 +219,14 @@ Hao, Karen. *Empire of AI: Dreams and Nightmares in Sam Altman's OpenAI.* Pengui
 - [Greenfield, Adam. "Against the Smart City." Urban Omnibus, 2013.](https://urbanomnibus.net/2013/10/against-the-smart-city/)
 - [Mattern, Shannon. "Interfacing Urban Intelligence." Places Journal, 2014.](https://placesjournal.org/article/interfacing-urban-intelligence/)
 
-### 4/03 | Week 11 | Simulations + Living in the Map
+### 4/03 | Week 11 | Living in the Map
 
 #### Readings
 
 [House, Brian. "Stalking the Smart City." 2019](https://urbanomnibus.net/2019/05/stalking-smart-city/)
 
 [Kurgan, Laura, Dan Miller, and Adam Vosburgh. "Two Sides of the Same Coin." Milan Triennale, 2025.](https://c4sr.columbia.edu/projects/two-sides-same-coin)
+*Read the text on that site, and check out the visualization at [twosides.earth](https://twosides.earth/)*
 
 <!--
 The Curse of Dimensionality

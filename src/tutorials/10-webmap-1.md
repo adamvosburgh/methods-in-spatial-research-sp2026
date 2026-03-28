@@ -46,12 +46,14 @@ At this stage, you should:
 5. use Git in the Terminal or Git Bash to clone the repository you created on github.
     - **On Mac** open your terminal (Applications > Utilities > Terminal.app); **on PC** open Git Bash (Programs > Git > Git Bash, or search for it in the start menu).
     - and learned how to [navigate](https://www.macworld.com/article/2042378/master-the-command-line-navigating-files-and-folders.html);
-    - navigate to the folder where you would like to create your web map.
+    - navigate to the folder where you would like to create your web map. (e.g. `cd Desktop`, if you are on MacOS and would like the web map to be in your desktop.)
     - set up git, type the following in your terminal/git bash:  
       `git config --global user.name 'Your Name'`  
       `git config --global user.email 'email@wherever.com'` (this email should match the one you used to set up Github)
     - cloned a local copy of your repository to your computer using git.
         - by typing: `git clone https://github.com/yourusername/webmap_1`
+        - this will add a folder named `webmap_1` into the directory that you ran the command in. This folder contains a .git file (that may be hidden) that connects it to your repository.
+        - navigate into this folder with `cd webmap_1`. 
 
 #### Create empty files that will become your web map and `commit` your first changes, and `push` them to GitHub
 
@@ -69,10 +71,19 @@ If you use VS Code, I would recommend working this way: Once installed, open VS 
         and then
         -  `git push -u origin main` -> This pushes your changes to the repository online. -u sets which branch to push to, after this you can juse use `git push`
 9. If `git push` gave you a login error, don't worry — as of a few years ago, GitHub no longer accepts your account password when pushing from the command line. There are a few ways to fix this, but the easiest is the [GitHub CLI](https://cli.github.com/):
-    - download and install the GitHub CLI for your operating system from [cli.github.com](https://cli.github.com/)
+    - download and install the GitHub CLI for your operating system from [cli.github.com](https://cli.github.com/). 
+        - If you are on Windows, that link should take you to page with an installer that you can download, run, and you'll be good to go.
+        - If you are on MacOS, you will see two options, a folder you can download, or a command that is likely `brew install gh`. Homebrew is an open-source package manager for MacOS, and is one of the more convenient ways to download development packages such as the Github CLI.
+        - If you run this command and it does not work, likely you do not have homebrew installed. Go to [brew.sh](https://brew.sh/), and run the command on the homepage to install this.
+        - After you run this command, homebrew will be installed. This may take a couple of minutes, but after it is completed there will be a message in your terminal that says something like "to add brew to your $PATH, run this command:" followed by a few lines of code. Run that code, it will make MacOS know that when you type `brew`, you are referring to Homebrew. After that, run `brew install gh` again. it should work.
+        - If it still doesn't work and you can't figure it out, see my note at the end of this step.
     - in your Terminal or Git Bash, type: `gh auth login`
     - follow the prompts — select **GitHub.com**, then **HTTPS**, then choose to authenticate via browser. It will open a browser window where you log into your GitHub account and confirm. Once done, your terminal is authorized to push to GitHub.
     - run `git push -u origin main` again — it should work now. You only need to do this once per computer.
+
+If none of this is working, that's okay! Environment management is difficult, and while I have tried to predict all that will go wrong, everyone's computer is unique. If this describes you, I recommend two things:
+    1. Download [Github Desktop](https://desktop.github.com/download/). This contains the same functionalities as using git in the command line, but in a GUI (graphical user interface) that should be more familiar.
+    2. Schedule an office hour! I can help finish the setup for you so you can use `git` in the command line. You only need to do this once for each computer.
 
 10. view the result on your online github repository (the url should be `github.com/yourusername/webmap_1`) github page (the url should be `yourgithubusername.github.io/webmap_1` but you can also find this in the settings of the repository you created on github). 
 
@@ -200,7 +211,7 @@ $ cd Documents/webmap_1
 ```
 Once you are inside your `webmap_1` folder, type the appropriate command for your version of Python in Command Prompt or Terminal:
 
-**Python 3**: `python -m http.server`
+**Python 3**: `python -m http.server` (note, this may also be `python3 -m http.server`)
 **Python 2**: `python -m SimpleHTTPServer`
 
 After you hit enter your Terminal/Command Prompt should say something like: `Serving HTTP on 0.0.0.0 port 8000 ...`
@@ -255,7 +266,7 @@ This tells git to never track `map.js`, so your token stays off GitHub.
 
 **Step 2: Keep a template in your repo**
 
-Make a copy of `map.js` and name it `map.template.js` — leave `YOUR TOKEN HERE` in that one. Commit this file. It gives anyone cloning your repo a starting point without exposing a real token.
+Make a copy of `map.js` and name it `map.template.js` — leave `YOUR TOKEN HERE` in that one. This is an open-source development convention. It gives anyone cloning your repo a starting point without exposing a real token.
 
 You only need to do this once — you'll use the same token and same `.gitignore` approach in the next tutorial too.
 
@@ -496,6 +507,7 @@ Once you have created an map that you like lets publish it online by `pushing` o
 - Type `git add .` to track all of the changes you made.
 - To commit your changes type `git commit -m "some note about the changes you made"` and replace the information within the quotes with some note to yourself about the changes you made.
 - Then push your changes to the server by typing `git push`.
+- Note that when you push, github may complain that is has detected a "secret" in your code base, and it may block the push. As long as you have configured your mapbox API key as above (map.js added to .gitignore, scoped to your github url, and only with public permissions) it is completely safe, and you can follow the instructions included in the terminal message (or sent to you over email) to override it.
 
 Visit your repository website at `yourgithubusername.github.io/webmap_1` to check that all changes were pushed correctly.
 

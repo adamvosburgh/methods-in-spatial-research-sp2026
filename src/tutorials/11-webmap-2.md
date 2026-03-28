@@ -9,6 +9,8 @@ published: true
 
 **Note: Since these tutorials were originally written in 2022, mapbox and github have changed a lot in regards to their security. I have made all of those updates in the tutorials, but please let me know if you run into issues.**
 
+**Note on Git:** This tutorial will not provide command-by-command instructions for git — that is covered comprehensively in the [previous tutorial](/tutorials/10-webmap-1). 
+
 # Making a Scrollytelling map with Mapbox Storytelling
 
 Now that you have learned QGIS, Git, html, css, javascript and some Mapbox libraries, let's make a custom story map using [Mapbox GL JS](https://docs.mapbox.com/mapbox-gl-js/guides/) and [Scrollarama](https://github.com/russellgoldenberg/scrollama). 
@@ -30,6 +32,8 @@ Because it reduces the complexity of our setup, we'll be adding our data layers 
 We're going to build off of the [last tutorial](https://methodsinspatialresearch.xyz/tutorials/10-webmap-1) to build this, so make sure you have that up and running first, or download the completed repo [here](https://drive.google.com/open?id=1cGBcYe3ZA6BU1saOjNsUSNa_nmIvjddS&usp=drive_fs). Note: you will still need to copy the map.template.js, rename it to map.js, and put in your own API key.
 
 We'll start by creating a new repo called `webmap_2_storytelling`, cloning it to your local filesystem, copying over the contents of `webmap_1` into it, and starting a live server. If you have any trouble with this - refer to the beginning of the [previous tutorial](/tutorials/10-webmap-1).
+
+Don't forget to also enable GitHub Pages for the new repo, the same way you did for `webmap_1` in the previous tutorial — otherwise your map won't be publicly accessible when you push.
 
 By now, you should have the same file contents and result as you did from the last tutorial
 
@@ -905,11 +909,22 @@ var config = {
 };
 ```
 
+#### Pushing to GitHub
+
+Once you have your story map working locally, push your changes to GitHub to publish it:
+- `git add .`
+- `git commit -m "YOUR COMMIT MESSAGE"`
+- `git push -u origin main`
+
+Note that when you push, github may complain that it has detected a "secret" in your code base, and it may block the push. As long as you have configured your mapbox API key as above (`config.js` added to `.gitignore`, scoped to your github url, and only with public permissions) it is completely safe, and you can follow the instructions included in the terminal message (or sent to you over email) to override it.
+
+Visit your repository website at `yourgithubusername.github.io/webmap_2_storytelling` to check that all changes were pushed correctly.
+
 #### Looking forward to seeing what you make!
 ______________________________________________________________________________________________________________
 
 
-Tutorial by Adam Vosburgh, Spring 2022.  
+Tutorial by Adam Vosburgh, Spring 2022. Updated Spring 2026.
 Written for Methods in Spatial Research, Spring 2022.
 
 

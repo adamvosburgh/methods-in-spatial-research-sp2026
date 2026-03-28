@@ -23,6 +23,14 @@ If you have not worked with any of the other tutorials that used code yet, and t
 
 In this tutorial, we will use [Google Colab](https://colab.research.google.com/) to run our code. Colab is a programming environment that allows for the execution of Python code in the browser. It extends on the `notebook` concept pioneered by Jupyter Notebooks, and combines that with the group editing features of google docs, plus Google's cloud computing infrastructure so that all of your code is not run on your computer. We will use it here because it requires virtually no setup, but with slight modifications this code could run in any programming environment.
 
+## Debugging
+
+If you run into any issues, after checking to make sure that there are no typos in your code, I would recommend turning to your web search provider of choice (e.g. Google), or AI model of choice (e.g. Claude). If you know what you want to do (e.g. perform a slightly different join in geopandas) but don't know how to do it, the documentation for any given python library will be your best friend (here is the documentation for [geopandas](https://geopandas.org/en/stable/docs.html).)
+
+If all else fails, I have also dumped all of the code here into this [colab notebook](https://colab.research.google.com/drive/116Zp0Z09uOS5IbP6RFQQ1hDK1yokG3mg?usp=sharing). Feel free to use this if you get stuck. When you get to the challenge at the end of this tutorial, I have also included an example in that notebook that may be helpful.
+
+If that fails, or even if it doesn't and you would just like to discuss, schedule an office hour!
+
 ## Instructions
 
 ### Setup
@@ -266,8 +274,10 @@ That's it! Your final map should look like this:
 
 Now that we have recreated a portion of Tutorial 1 in Python, for the assignment please wrangle your own data to create your own map. You can choose anything you like, but you must have at least one non-spatial dataset, and join it to a spatial one. If you are not sure of what you may choose, you could recreate tutorial 5 in your notebook (just the tutorial, not the challenge).
 
+In case it is helpful, I have added an example with census data in the [notebook](https://colab.research.google.com/drive/116Zp0Z09uOS5IbP6RFQQ1hDK1yokG3mg?usp=sharing) for this tutorial.
+
 ---
-Module by Adam Vosburgh, Spring 2024.
+Module by Adam Vosburgh, Spring 2024. Update Spring 2026.
 
 [uploading data]:/tutorials/images/159/1-python_upload_data.png
 
