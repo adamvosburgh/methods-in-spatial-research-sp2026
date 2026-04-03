@@ -242,6 +242,9 @@ Hao, Karen. *Empire of AI: Dreams and Nightmares in Sam Altman's OpenAI.* Pengui
 - [Greenfield, Adam. "Against the Smart City." Urban Omnibus, 2013.](https://urbanomnibus.net/2013/10/against-the-smart-city/)
 - [Mattern, Shannon. "Interfacing Urban Intelligence." Places Journal, 2014.](https://placesjournal.org/article/interfacing-urban-intelligence/)
 
+**Trees**
+- [Kobald, Alexander. "When It Comes to Urban Trees, More Isn’t Always Better." *Bloomberg CityLab*. October 9, 2023.](https://www.bloomberg.com/news/articles/2023-10-09/what-mapping-every-tree-in-new-york-city-reveals)
+
 ### 4/10 | Week 12 | Show and Tell Day 1
 
 #### Group 1 Presentations
