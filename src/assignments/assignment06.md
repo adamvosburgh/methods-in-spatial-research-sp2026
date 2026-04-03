@@ -1,5 +1,5 @@
 ---
-title: "Spatial Intelligence"
+title: "Where Next? Part 2"
 date: "2023-03-08"
 author: Adam Vosburgh
 sequence: 6
