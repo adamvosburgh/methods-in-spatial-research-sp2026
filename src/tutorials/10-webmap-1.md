@@ -250,26 +250,6 @@ console.log('Loaded map.js')
 mapboxgl.accessToken = 'YOUR TOKEN HERE BETWEEN THE QUOTES'
 ```
 
-#### Protecting your Access Token
-
-Before committing and pushing, make sure your token doesn't end up in your public GitHub repo, where automated scrapers actively harvest exposed API keys.
-
-**Step 1: Create a `.gitignore` file**
-
-In your `webmap_1` directory, create a file called `.gitignore` and add the following line to it:
-
-```
-map.js
-```
-
-This tells git to never track `map.js`, so your token stays off GitHub.
-
-**Step 2: Keep a template in your repo**
-
-Make a copy of `map.js` and name it `map.template.js` — leave `YOUR TOKEN HERE` in that one. This is an open-source development convention. It gives anyone cloning your repo a starting point without exposing a real token.
-
-You only need to do this once — you'll use the same token and same `.gitignore` approach in the next tutorial too.
-
 You might want to reload your page and check the console to make sure there are no errors—you should just see your debug statement. Now add this to the bottom of your js file:
 
 ```javascript
@@ -507,7 +487,7 @@ Once you have created an map that you like lets publish it online by `pushing` o
 - Type `git add .` to track all of the changes you made.
 - To commit your changes type `git commit -m "some note about the changes you made"` and replace the information within the quotes with some note to yourself about the changes you made.
 - Then push your changes to the server by typing `git push`.
-- Note that when you push, github may complain that is has detected a "secret" in your code base, and it may block the push. As long as you have configured your mapbox API key as above (map.js added to .gitignore, scoped to your github url, and only with public permissions) it is completely safe, and you can follow the instructions included in the terminal message (or sent to you over email) to override it.
+- Note that when you push, github may complain that is has detected a "secret" in your code base, and it may block the push. As long as you have configured your mapbox API key as above (scoped to your github url, and only with public permissions) it is completely safe, and you can follow the instructions included in the terminal message (or sent to you over email) to override it.
 
 Visit your repository website at `yourgithubusername.github.io/webmap_1` to check that all changes were pushed correctly.
 

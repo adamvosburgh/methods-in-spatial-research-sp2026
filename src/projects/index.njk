@@ -1,0 +1,25 @@
+---
+layout: base.njk
+title: Student Work
+---
+<p class="projects-intro-link">New to this? See <a href="/tutorials/15-submit-project/">Tutorial 15: How to Submit Your Final Project</a> for instructions on uploading your work.</p>
+
+<div class="project-grid">
+{% for project in collections.projects %}
+  <a href="{{ project.url | url }}" class="project-card">
+    {% if project.data.image %}
+    <div class="project-card-image">
+      <img src="{{ project.data.image }}" alt="Cover image for {{ project.data.title }}">
+    </div>
+    {% else %}
+    <div class="project-card-image project-card-no-image"></div>
+    {% endif %}
+    <div class="project-card-info">
+      <h2 class="project-card-title">{{ project.data.title }}</h2>
+      {% if project.data.author %}
+      <p class="project-card-author">{{ project.data.author }}</p>
+      {% endif %}
+    </div>
+  </a>
+{% endfor %}
+</div>

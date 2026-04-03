@@ -29,7 +29,7 @@ Because it reduces the complexity of our setup, we'll be adding our data layers 
 
 #### File Setup
 
-We're going to build off of the [last tutorial](https://methodsinspatialresearch.xyz/tutorials/10-webmap-1) to build this, so make sure you have that up and running first, or download the completed repo [here](https://drive.google.com/open?id=1cGBcYe3ZA6BU1saOjNsUSNa_nmIvjddS&usp=drive_fs). Note: you will still need to copy the map.template.js, rename it to map.js, and put in your own API key.
+We're going to build off of the [last tutorial](https://methodsinspatialresearch.xyz/tutorials/10-webmap-1) to build this, so make sure you have that up and running first, or download the completed repo [here](https://drive.google.com/open?id=1cGBcYe3ZA6BU1saOjNsUSNa_nmIvjddS&usp=drive_fs). Note: you will still need to put in your own API key.
 
 We'll start by creating a new repo called `webmap_2_storytelling`, cloning it to your local filesystem, copying over the contents of `webmap_1` into it, and starting a live server. If you have any trouble with this - refer to the beginning of the [previous tutorial](/tutorials/10-webmap-1).
 
@@ -456,11 +456,7 @@ var config = {
 };
 ```
 
-#### Protecting your Access Token
-
-You set up token protection in the previous tutorial — the same approach applies here. Add `config.js` to your `.gitignore` and keep a `config.template.js` with `YOUR_ACCESS_TOKEN` as the committed reference copy.
-
-Once that's done, add your `accessToken` to `config.js` where it currently says `accessToken: 'YOUR_ACCESS_TOKEN',`.
+Add your `accessToken` to `config.js` where it currently says `accessToken: 'YOUR_ACCESS_TOKEN',`.
 
 Once you do that, save and possibly refresh, you're all set up! Your `map.js` is no longer of any use to you, and you can feel free to delete it if you would like to keep your repo clean. You should have a template story with some basic animation in your browser, which looks something like this:
 
@@ -915,8 +911,7 @@ Once you have your story map working locally, push your changes to GitHub to pub
 - `git add .`
 - `git commit -m "YOUR COMMIT MESSAGE"`
 - `git push -u origin main`
-
-Note that when you push, github may complain that it has detected a "secret" in your code base, and it may block the push. As long as you have configured your mapbox API key as above (`config.js` added to `.gitignore`, scoped to your github url, and only with public permissions) it is completely safe, and you can follow the instructions included in the terminal message (or sent to you over email) to override it.
+- Note that when you push, github may complain that it has detected a "secret" in your code base, and it may block the push. As long as you have configured your mapbox API key as above (scoped to your github url, and only with public permissions) it is completely safe, and you can follow the instructions included in the terminal message (or sent to you over email) to override it.
 
 Visit your repository website at `yourgithubusername.github.io/webmap_2_storytelling` to check that all changes were pushed correctly.
 

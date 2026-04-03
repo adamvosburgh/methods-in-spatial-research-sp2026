@@ -213,12 +213,6 @@ Hao, Karen. *Empire of AI: Dreams and Nightmares in Sam Altman's OpenAI.* Pengui
 - [Fatima, Tazbia. "We Asked an AI to Map Our Stories Across NYC." The City, 2024.](https://www.thecity.nyc/2024/02/29/chatgpt-map-stories-nyc/)
 - [Living with Machines. Machines Reading Maps. Alan Turing Institute + British Library.](https://machines-reading-maps.github.io/)
 
-**Smart Cities**
-- [Wylie, Bianca. "In Toronto, Google's Attempt to Privatize Government Fails—For Now." Boston Review, 2020.](https://www.bostonreview.net/articles/bianca-wylie-sidewalk-labs-toronto/)
-- [Architectural Record. "The End of Sidewalk Labs." 2020.](https://www.architecturalrecord.com/articles/15573-the-end-of-sidewalk-labs)
-- [Greenfield, Adam. "Against the Smart City." Urban Omnibus, 2013.](https://urbanomnibus.net/2013/10/against-the-smart-city/)
-- [Mattern, Shannon. "Interfacing Urban Intelligence." Places Journal, 2014.](https://placesjournal.org/article/interfacing-urban-intelligence/)
-
 ### 4/03 | Week 11 | Living in the Map
 
 #### Readings
@@ -228,13 +222,25 @@ Hao, Karen. *Empire of AI: Dreams and Nightmares in Sam Altman's OpenAI.* Pengui
 [Kurgan, Laura, Dan Miller, and Adam Vosburgh. "Two Sides of the Same Coin." Milan Triennale, 2025.](https://c4sr.columbia.edu/projects/two-sides-same-coin)
 *Read the text on that site, and check out the visualization at [twosides.earth](https://twosides.earth/)*
 
-<!--
-The Curse of Dimensionality
-Either 972 mag or something else. Maybe anything interesting written on palantir?
+[Halpern, Orit, Robert Mitchell, and Bernard Dionysius Geoghegan, “The Smartness Mandate: Notes toward a Critique,” Grey Room, no. 68 (Summer 2017): 106–129](https://www.greyroom.org/issues/68/72/the-smartness-mandate-notes-toward-a-critique/)
 
-Two Sides
-Humans have shaped the world for at least 10,000 years 
--->
+**Supplementary Readings by Topic:**
+
+**Two Sides of the Same Coin**
+- [E.C. Ellis, N. Gauthier, K. Klein Goldewijk, R. Bliege Bird, N. Boivin, S. Díaz, D.Q. Fuller, J.L. Gill, J.O. Kaplan, N. Kingston, H. Locke, C.N.H. McMichael, D. Ranco, T.C. Rick, M.R. Shaw, L. Stephens, J. Svenning, & J.E.M. Watson, People have shaped most of terrestrial nature for at least 12,000 years, Proc. Natl. Acad. Sci. U.S.A. 118 (17) e2023483118, https://doi.org/10.1073/pnas.2023483118 (2021).](https://www.pnas.org/doi/full/10.1073/pnas.2023483118)
+- [Link to HYDE Data](https://landuse.sites.uu.nl/datasets/)
+- [Pasolli E, Asnicar F, Manara S... Extensive Unexplored Human Microbiome Diversity Revealed by Over 150,000 Genomes from Metagenomes Spanning Age, Geography, and Lifestyle. Cell, 2019; 176, 649-662.e20](https://www.cell.com/cell/fulltext/S0092-8674(19)30001-7?_returnURL=https://linkinghub.elsevier.com/retrieve/pii/S0092867419300017?showall%3Dtrue)
+
+**Fire Insurance**
+- [Tambunan, Aatish. "Insurers Are Spying on Your Home From the Sky." *Wall Street Journal*, April 6, 2024.](https://www.wsj.com/real-estate/home-insurance-aerial-images-37a18b16)
+- [Flavelle, Christopher, Mira Rojanasakul, Desiree Rios. "Home Insurance Rates in America Are Wildly Distorted. Here’s Why." *New York Times*, July 8, 2024.](https://www.nytimes.com/interactive/2024/07/08/climate/home-insurance-climate-change.html)
+- [Liu, Coco, and Saijel Kishan. "AI-Powered Home Insurance Startup Expands in Risky Markets." *Los Angeles Times* (Bloomberg), October 17, 2025.](https://www.latimes.com/business/story/2025-10-17/ai-powered-home-insurance-startup-expands-in-risky-markets)
+- [Darmiento, Laurence, and Summer Lin. "California Homeowners Are Getting Cancelled by Their Insurers, and the Reasons Are Dubious." *Los Angeles Times*, January 12, 2025.](https://www.latimes.com/business/story/2025-01-12/california-homeowners-are-getting-cancelled-by-their-insurers-and-the-reasons-are-dubious)
+
+**Smart Cities**
+- [Architectural Record. "The End of Sidewalk Labs." 2020.](https://www.architecturalrecord.com/articles/15573-the-end-of-sidewalk-labs)
+- [Greenfield, Adam. "Against the Smart City." Urban Omnibus, 2013.](https://urbanomnibus.net/2013/10/against-the-smart-city/)
+- [Mattern, Shannon. "Interfacing Urban Intelligence." Places Journal, 2014.](https://placesjournal.org/article/interfacing-urban-intelligence/)
 
 ### 4/10 | Week 12 | Show and Tell Day 1
 

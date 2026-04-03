@@ -366,6 +366,124 @@ pre code {
   }
 }
 
+/* Projects intro link */
+.projects-intro-link {
+  font-size: 0.85rem;
+  margin-bottom: 2rem;
+  color: #666;
+}
+
+/* Project index grid */
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+}
+
+.project-card {
+  text-decoration: none;
+  color: #000;
+  display: block;
+  transition: opacity 0.2s ease;
+}
+
+.project-card:hover {
+  opacity: 0.75;
+}
+
+.project-card-image {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  overflow: hidden;
+  border-radius: 4px;
+  margin-bottom: 0.75rem;
+  background-color: #f0f0f0;
+}
+
+.project-card-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.project-card-no-image {
+  background-color: #e8e8e8;
+}
+
+.project-card-title {
+  font-size: 0.9rem;
+  font-weight: 700;
+  margin-bottom: 0.25rem;
+}
+
+.project-card-author {
+  font-size: 0.8rem;
+  color: #666;
+}
+
+/* Project page layout */
+.project-article {
+  font-size: 0.9rem;
+  line-height: 1.7;
+}
+
+.project-cover {
+  width: 100%;
+  margin-bottom: 2rem;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.project-cover img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.project-header {
+  margin-bottom: 2rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid #eee;
+}
+
+.project-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+.project-author {
+  font-size: 0.9rem;
+  color: #666;
+}
+
+/* iframe embed for interactive maps */
+.iframe-column {
+  position: relative;
+  width: 100%;
+  padding-bottom: 56.25%;
+  height: 0;
+  overflow: hidden;
+  margin: 1.5rem 0;
+  border-radius: 4px;
+}
+
+.iframe-column iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+@media (max-width: 600px) {
+  .project-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
 /* Utilities */
 .sr-only {
   position: absolute;

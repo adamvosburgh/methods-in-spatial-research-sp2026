@@ -1,0 +1,20 @@
+---
+layout: base.njk
+showTitle: false
+---
+<article class="project-article">
+  {% if image %}
+  <div class="project-cover">
+    <img src="{{ image }}" alt="Cover image for {{ title }}">
+  </div>
+  {% endif %}
+  <header class="project-header">
+    <h1 class="project-title">{{ title }}</h1>
+    {% if author %}
+    <p class="project-author">{{ author }}</p>
+    {% endif %}
+  </header>
+  <div class="project-body content-article">
+    {{ content | safe }}
+  </div>
+</article>

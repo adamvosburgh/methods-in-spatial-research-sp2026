@@ -23,6 +23,7 @@ module.exports = function(eleventyConfig) {
   eleventyConfig.addPassthroughCopy("src/tutorials/data");
   eleventyConfig.addPassthroughCopy("src/assignments/images");
   eleventyConfig.addPassthroughCopy("src/resources/images");
+  eleventyConfig.addPassthroughCopy("src/projects/images");
 
   // Watch targets
   eleventyConfig.addWatchTarget("./src/assets/");
@@ -60,6 +61,14 @@ module.exports = function(eleventyConfig) {
       .filter(item => item.data.published !== false)
       .sort((a, b) => {
         return (a.data.sequence || 0) - (b.data.sequence || 0);
+      });
+  });
+
+  eleventyConfig.addCollection("projects", function(collectionApi) {
+    return collectionApi.getFilteredByGlob("./src/projects/*.md")
+      .filter(item => item.data.published !== false)
+      .sort((a, b) => {
+        return new Date(b.data.date) - new Date(a.data.date);
       });
   });
 
