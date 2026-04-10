@@ -4,7 +4,7 @@ date: "2026-04-01"
 author: Adam Vosburgh
 sequence: 13
 cat: tutorial
-published: true
+published: false
 ---
 
 This tutorial builds directly on Tutorial 9. We'll use the same two datasets — the 2015 NYC Street Tree Census and the census block group shapefile — and repeat the same spatial join. The difference is what we do before the join. Instead of just counting trees, we'll estimate two ecological services each tree provides: stormwater interception and CO₂ sequestration. Then we'll aggregate those benefit estimates spatially to see which neighborhoods are getting the most (and least) out of the city's urban forest.
