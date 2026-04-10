@@ -45,7 +45,7 @@ At this stage, you should:
 
 5. use Git in the Terminal or Git Bash to clone the repository you created on github.
     - **On Mac** open your terminal (Applications > Utilities > Terminal.app); **on PC** open Git Bash (Programs > Git > Git Bash, or search for it in the start menu).
-    - and learned how to [navigate](https://www.macworld.com/article/2042378/master-the-command-line-navigating-files-and-folders.html);
+    - if you haven't used the terminal before, I recommend checking this out to learn how to [navigate](https://www.macworld.com/article/2042378/master-the-command-line-navigating-files-and-folders.html) using it.
     - navigate to the folder where you would like to create your web map. (e.g. `cd Desktop`, if you are on MacOS and would like the web map to be in your desktop.)
     - set up git, type the following in your terminal/git bash:  
       `git config --global user.name 'Your Name'`  
@@ -487,7 +487,7 @@ Once you have created an map that you like lets publish it online by `pushing` o
 - Type `git add .` to track all of the changes you made.
 - To commit your changes type `git commit -m "some note about the changes you made"` and replace the information within the quotes with some note to yourself about the changes you made.
 - Then push your changes to the server by typing `git push`.
-- Note that when you push, github may complain that is has detected a "secret" in your code base, and it may block the push. As long as you have configured your mapbox API key as above (scoped to your github url, and only with public permissions) it is completely safe, and you can follow the instructions included in the terminal message (or sent to you over email) to override it.
+- Note that when you push, github may complain that it has detected a "secret" in your code base, and it may block the push. It is completely safe to override this — follow the instructions included in the terminal message and push again to do so.
 
 Visit your repository website at `yourgithubusername.github.io/webmap_1` to check that all changes were pushed correctly.
 

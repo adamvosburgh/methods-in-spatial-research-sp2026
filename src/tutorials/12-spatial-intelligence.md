@@ -1,13 +1,21 @@
 ---
-title: Spatial Intelligence - Mapping Apartment Listings by Meaning
+title: Making Spatial Data from Plain Text
 date: "2026-03-28"
 author: Adam Vosburgh
 sequence: 12
 cat: tutorial
-published: false
+published: true
 ---
 
-This tutorial is about using language models to work with text as spatial data. We will take a dataset of StreetEasy apartment listings in Manhattan, and use two different techniques to turn the *language* in those listing descriptions into something we can map.
+This tutorial is about using large language models to work with text as spatial data. A large language model (LLM) is a computational model designed to perform natural language processing tasks, especially language generation, using contextual relationships derived from a large set of training data (wikipedia). ChatGPT, and most other products that we refer to as "AI", are large language models.
+
+In order to make spatial data from plain text, we need a bunch of text. This can take many forms, but for this tutorial I thought it would be interesting to work with data from StreetEasy. I wrote a python script to scrape rental listings in Manhattan, including their address, rent, and crucially their descriptions. These descriptions include qualitative descriptions of the properties that they are attached to. In this tutorial, we will use an LLM to turn those descriptions into data, in two different ways.
+
+If you are interested in the scraping methodology, feel free to send an email and I can share those files.
+
+<video width="100%" autoplay loop>
+  <source src="/tutorials/images/162/01-scraping-zillow.mp4" type="video/mp4">
+</video>
 
 The tutorial has two parts, both working from the same CSV of listings:
 
@@ -15,40 +23,159 @@ In **Part 1**, we use a language model to classify each listing description: doe
 
 In **Part 2**, we pass each description through an embedding model to get a high-dimensional vector that encodes its meaning. We then reduce those vectors down to 2D with UMAP, cluster them with k-means, auto-label each cluster, and map the results both geographically and semantically.
 
-A companion scraping tutorial explains how the dataset was collected.
+## Environment setup
 
-## What are embeddings?
+### Working locally
 
-Before we get into the code, it's worth understanding what an embedding actually is, since it's the core concept behind Part 2.
+Through most tutorials, you have used python notebooks in Google Colab. Colab is very convenient because it allows you to run code without having to worry about your local environment.
 
-When a language model is trained on billions of texts, it learns to represent every word — and eventually every sentence or paragraph — as a list of numbers called a **vector** (or **embedding**). These numbers are not arbitrary: they are learned so that words and phrases with similar meanings end up with similar numbers. "Steps from the park" and "across from the park entrance" will have nearly identical vectors despite sharing no words, because the model learned that both describe the same spatial relationship.
+We won't use that for this tutorial, because we will be using a large language model *locally*. Meaning you will download the model, and run it locally on your own computer. Also, in the spirit of this class, while the service provided by Google is great, it's best if you learn how to use these tools and technologies in a way that doesn't leave you reliant on the services of one of the most powerful entities in the world.
 
-In this tutorial, we use that property at the scale of whole listing descriptions. Each description gets compressed into a single vector (768 numbers long, for the model we're using). That vector is a coordinate in a 768-dimensional space — a space where closeness means similarity of meaning.
+All that said, if you are really struggling with setting up the environment, you can feel free to switch back to google colab. If you do that, you can skip the entire `environment setup` phase of this tutorial. You can stll run the model locally through the [ollama](https://ollama.com/download) app, or use an llm located somewhere else like ChatGPT. You'll need to edit the notebook a bit, mainly to import the created file back into this notebook as a geodataframe, let me know if you need assistance. 
 
-The same idea shows up in several other contexts you've encountered in this course. **AlphaEarth** (Google) does this for satellite imagery: every 10-meter pixel gets a vector encoding what the surface looks like, and the result is a continuous semantic space of land cover — farmland clusters near farmland, water near water, regardless of geography. The targeting systems we discussed in lecture (Lavender and similar military AI systems) convert people, places, and behaviors into vectors, and "similarity to a target profile" is literally a distance calculation in that space. And when you type a message to Claude or ChatGPT, every token is immediately converted into an embedding vector before any processing happens — the model operates entirely in this numerical space.
+### Setting up your notebook
 
-Embeddings are not metaphorical coordinates — they are the actual computational substrate of how these models work. That's what makes this tutorial interesting from a spatial research perspective.
+So let's start. For this, you will need a full-featured text editor, I recommend [vs code](https://code.visualstudio.com/), and will assume you are using that in the following steps.
+
+Let's open up terminal in MacOS, or Powershell in Windows. Run each of these commands by typing them into your terminal and hitting `enter`. Together they will create a folder name `tutorial-12` on your desktop, open it, and create some (empty) files that we will need later. 
+If you are new to this, I recommend this [quick start](https://www.macworld.com/article/221277/command-line-navigating-files-folders-mac-terminal.html) on navigating your files in terminal. If this is all too confusing, you are absolutely welcome to create the folder as you would any other folder, open it in vs code, and create the files using the "new file" button in there. 
+
+**In MacOS**, run each of these one at a time by typing them into your terminal and hitting `enter`.
+```bash
+cd Desktop 
+mkdir tutorial-12
+cd tutorial-12
+touch tutorial-12.ipynb
+touch environment.yml
+code .
+```
+![bash commands][BASH]
+
+Most likely, that last command did not work for you. If it did, it would open vs code at the folder that you made, and you would see the files that you created on the "Explorer" tab on the left. If you would like to use that command, you can follow the instructions [here](https://code.visualstudio.com/docs/setup/mac#_launch-vs-code-from-the-command-line). I personally find it convenient. If you prefer not to, you can open up VS code, and select your folder in `File` > `Open Folder...` If you are on windows, this command should work by default.
+
+**In Windows**, open PowerShell and run:
+```powershell
+cd Desktop
+mkdir tutorial-12
+cd tutorial-12
+New-Item tutorial-12.ipynb
+New-Item environment.yml
+code .
+```
+One last thing: In VS Code, go to `Terminal` > `New Terminal`. This will open up a new terminal on the right side of your VS Code workspace, that is running in this folder. Going forward, this is where we will type terminal commands. You workspace should now look like the below.
+
+![vs code setup][VSCODE]
+
+### Installing conda
+
+In order to run this code, we will have to input various packages that are not included in vanilla python, such as `geopandas`, `altair`, etc. For various reasons, we will be using `conda` as a package manager, instead of the default python package manager, `pip`.
+
+There are a few conda install options, we will choose  **Miniconda** — it's the smallest version that gives you what you need. Download the Miniconda installer from [anaconda.com/download](https://www.anaconda.com/download/success?reg=skipped) and run it with all default settings.
+
+On MacOS, after it finishes installing, run this to refresh your terminal session:
+
+```bash
+source ~/.zshrc
+```
+
+Then verify it worked:
+
+```bash
+conda --version
+```
+
+You should see a version number like the screenshot below. Once that works, you may proceed.
+
+![succesful conda install][CONDA]
+
+### Creating the conda environment
+
+We'll use an `environment.yml` file to set up the environment. You should have already created it, but if you haven't, do so now and paste the following into it:
+
+```yaml
+name: tutorial-12
+channels:
+  - conda-forge
+  - defaults
+dependencies:
+  - python
+  - huggingface_hub
+  - pandas
+  - geopandas
+  - numpy
+  - scipy
+  - umap-learn
+  - scikit-learn
+  - altair
+  - plotly
+  - ipykernel
+  - nbformat
+  - pip:
+    - ollama
+    - nbformat
+```
+
+`conda-forge` is listed first because it carries the most up-to-date geospatial builds. `ipykernel` is what lets you run the notebook in VS Code. `ollama` must be installed via `pip` (the python package manager,) hence why it looks different.
+
+In your terminal run:
+
+```bash
+conda env create -f environment.yml
+```
+
+This will take a few minutes the first time. Once it's done:
+
+```bash
+conda activate tutorial-12
+```
+
+Your terminal prompt will change to show `(tutorial-12)`. Then register the environment as a Jupyter kernel so VS Code can find it:
+
+```bash
+python -m ipykernel install --user --name tutorial-12 --display-name "tutorial-12"
+```
+
+You only need to do this once. After that, open the notebook (the .ipynb file) in VS Code, click the "Select Kernel" button in the top-right corner, click "Jupyter Kernel...", and choose **tutorial-12**. If you don't see it, close and reopen VS Code. Once the kernel is selected, we're all done with setup.
+
+![selecting kernel][KERNEL]
 
 ## Setup
 
-This notebook uses two different kinds of language models, and it's important to keep the distinction in mind:
+Like all technologies, all LLMs are built for a specific purpose. This notebook uses two different kinds of language models:
 
-**Part 1** uses a **generation model** — a model trained to produce text. We use it as a classifier by prompting it to read each listing and output a label. The default is `qwen2.5:3b` via Ollama.
+**Part 1** uses a **generation model** — a model trained to *generate* something, in this case text. You ChatGPTs etc are general generation models (although increasingly these days they are stacks of multiple models.) We will use `qwen3.5:2b`, a very small, open-weight (not quite open-source) large language model developed by Alibaba. You can find the model card (information about the model) [here](https://huggingface.co/Qwen/Qwen3.5-2B). We are going to use this as a classifier by prompting it to read each listing and output a label. 
 
-**Part 2** uses an **embedding model** — a model trained to produce vectors that encode meaning. The default is `nomic-embed-text` via Ollama.
+**Part 2** uses an **embedding model** — a model trained to produce vectors (in the machine learning sense) that encode meaning. If you don't know what that is, don't worry about it, I will explain a bit more when we get to that part. We will use `nomic-embed-text`, a completely open-source (meaning the training data is also open-sourced) embedding model developed by [nomic.ai](https://www.nomic.ai/), which funnily enough looks like it is in the AEC business these days. You can find the model card [here](https://huggingface.co/nomic-ai/nomic-embed-text-v1)
 
-These are fundamentally different tasks: generation models produce text, embedding models produce vectors. You cannot use one in place of the other.
+While these models are different—you cannot use one in place of the other—they are similar in that they are both lightweight, and can easily run on any modern hardware. `qwen3.5:2b` is a 2 billion parameter model, tiny by LLM standards. `nomic-embed-text` is even smaller, with less than 200 million parameters. For a point of comparison, the highest quality models produced by labs like OpenAI and anthropic are estimated to be 100 to 400 billion parameters. 
 
-There are two ways to run the models. The default is **local mode** using [Ollama](https://ollama.ai), which runs the models on your own machine. If your computer can't handle that, there's also a **HuggingFace API mode** that runs models in the cloud (you'll need a free HF account and token). The code includes both options — the HF version is commented out but ready to go.
+We'll run both locally using [Ollama](https://ollama.ai). Ollama lets you download and run open-weight models on your own machine. Install it from [ollama.ai](https://ollama.ai), then pull the two models:
 
-If you're going with Ollama (recommended), install it from [ollama.ai](https://ollama.ai), then pull the two models you'll need:
-
-```
-ollama pull qwen2.5:3b
+```bash
+ollama pull qwen3.5:2b
 ollama pull nomic-embed-text
 ```
 
-Before running the notebook, install the python dependencies: `pip install -r requirements.txt`
+After you pull those two, run `ollama list`, and it should look like the screenshot below. 
+
+![ollama model list][OLLAMA]
+
+Notice that these models are not small - this is about 3gb total of space. After you are finished with the tutorial, you are welcome to remove them using these commands:
+
+```bash
+ollama rm qwen3.5:2b
+ollama rm nomic-embed-text
+```
+
+### Alternative to Local LLMs
+
+The tutorial will assume you are using a local LLM going forward. I think it is a good opportunity to see that this technology does not necessarily need data-centers level of computation—for many tasks your computer is totally fine. But, if you prefer to use a cloud-based model, here are two options:
+
+The simplest is just using a chatbot like ChatGPT or Claude directly — if you paste in the csv we are using and our prompt, it should do a good (if not better) job of classifying the descriptions. 
+
+Another option is [HuggingFace](https://huggingface.co). HuggingFace is a platform that hosts open-weight and open-source models — think of it like GitHub but for AI. When most people use an open source model, they use HuggingFace. They also offer an **Inference API**, which lets you send text to a model running on their servers and get a response back, without running anything locally. You'll need a free account and an API token from [huggingface.co/settings/tokens](https://huggingface.co/settings/tokens), and then you would change the code below to make an API call to HuggingFace instead of Ollama. 
+
+The underlying logic is the same either way — you're writing a prompt and getting a response, the model just runs somewhere else. 
 
 ### Imports
 
@@ -64,7 +191,7 @@ import time
 import pandas as pd
 import numpy as np
 
-# Language model — local (Ollama) or cloud (HuggingFace API)
+# Language model — Ollama (local)
 import ollama
 
 # Machine learning — used in Part 2
@@ -72,6 +199,7 @@ from sklearn.cluster import KMeans
 from sklearn.preprocessing import normalize   # L2-normalizes vectors before clustering
 from scipy.spatial.distance import cosine as cosine_distance
 import umap
+import nbformat
 
 # Visualization — Altair for all maps and charts in both parts
 import altair as alt
@@ -81,17 +209,14 @@ alt.data_transformers.disable_max_rows()  # lift Altair's default 5000-row limit
 # Geospatial — used in Part 1 for the NTA spatial join
 import geopandas as gpd
 
-# HuggingFace API mode (commented out — only needed if not using Ollama)
-from huggingface_hub import InferenceClient
-
 print("Imports OK.")
 ```
 
-If you get an import error for any of these, check that you ran `pip install -r requirements.txt`.
+It may take a minute. If you get an import error for any of these, make sure you've activated the `tutorial-12` conda environment and selected it as the kernel in VS Code.
 
 ### Load the dataset
 
-Next, load the StreetEasy listings CSV and take a look at what we're working with.
+Next, load the StreetEasy listings CSV and take a look at what we're working with. Create a new folder in your project called data/, and download the `streeteasy_full.csv` file [here](https://drive.google.com/open?id=1b0hOMfQROzRPcgq_1GOb62cXd6uw8_5g&usp=drive_fs). In that folder is also a smaller csv (`streeteasy_250`,) If you would like to start with something that will run faster and scale up from there.
 
 ```python
 # Load the dataset
@@ -110,32 +235,33 @@ print("\n--- Example listing description ---")
 print(df['description'].iloc[0])
 ```
 
-Take a look at the description that prints. These are real listing descriptions scraped from StreetEasy — they're messy, inconsistent, sometimes full of all-caps or weird formatting. That's fine. One of the useful things about working with language models is that they handle this kind of variation without any cleaning on our part.
+Take a look at the description that prints, it should look like below. These are real listings scraped from StreetEasy. Landlords are not known for their prose. 
+
+![street easy loaded][STREETEASY-LOAD]
 
 ## Part 1: Classification with Prompting
 
-In this part we use a generation model to classify each listing description along one dimension: does this listing primarily sell the *neighborhood* (transit, parks, character) or the *unit itself* (layout, finishes, light)?
+In this part we use the generation model to classify each listing description: does it primarily sell the *neighborhood* (transit, parks, character) or the *unit itself* (layout, finishes, light)?
 
-We label each description **1** (neighborhood-forward) or **0** (unit-forward) using zero-shot prompting — no examples, no labeled training data, just a clear prompt. We then aggregate the results to the NTA (Neighborhood Tabulation Area) level and map the average score as a choropleth.
-
-This is one of the most direct uses of language models in spatial analysis: the model acts as a fast, scalable reader that converts unstructured text into a structured signal you can map.
+We label each description **1** (neighborhood-forward) or **0** (unit-forward) using zero-shot prompting — no examples, no labeled training data, just a prompt. We then aggregate to the NTA (Neighborhood Tabulation Area) level and map the result as a choropleth.
 
 ### Step 1.1: Define the generation model
 
-The first thing we need to do is set up the generation model and make sure Ollama is running. We use `qwen2.5:3b` by default — it's small, fast, and good enough for a simple binary classification like this. If you want to try a different model, just change `GENERATION_MODEL` below to anything you've pulled via `ollama pull`.
+First, let's define the model and make sure Ollama is running. We're using `qwen3.5:2b`. If you want to try something else, change `GENERATION_MODEL` to anything you've pulled with `ollama pull`, and swap out the model name. You can see a list of available models [here](https://ollama.com/library). Keep in mind that some of these are likely way too large for your personal computer. 
 
 ```python
 # ── Generation model setup ────────────────────────────────────────────────────
 # Change this to switch models. Options:
-#   'qwen2.5:3b'  — fast, good enough for binary classification
-#   'qwen2.5:7b'  — more accurate, needs more RAM, slower
-GENERATION_MODEL = 'qwen2.5:3b'
+#   'qwen3.5:2b'  — fast, good enough for binary classification
+#   'qwen3.5:4b'  — more accurate, needs more RAM, slower
+GENERATION_MODEL = 'qwen3.5:2b'
 
 # Quick connectivity check — makes sure Ollama is running before the long loop.
 try:
     _test = ollama.chat(
         model=GENERATION_MODEL,
-        messages=[{'role': 'user', 'content': 'Reply with the word OK and nothing else.'}]
+        messages=[{'role': 'user', 'content': 'Reply with the word OK and nothing else.'}],
+        think=False
     )
     print(f"Ollama OK — model: {GENERATION_MODEL}")
     print(f"Test response: {_test['message']['content'].strip()}")
@@ -146,15 +272,19 @@ except Exception as e:
     print("  ollama serve   (if not already running as a background service)")
 ```
 
-If this prints "Ollama OK" you're good. If not, make sure Ollama is actually running — on Mac it should be visible in the menu bar, on other systems you may need to run `ollama serve` in a separate terminal.
+If this prints "Ollama OK" you're good. If not, Ollama probably isn't running — on Mac it should be visible in the menu bar, on other systems you may need to run `ollama serve` in a separate terminal.
 
 ### Step 1.2: Classify each listing
 
-Now we'll loop over every listing description and ask the model to classify it. The function below builds a prompt that describes the two categories and asks the model to reply with a single digit — 1 for neighborhood-forward, 0 for unit-forward.
+Now we loop over every listing and ask the model to classify it. The function builds a prompt describing the two categories and asks for a single digit back — 1 for neighborhood-forward, 0 for unit-forward.
 
-A few things to pay attention to as this runs. The prompt is deliberately constrained ("Reply with ONLY the digit 1 or 0") to simplify parsing — small models sometimes ignore this, so we mark those as `-1` and exclude them later. Try reading a few descriptions yourself before looking at the model's label. Do you agree? Where does it surprise you? Keep in mind this is a binary classification, and real listings are often mixed — the model is forced to pick a dominant orientation.
+The prompt says "Reply with ONLY the digit 1 or 0" to make parsing easy. If a parse fails, it will assign -1, and exclude that listing from the dataset. 
 
-**This step takes 5–10 minutes for ~250 listings.** 
+We also have included `think=False` in the code below. These days, most AI models for text generation are "reasoning" models. They perform an approximation of reasoning by prompting the model to `think`, which will cause the model to reprompt itself many times before answering your question. That can be a really powerful feature and leaving it on would probably yield better classifications, but for a relatively dumb one-shot classification task like this, it makes it far too slow.
+
+Try reading a few descriptions yourself in the .csv before looking at what the model says. Where does it surprise you? Keep in mind this is a forced binary and highly imperfect — real listings are almost always going to be describing both the unit and the neighborhood.
+
+**This step takes 5-15 minutes for ~1400 listings, depending on your computer. Expect your computer to get a bit warm.** 
 
 ```python
 def classify_listing(description, model=GENERATION_MODEL):
@@ -174,7 +304,8 @@ def classify_listing(description, model=GENERATION_MODEL):
     )
     response = ollama.chat(
         model=model,
-        messages=[{'role': 'user', 'content': prompt}]
+        messages=[{'role': 'user', 'content': prompt}],
+        think=False
     )
     raw = response['message']['content'].strip()
     if raw.startswith('1'):
@@ -212,15 +343,15 @@ print("\nSample neighborhood-forward listings:")
 display(df[df['neighborhood_forward'] == 1][['address', 'neighborhood', 'description']].head(2))
 ```
 
-When it finishes, take a look at the sample listings that print. Read the descriptions and see if you agree with the model's classification. It won't be perfect — this is a blunt instrument — but it should be directionally right most of the time.
+When it finishes, the bottom of your output should look like below. Take a look at the sample listings that print. Read the descriptions and see if you agree with the model's classification. It won't be perfect — this is a blunt instrument — but it should be directionally right where it is possible to be.
+
+![sample classifications][CLASSIFICATIONS]
 
 ### Step 1.3: Load Neighborhood Tabulation Areas
 
-To map the classification results spatially, we need a geographic boundary layer. We'll use NYC's **Neighborhood Tabulation Areas (NTAs)**, which are the standard census sub-borough geography — granular enough to show variation within a borough, stable enough for comparison.
+To map the results, we need a geographic boundary file. We'll use NYC's **Neighborhood Tabulation Areas (NTAs)** — the standard sub-borough census geography.
 
-**Before running this cell:** download the NTA GeoJSON from NYC Open Data and save it to your `data/` folder as `nta_nyc.geojson`:
-
-[https://data.cityofnewyork.us/api/geospatial/9nt8-h7nd?method=export&type=GeoJSON](https://data.cityofnewyork.us/api/geospatial/9nt8-h7nd?method=export&type=GeoJSON)
+**Before running this cell:** download the NTA GeoJSON from [NYC Open Data (export -> Geojson)](https://data.cityofnewyork.us/City-Government/2020-Neighborhood-Tabulation-Areas-NTAs-/9nt8-h7nd/about_data) and save it to your `data/` folder, renamed to  `nta_nyc.geojson`.
 
 ```python
 nta_gdf = gpd.read_file('data/nta_nyc.geojson')
@@ -228,7 +359,9 @@ print(f"Loaded {len(nta_gdf)} NTAs")
 print(f"Columns: {list(nta_gdf.columns)}")
 ```
 
-Now we'll do a spatial join — the same operation you've done in QGIS and in the python tutorial, just with different datasets. We filter to Manhattan NTAs, convert our listings to a GeoDataFrame using their lat/lon coordinates, join each listing to the NTA polygon it falls within, and then compute the mean `neighborhood_forward` score per NTA.
+Now we do a spatial join. We filter to Manhattan NTAs, convert the listings to a GeoDataFrame, join each one to the NTA polygon it falls in, and compute the mean `neighborhood_forward` score per NTA.
+
+This should feel familiar — we're doing the same thing here (joining points to polygons) as we did in Tutorial 1. Just with classification labels instead of tree counts.
 
 ```python
 # Filter to Manhattan and reproject to match the listings CRS
@@ -268,8 +401,6 @@ print(nta_scores.sort_values('avg_neighborhood_forward', ascending=False)
       .head(5)[['ntaname', 'avg_neighborhood_forward', 'listing_count']]
       .to_string(index=False))
 ```
-
-If you've done the spatial join tutorial in QGIS and the python tutorial, this should feel familiar — we're doing the same thing here (joining points to polygons), just with classification labels instead of tree counts.
 
 ### Step 1.4: Map the result
 
@@ -323,7 +454,9 @@ choropleth = alt.Chart(
 choropleth
 ```
 
-Take a look at the result. Does the pattern make sense to you? Areas where the neighborhood itself is a major draw (think the Village, the Upper West Side near the park) might lean neighborhood-forward, while areas where the buildings themselves are the selling point might lean the other way.
+Take a look at the result. Does the pattern make sense to you? To me, it doesn't totally make sense. I would guess that we are looking at the bias of our dataset: The description of listings probably talks about the unit mroe than the neighborhood. Still, there are some interesting outliers.
+
+![map 1][MAP1]
 
 We can also export this scored NTA layer as a GeoJSON for use in other tools:
 
@@ -337,55 +470,42 @@ from IPython.display import FileLink
 FileLink(out_path, result_html_prefix="Download: ")
 ```
 
+What prompts do you think would yield more interesting maps? That is what you will be asked to try in the assignment. If you are strapped for time, feel free to stop here and move to the assignment. However, if you can I do recommend continuing. I think part 2 is where things start to get interesting.
+
 ## Part 2: Semantic Mapping with Embeddings
 
-In Part 1 we used a language model as a classifier — we gave it instructions and asked for a label. In Part 2 we use a different kind of model to turn each description into a vector of numbers, and then use those vectors to build a map of *meaning* rather than geography.
+In Part 1 we gave the model instructions and asked for a label. In Part 2 we do something different — we turn each description into a vector of numbers, and use those vectors to build a map of *meaning* rather than geography.
+
+## What are embeddings?
+
+When a language model is trained, it learns to represent words and phrases as lists of numbers called **vectors** (or **embeddings**). Things with similar meanings end up with similar numbers. "Steps from the park" and "across from the park entrance" will have nearly identical vectors even though they share no words, because the model learned that both describe similar things.
+
+We apply that at the scale of whole listing descriptions. Each description gets compressed into a single vector — 768 numbers, for the model we're using. That vector is a coordinate in a 768-dimensional space, where closeness means similarity of meaning.
+
+This same idea shows up in a lot of places we've talked about in this course. AlphaEarth does it for satellite imagery — every pixel gets a vector, and the result is a space where similar land cover types cluster together regardless of geography. The targeting systems we discussed in *The Curse of Dimensionality* work the same way: people, places, and behaviors get converted to vectors, and "similarity to a target profile" is just a distance calculation. When you type a message to ChatGPT, every word is immediately converted to an embedding before any processing happens. The model works entirely in this numerical space. Embeddings are the substrate of how these models operate.
 
 ### Step 2.1: Generate embeddings
 
-We'll pass each listing description through an **embedding model** — a model trained specifically to convert text into vectors. This is a different job from Part 1's generation model, which was trained to produce text. Embedding models are trained to produce vectors that encode meaning.
+We pass each description through the embedding model, which converts it to a vector. This runs locally through Ollama, same as before. We're using `nomic-embed-text`, which produces 768-dimensional vectors. If you're curious how it compares to other options, the [MTEB leaderboard](https://huggingface.co/spaces/mteb/leaderboard) is the standard benchmark — look at the "Semantic Textual Similarity" column. If you want something stronger and have the RAM, try `mxbai-embed-large` (`ollama pull mxbai-embed-large`). Just note that embeddings from different models aren't interchangeable — you can't mix vectors from two models and compare them.
 
-If you're curious about how different embedding models compare, the benchmark to look at is the [MTEB leaderboard](https://huggingface.co/spaces/mteb/leaderboard) (Massive Text Embedding Benchmark) on HuggingFace. For our use case (semantic similarity of short English texts), look at the "Semantic Textual Similarity" column.
-
-We use `nomic-embed-text` (768 dimensions) as the default — it scores well on MTEB, runs locally via Ollama, and is small enough for a laptop. If you want something stronger, try `mxbai-embed-large` (1024 dims): `ollama pull mxbai-embed-large`. The HuggingFace fallback (`all-MiniLM-L6-v2`) produces 384-dimensional vectors — the code works with either, but embeddings from different models are not interchangeable.
-
-**This step takes 10–20 minutes for ~250 listings in local mode.**
+**This step takes 1-5 minutes for ~1400 listings**
 
 ```python
 # Load the dataset (allows this cell to run independently of Part 1)
 df = pd.read_csv('data/streeteasy_full.csv')
 
-# ---- LOCAL MODE (default) ----------------------------------------
 # Calls Ollama running on your machine. Requires: ollama pull nomic-embed-text
 # Produces 768-dimensional vectors.
 def embed_local(text):
     response = ollama.embeddings(model='nomic-embed-text', prompt=text)
     return response['embedding']
 
-
-# ---- HF API MODE (commented out) -----------------------------------
-# Uncomment this block and set embed = embed_hf below to use HF instead.
-# Produces 384-dimensional vectors — not compatible with local mode embeddings.
-#
-# HF_TOKEN = "YOUR_HF_TOKEN_HERE"  # paste your token from huggingface.co/settings/tokens
-# hf_client = InferenceClient(token=HF_TOKEN)
-#
-# def embed_hf(text):
-#     result = hf_client.feature_extraction(
-#         text, model="sentence-transformers/all-MiniLM-L6-v2"
-#     )
-#     return result[0].tolist()  # result is a 2D array; take the first (and only) row
-
-
-# Set the active embedding function here.
-# To switch to HF mode: comment out the next line and uncomment the one after.
 embed = embed_local
-# embed = embed_hf
 
 
 # ---- Run embeddings ------------------------------------------------
 print(f"Generating embeddings for {len(df)} listings...")
-print("(In local mode, expect ~10–20 minutes on a laptop.)")
+print("(Expect ~1-5 minutes on a laptop.)")
 print()
 
 embeddings = []
@@ -401,7 +521,7 @@ df['embedding'] = embeddings
 print(f"\nDone. Each embedding has {len(df['embedding'].iloc[0])} dimensions.")
 ```
 
-Once this finishes, each listing now has a 768-number vector associated with it. To get a feel for what these embeddings actually capture, let's compare the similarity of a few pairs of listings:
+Once that runs, each listing has a 768-number vector attached to it. To get a feel for what these capture, let's compare a few pairs:
 
 ```python
 # scipy's cosine() returns cosine *distance* (0 = identical, 2 = maximally different)
@@ -448,13 +568,15 @@ print("--- Note: same-neighborhood listings are often more similar, but not alwa
 print("--- Semantic similarity reflects *content*, not location. ---")
 ```
 
-Read the descriptions that print and look at the cosine similarity scores. Listings from the same neighborhood are often more similar, but not always — semantic similarity reflects what the description *says*, not where the apartment is. That gap between geographic proximity and semantic proximity is what makes the rest of this tutorial interesting.
+Read the descriptions and look at the scores. Listings from the same neighborhood are often similar, but not always — similarity here reflects what the description *says*, not where the apartment is.
+
+![embedding comparison][EMBEDDING-COMPARISON]
 
 ### Step 2.2: Dimensionality reduction with UMAP
 
-We can't visualize 768 dimensions, so we need to compress them. **UMAP** (Uniform Manifold Approximation and Projection) is a dimensionality reduction algorithm that compresses high-dimensional data down to 2D (or 3D) while trying to preserve the neighborhood structure — points that are close in high-dimensional space should end up close in 2D.
+768 dimensions can't be visualized, so we need to compress them. **UMAP** (Uniform Manifold Approximation and Projection) takes high-dimensional data and projects it to 2D (or 3D) while trying to keep nearby things nearby.
 
-The result is a "semantic map" of the dataset. Two listings that describe similar things will land near each other on this map even if they share no words and are in different neighborhoods. The axes have no geographic meaning; the only thing that matters is distance between points.
+The result is a kind of semantic map. Two listings that describe similar things will land close together even if they share no words and are in different neighborhoods. The axes don't mean anything geographically — only the distances between points matter.
 
 ```python
 # Stack all embedding vectors into a 2D numpy array: shape = (n_listings, n_dimensions)
@@ -505,13 +627,15 @@ umap_by_neighborhood = alt.Chart(df).mark_circle(size=40, opacity=0.75).encode(
 umap_by_neighborhood
 ```
 
-Notice how listings from the same neighborhood often cluster together, but not always. Some clusters cut across neighborhood lines, grouping listings by description *style* rather than location. That's the whole point — this map shows similarity of language, not similarity of geography.
+This is interactive, hover over the points. Notice how listings from the same neighborhood often cluster together — but not always. Some clusters cut across neighborhood lines, grouping by description style rather than location. This map shows similarity of language, not similarity of geography. 
+
+![umap 2d visualization][UMAP-2D]
 
 ### Step 2.3: Clustering
 
-Now we'll use **k-means** to assign each listing to one of `k` clusters based on its position in embedding space. K-means works by repeatedly assigning each point to its nearest cluster center, then moving the center to the mean of all its assigned points, until stable.
+Now we use [k-means clustering](https://en.wikipedia.org/wiki/K-means_clustering) to group the listings into `k` clusters based on their position in embedding space. K-means works by repeatedly assigning each point to its nearest cluster center, then moving the center to the mean of its members, until stable.
 
-This is different from what we did in Part 1, where we told the model what categories to use. Here, we're letting groupings emerge from the data itself. We choose `k` — try different values between 5 and 12 and see what changes. We cluster in the original high-dimensional space (not in the UMAP 2D), because UMAP compresses information and clustering there gives noisier results.
+Unlike Part 1, where we told the model what categories to use, here we're letting groupings emerge from the data. Try changing `k` between 5 and 12 and see what shifts. We cluster in the original high-dimensional space rather than the UMAP 2D, because UMAP compresses information and clustering there gives noisier results.
 
 ```python
 # Try changing k between 5 and 12 to see how the clusters shift
@@ -559,13 +683,15 @@ umap_by_cluster = alt.Chart(df).mark_circle(size=40, opacity=0.75).encode(
 umap_by_cluster
 ```
 
-Compare this with the neighborhood-colored version from above. Where do the cluster boundaries align with neighborhood boundaries? Where do they diverge?
+Below is what I get with eight clusters:
+
+![k means clustering][CLUSTER]
 
 ### Step 2.4: Auto-labeling clusters
 
-Each cluster now has a number but no name. We'll ask the generation model to read a sample of listings from each cluster and describe what they have in common — in four words or fewer.
+Each cluster has a number but no name. What is good at analyzing text? That's right, the generation model that we used before. We'll pass a sample of listings from each cluster to the generation model and ask it to describe what they have in common.
 
-This is a much easier task for a small model than classifying individual listings: it's reading a group and naming a pattern, not making a fine judgment about a single item.
+Here, the model is reading a group and naming a pattern, not making a judgment about a single item. This should be quicker than the last time we used this model, but that may increase if you change `n_samples` or the prompt.
 
 ```python
 n_samples = 30  # number of listings to show the model per cluster
@@ -600,7 +726,8 @@ for cluster_id in sorted(df['cluster'].unique()):
 
     response = ollama.chat(
         model=GENERATION_MODEL,
-        messages=[{'role': 'user', 'content': prompt}]
+        messages=[{'role': 'user', 'content': prompt}],
+        think=False
     )
     label = response['message']['content'].strip()
 
@@ -620,13 +747,15 @@ for cid, lbl in sorted(cluster_labels.items()):
     print(f"  Cluster {cid}: {lbl}")
 ```
 
-Read through the labels and the sample descriptions. Do the labels make sense? Sometimes the model produces something too generic or too specific — you can always re-run this cell (it's fast) or change the prompt to push it in a different direction.
+Read through the labels and the sample listings. Do they make sense? I find it not surprising that the most descriptions have the word *luxury* in there somewhere. Sometimes the model is too generic or too specific — re-run the cell or tweak the prompt if you want to push it in a different direction.
+
+![auto-labeling clusters][LABELS]
 
 ### Step 2.5: Map the results
 
-Now the payoff. We'll look at the same listings through two lenses: a **geographic map** with listings placed at their real lat/lon, and a **3D semantic map** with listings placed in UMAP space. Both are colored by cluster.
+Now we map everything. Same listings, two views: a **geographic map** with listings at their real lat/lon, and a **3D semantic map** with listings in UMAP space. Both colored by cluster. I recommend pasting each of the three scripts below as seperate cells, and then running them together. The third one will be a side-by-side visualization.
 
-Comparing the two is the point: where do geographic neighbors become semantic strangers? Which clusters appear everywhere in the city, and which are concentrated in specific areas?
+Where do geographic neighbors end up in different clusters? Any interesting trends you are noticing?
 
 First, the geographic map:
 
@@ -765,7 +894,7 @@ fig_combined.update_layout(
     height=600,
     legend=dict(title='Cluster'),
     title=dict(
-        text='Geographic vs. Semantic — same color = same cluster. Where do geographic neighbors become semantic strangers?',
+        text='Geographic vs. Semantic',
         x=0.5,
         xanchor='center',
     ),
@@ -775,11 +904,27 @@ fig_combined.update_layout(
 fig_combined.show()
 ```
 
-Spend some time with this combined view. Rotate the 3D semantic map and hover over points. Find two listings that are geographically close but in different semantic clusters, and read their descriptions. Find two that are geographically far apart but in the same cluster. What's going on in the language that connects or separates them?
+The output should look like the below, the map and embedding space side by side.
 
-## What's next
+![both visualizations][FINAL]
 
-The UMAP coordinates, cluster labels, and `neighborhood_forward` classifications you've generated are the starting point for the next tutorial, where we'll use a web-first approach — working with Claude as a coding collaborator — to build an interactive web visualization of this dataset.
+Spend some time with this. Rotate the semantic map and hover over points. Find two listings that are geographically close but in different clusters, and read their descriptions. Find two that are far apart geographically but in the same cluster. What is it about the language that connects or separates them?
+
+While the assignment does not ask you to construct embeddings, if anyone ends up with any interesting results, I would love to see them!
 
 ---
 Module by Adam Vosburgh, Spring 2026.
+
+[BASH]: /tutorials/images/162/02-bash.png
+[VSCODE]: /tutorials/images/162/03-vscode.png
+[CONDA]: /tutorials/images/162/04-conda.png
+[KERNEL]: /tutorials/images/162/05-kernel.png
+[OLLAMA]: /tutorials/images/162/06-ollama-list.png
+[STREETEASY-LOAD]: /tutorials/images/162/07-streeteasy-load.png
+[CLASSIFICATIONS]: /tutorials/images/162/08-classification.png
+[MAP1]: /tutorials/images/162/09-map1.png
+[EMBEDDING-COMPARISON]: /tutorials/images/162/10-embedding-comparison.png
+[UMAP-2D]: /tutorials/images/162/11-umap-2d.png
+[CLUSTER]: /tutorials/images/162/12-cluster.png
+[LABELS]: /tutorials/images/162/13-labels.png
+[FINAL]: /tutorials/images/162/14-final.png
