@@ -147,9 +147,9 @@ Like all technologies, all LLMs are built for a specific purpose. This notebook 
 
 **Part 2** uses an **embedding model** — a model trained to produce vectors (in the machine learning sense) that encode meaning. If you don't know what that is, don't worry about it, I will explain a bit more when we get to that part. We will use `nomic-embed-text`, a completely open-source (meaning the training data is also open-sourced) embedding model developed by [nomic.ai](https://www.nomic.ai/), which funnily enough looks like it is in the AEC business these days. You can find the model card [here](https://huggingface.co/nomic-ai/nomic-embed-text-v1)
 
-While these models are different—you cannot use one in place of the other—they are similar in that they are both lightweight, and can easily run on any modern hardware. `qwen3.5:2b` is a 2 billion parameter model, tiny by LLM standards. `nomic-embed-text` is even smaller, with less than 200 million parameters. For a point of comparison, the highest quality models produced by labs like OpenAI and anthropic are estimated to be 100 to 400 billion parameters. 
+While these models are different—you cannot use one in place of the other—they are similar in that they are both lightweight, and can easily run on any modern hardware. `qwen3.5:2b` is a 2 billion parameter model, tiny by LLM standards. `nomic-embed-text` is even smaller, with less than 200 million parameters. For a point of comparison, the highest quality models produced by labs like OpenAI and Anthropic are estimated to be 100 to 400 billion parameters. 
 
-We'll run both locally using [Ollama](https://ollama.ai). Ollama lets you download and run open-weight models on your own machine. Install it from [ollama.ai](https://ollama.ai), then pull the two models:
+We'll run both locally using [Ollama](https://ollama.ai). Ollama lets you download and run open-weight models on your own machine. Install it from [ollama.ai](https://ollama.ai), then pull the two models using the below commands. Note that you should have at least 4gb of free space on your computer before doing so:
 
 ```bash
 ollama pull qwen3.5:2b
@@ -160,7 +160,7 @@ After you pull those two, run `ollama list`, and it should look like the screens
 
 ![ollama model list][OLLAMA]
 
-Notice that these models are not small - this is about 3gb total of space. After you are finished with the tutorial, you are welcome to remove them using these commands:
+Notice that these models are not small - this is about 3gb total of space. *After you are finished with the tutorial*, you are welcome to remove them using these commands:
 
 ```bash
 ollama rm qwen3.5:2b
@@ -169,7 +169,7 @@ ollama rm nomic-embed-text
 
 ### Alternative to Local LLMs
 
-The tutorial will assume you are using a local LLM going forward. I think it is a good opportunity to see that this technology does not necessarily need data-centers level of computation—for many tasks your computer is totally fine. But, if you prefer to use a cloud-based model, here are two options:
+The tutorial will assume you are using a local LLM going forward. I think it is a good opportunity to see that this technology does not necessarily need data center level of computation. For many tasks, your computer is totally fine. But, if you prefer to use a cloud-based model, here are two options:
 
 The simplest is just using a chatbot like ChatGPT or Claude directly — if you paste in the csv we are using and our prompt, it should do a good (if not better) job of classifying the descriptions. 
 
@@ -404,7 +404,7 @@ print(nta_scores.sort_values('avg_neighborhood_forward', ascending=False)
 
 ### Step 1.4: Map the result
 
-Now we'll build a choropleth of Manhattan NTAs. Each NTA is colored by its average `neighborhood_forward` score: pink means listings in that area tend to sell the location, green means they tend to sell the unit, gray means we didn't have any listings there.
+Now we'll build a choropleth of Manhattan NTAs. Each NTA is colored by its average `neighborhood_forward` score: pink means listings in that area tend to sell the location, green means they tend to sell the unit, white an even split.
 
 ```python
 # Merge scores into the Manhattan NTA GeoDataFrame
@@ -814,7 +814,7 @@ sem_fig = px.scatter_3d(
         'umap_z3': False,
     },
     opacity=0.8,
-    title='3D Semantic Map (UMAP — not geographic)',
+    title='3D Semantic Map',
 )
 sem_fig.update_traces(marker=dict(size=3))
 sem_fig.update_layout(
@@ -839,7 +839,7 @@ import plotly.graph_objects as go
 fig_combined = make_subplots(
     rows=1, cols=2,
     specs=[[{'type': 'map'}, {'type': 'scene'}]],
-    subplot_titles=['Geographic map', 'Semantic map (UMAP 3D — not geographic)'],
+    subplot_titles=['Geographic map', 'Semantic map'],
     column_widths=[0.5, 0.5],
 )
 
