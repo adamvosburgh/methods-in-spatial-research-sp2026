@@ -44,10 +44,10 @@ This course is divided into two halves:
 | 3/13 | 8 | Kinne Week | | |
 | 3/20 | 9 | Spring Break | | |
 | 3/27 | 10 | "Spatial Intelligence" | Tutorial 9 OR Tutorial 10 + 11 | Assignment 5 |
-| 4/03 | 11 | Simulations | Tutorial 12 | Assignment 6 (for extra credit) |
+| 4/03 | 11 | Simulations | Tutorial 12 | |
 | 4/10 | 12 | Show and Tell Day 1 | | Group 1 Final Presentation |
 | 4/17 | 13 | Show and Tell Day 2 | | Group 2 Final Presentation |
-| 5/06 |  | Website Due | | | 
+| 5/06 |  | Website Due | | Assignment 6 (for extra credit) | 
 
 ## Weekly Schedule, Readings, & Assignments
 All course tutorials and assignments will be posted here on the course website.
