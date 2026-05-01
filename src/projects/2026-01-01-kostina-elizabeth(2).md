@@ -18,7 +18,9 @@ There are no Lakota-authored maps in this dataset. This absence is not incidenta
 
 #### The Očhéthi Šakówiŋ, Before 1851
 
-The territory of the *Očhéthi Šakówiŋ* (the Seven Council Fires, the confederacy the United States would call the Sioux) extended across the Northern Great Plains from the Missouri River west to the Rocky Mountain foothills, and from the Platte River north into present-day Canada. At its heart stood the Black Hills: *Pahá Sápa*, the center of the Lakota world. The confederacy comprised seven distinct nations — the four Dakota, the two Nakota, and the Teton Lakota — whose relationship to this land was collective, relational, and non-commodified. No document bounded it. That was about to change.
+The territory of the *Očhéthi Šakówiŋ* (the Seven Council Fires, the confederacy the United States would call the Sioux) extended across the Northern Great Plains from the Missouri River west to the Rocky Mountain foothills, and from the Platte River north into present-day Canada. At its heart stood the Black Hills: *Pahá Sápa*, the center of the Lakota world. The confederacy comprised seven distinct nations — the four Dakota, the two Nakota, and the Teton Lakota — whose relationship to this land was collective, relational, and non-commodified. No document bounded it. 
+
+In each map below, the Black Hills / Pahá Sápa are outlined in black. These are the heart of the Lakota world and anchors these changing  boundaries.
 
 ![The Očhéthi Šakówiŋ nations and their territories across the Northern Great Plains, pre-1851](/projects/images/kostina-elizabeth/map%201.png)
 
