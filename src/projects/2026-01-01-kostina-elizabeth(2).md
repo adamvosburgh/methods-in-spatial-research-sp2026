@@ -20,8 +20,6 @@ There are no Lakota-authored maps in this dataset. This absence is not incidenta
 
 The territory of the *Očhéthi Šakówiŋ* (the Seven Council Fires, the confederacy the United States would call the Sioux) extended across the Northern Great Plains from the Missouri River west to the Rocky Mountain foothills, and from the Platte River north into present-day Canada. At its heart stood the Black Hills: *Pahá Sápa*, the center of the Lakota world. The confederacy comprised seven distinct nations — the four Dakota, the two Nakota, and the Teton Lakota — whose relationship to this land was collective, relational, and non-commodified. No document bounded it. 
 
-In each map below, the Black Hills / Pahá Sápa are outlined in black. These are the heart of the Lakota world and anchors these changing  boundaries.
-
 ![The Očhéthi Šakówiŋ nations and their territories across the Northern Great Plains, pre-1851](/projects/images/kostina-elizabeth/map%201.png)
 
 ---
@@ -42,11 +40,13 @@ The first Fort Laramie Treaty of 1851 — the Horse Creek Treaty — formalized 
 
 The 1868 Fort Laramie Treaty was more significant. Signed after Lakota forces under Red Cloud successfully closed the Bozeman Trail and forced the abandonment of US Army forts, it established the Great Sioux Reservation — guaranteeing the Lakota permanent possession of all land west of the Missouri River in present-day South Dakota, including the Black Hills. Article XII was explicit: no future cession would be valid without the consent of three-quarters of all adult male Lakota. The United States had, in its own legally binding terms, acknowledged Lakota sovereignty over *Pahá Sápa*. Six years later, gold was discovered there (Ostler 2004).
 
+In each map below, the Black Hills / Pahá Sápa are outlined in black. These are the heart of the Lakota world and anchors these changing  boundaries.
+
 ![1851 vs. 1868 — reduction from the Horse Creek boundary to the Great Sioux Reservation](/projects/images/kostina-elizabeth/map%203.png)
 
-*Historic map: Warren, Military Map of Nebraska and Dakota, 1857–58. Lt. G.K. Warren's military reconnaissance of Lakota territory, produced in the years before the 1868 reservation boundary was drawn — the landscape as it existed before the lines were imposed. Library of Congress.*
-
 ![Warren Military Map of Nebraska and Dakota, 1857–58](/projects/images/kostina-elizabeth/warren%20map%201857%2C8.jpg)
+
+*Historic map: Warren, Military Map of Nebraska and Dakota, 1857–58. Lt. G.K. Warren's military reconnaissance of Lakota territory, produced in the years before the 1868 reservation boundary was drawn — the landscape as it existed before the lines were imposed. Library of Congress.*
 
 ---
 
@@ -60,7 +60,7 @@ The ensuing Great Sioux War culminated in the Battle of the Little Bighorn in Ju
 
 *Historic map: Map of Country Comprising the Sioux Indian Reservations in North and South Dakota, November 1890. Prepared by the Engineer Office, Headquarters Dept. of Dakota, by authority of Brig. Gen. T.H. Ruger. Issued weeks before the Wounded Knee massacre — the six fragmented reservations rendered in military engineering blue.*
 
-![Military map of Sioux reservations, 1890](/projects/images/kostina-elizabeth/1890%20Military%20map%20of%20Sioux%20reservations%20in%20North%20and%20South%20Dakota_%20issued%20just%20weeks%20before%20Wounded%20Knee.jpg)
+![Military map of Sioux reservations, 1890](/projects/images/kostina-elizabeth/1890%20Military%20map)
 
 ---
 
