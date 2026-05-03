@@ -20,11 +20,52 @@ Make sure both are in a `data/` folder in the same directory as this notebook be
 
 ## Environment setup
 
+### Working locally
+
+Through most tutorials, you have used python notebooks in Google Colab. Colab is very convenient because it allows you to run code without having to worry about your local environment.
+
+We won't use that for this tutorial, because we will be using `geopandas`, which depends on some native geospatial libraries (GDAL, PROJ, Fiona) that are much more reliable to install through conda than pip, and conda is not available in Colab. Also, in the spirit of this class, while the service provided by Google is great, it's best if you learn how to use these tools and technologies in a way that doesn't leave you reliant on the services of one of the most powerful entities in the world.
+
+All that said, if you are really struggling with setting up the environment, you can feel free to switch back to Google Colab. If you do that, you can skip the entire `environment setup` phase of this tutorial and install the packages using pip. Let me know if you need assistance.
+
+### Setting up your notebook
+
+So let's start. For this, you will need a full-featured text editor, I recommend [vs code](https://code.visualstudio.com/), and will assume you are using that in the following steps.
+
+Let's open up terminal in MacOS, or Powershell in Windows. Run each of these commands by typing them into your terminal and hitting `enter`. Together they will create a folder named `tutorial-13` on your desktop, open it, and create some (empty) files that we will need later.
+If you are new to this, I recommend this [quick start](https://www.macworld.com/article/221277/command-line-navigating-files-folders-mac-terminal.html) on navigating your files in terminal. If this is all too confusing, you are absolutely welcome to create the folder as you would any other folder, open it in vs code, and create the files using the "new file" button in there.
+
+**In MacOS**, run each of these one at a time by typing them into your terminal and hitting `enter`.
+```bash
+cd Desktop 
+mkdir tutorial-13
+cd tutorial-13
+touch tutorial-13.ipynb
+touch environment.yml
+code .
+```
+![bash commands][BASH]
+
+Most likely, that last command did not work for you. If it did, it would open vs code at the folder that you made, and you would see the files that you created on the "Explorer" tab on the left. If you would like to use that command, you can follow the instructions [here](https://code.visualstudio.com/docs/setup/mac#_launch-vs-code-from-the-command-line). I personally find it convenient. If you prefer not to, you can open up VS code, and select your folder in `File` > `Open Folder...` If you are on windows, this command should work by default.
+
+**In Windows**, open PowerShell and run:
+```powershell
+cd Desktop
+mkdir tutorial-13
+cd tutorial-13
+New-Item tutorial-13.ipynb
+New-Item environment.yml
+code .
+```
+One last thing: In VS Code, go to `Terminal` > `New Terminal`. This will open up a new terminal on the right side of your VS Code workspace, that is running in this folder. Going forward, this is where we will type terminal commands.
+
+![vs code setup][VSCODE]
+
 ### Installing conda
 
-This tutorial uses `geopandas`, which depends on some native geospatial libraries (GDAL, PROJ, Fiona) that are much more reliable to install through conda than pip. If you already have conda set up from a previous tutorial, skip ahead to the next section.
+In order to run this code, we will have to use various packages that are not included in vanilla python, such as `geopandas`, `altair`, etc. For various reasons, we will be using `conda` as a package manager, instead of the default python package manager, `pip`.
 
-If not, install **Miniconda** — it's the smallest version that gives you what you need. Download the installer from [anaconda.com/download](https://www.anaconda.com/download/success?reg=skipped) and run it with all default settings.
+There are a few conda install options, we will choose **Miniconda** — it's the smallest version that gives you what you need. Download the Miniconda installer from [anaconda.com/download](https://www.anaconda.com/download/success?reg=skipped) and run it with all default settings.
 
 On MacOS, after it finishes installing, run this to refresh your terminal session:
 
@@ -38,11 +79,13 @@ Then verify it worked:
 conda --version
 ```
 
-You should see a version number. Once that works, proceed below.
+You should see a version number like the screenshot below. Once that works, you may proceed.
+
+![succesful conda install][CONDA]
 
 ### Creating the conda environment
 
-We'll use a `environment.yml` file to set up the environment. Create that file in your tutorial folder and paste the following into it:
+We'll use an `environment.yml` file to set up the environment. You should have already created it, but if you haven't, do so now and paste the following into it:
 
 ```yaml
 name: street-trees
@@ -60,7 +103,7 @@ dependencies:
 
 `conda-forge` is listed first because it carries the most up-to-date geospatial builds. `ipykernel` is what lets you run the notebook in VS Code.
 
-Open a terminal, navigate to your tutorial folder, and run:
+In your terminal run:
 
 ```bash
 conda env create -f environment.yml
@@ -78,7 +121,9 @@ Your terminal prompt will change to show `(street-trees)`. Then register the env
 python -m ipykernel install --user --name street-trees --display-name "street-trees"
 ```
 
-You only need to do this once. After that, open the notebook in VS Code, click the kernel selector in the top-right corner, click "Jupyter Kernel...", and choose **street-trees**. If you don't see it, close and reopen VS Code. Once the kernel is selected, you're ready to run.
+You only need to do this once. After that, open the notebook (the .ipynb file) in VS Code, click the "Select Kernel" button in the top-right corner, click "Jupyter Kernel...", and choose **street-trees**. If you don't see it, close and reopen VS Code. Once the kernel is selected, we're all done with setup.
+
+![selecting kernel][KERNEL]
 
 ## Setup
 
@@ -417,4 +462,9 @@ There's a broader methodological point worth sitting with. When researchers or c
 If you wanted to shift the benefit map toward underserved areas, you have two levers: number of trees (planting more) and quality of trees (prioritizing larger species, better stewardship, fewer removals). Which is more tractable in a dense urban environment? What constraints — sidewalk width, underground utilities, maintenance budgets — would shape where new trees can actually go?
 
 ---
-Module by Adam Vosburgh, Spring 2026. 
+Module by Adam Vosburgh, Spring 2026.
+
+[BASH]: /tutorials/images/TBD/01-bash.png
+[VSCODE]: /tutorials/images/TBD/02-vscode.png
+[CONDA]: /tutorials/images/TBD/03-conda.png
+[KERNEL]: /tutorials/images/TBD/04-kernel.png
