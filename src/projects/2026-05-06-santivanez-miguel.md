@@ -6,7 +6,6 @@ author: "Miguel Angel Santivanez, Jie-Enn Lee, Amy Connor"
 published: true
 ---
 
-# Surco Canal Mapping
 
 *To enjoy the complete interactive experience, please go to https://mas2646.github.io/SurcoCanalMapping/*
 
@@ -36,7 +35,19 @@ As Lima expanded throughout the twentieth century, the Surco Canal became increa
 
 The Surco Canal long predates the contemporary city of Lima. Constructed as part of a broader pre-Hispanic hydraulic network, the canal transformed an arid coastal territory into productive agricultural land and structured patterns of settlement, cultivation, and governance across the valley. For centuries, water infrastructure operated as the foundation of urban and territorial life in the desert landscape. By the late nineteenth century, Lima’s urban expansion began to absorb these agricultural landscapes into an increasingly consolidated urban fabric. As new roads, neighborhoods, and infrastructures emerged, the canal persisted within the growing city, gradually shifting from a territorial irrigation system into embedded urban infrastructure.
 
-<iframe src="https://mas2646.github.io/SMC-historical-timeline" style="position:absolute;top:0;left:0;width:100%;height:100%;" frameborder="0"></iframe>
+### Urban Evolution Timeline (1944 - 2025)
+
+This interactive slider demonstrates the rapid urban consolidation of Lima and its impact on the Surco Canal's historical agricultural territory.
+
+<div class="iframe-column">
+  <iframe src="https://mas2646.github.io/SCM-historical-timeline/" 
+          style="position:absolute;top:0;left:0;width:100%;height:100%;" 
+          frameborder="0">
+  </iframe>
+</div>
+
+*Comparison of urban growth across 80 years (Source: Historical Aerophotography and Satellite Imagery).*
+
 
 
 #### Works Cited
