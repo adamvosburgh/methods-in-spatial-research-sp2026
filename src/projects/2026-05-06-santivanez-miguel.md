@@ -6,7 +6,7 @@ author: "Miguel Angel Santivanez, Jie-Enn Lee, Amy Connor"
 published: true
 ---
 
-# Historical Urban Evolution - Lima
+# Surco Canal Mapping
 
 *To enjoy the complete interactive experience, please go to https://mas2646.github.io/SurcoCanalMapping/*
 
