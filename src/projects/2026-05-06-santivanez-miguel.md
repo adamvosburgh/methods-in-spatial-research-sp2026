@@ -21,7 +21,7 @@ Lima is the second driest biggest city in the world, after El Cairo. Through the
 In pre-Hispanic Lima, hydraulic infrastructure structured territorial authority. Control over water distribution through the development of this system over the centuries, local curacas such as **Taulichusco** held power over the territory.
 
 ### Prehispanic Evolution
-![Prehispanic Evolution](/projects/images/santivanez-miguel/01-Prehispanic-maps.JPG)
+![Prehispanic Evolution](/projects/images/santivanez-miguel/01-Prehispanic-maps.jpg)
 
 The Surco Canal long predates the contemporary city of Lima. Constructed as part of a broader pre-Hispanic hydraulic network, the canal transformed an arid coastal territory into productive agricultural land.
 
@@ -45,6 +45,45 @@ This interactive slider demonstrates the rapid urban consolidation of Lima and i
 </div>
 
 *Comparison of urban growth across 80 years (Source: Historical Aerophotography and Satellite Imagery).*
+
+
+### Spaces in Conflict
+
+Historically, the control and distribution of water in Lima’s valleys was closely tied to territorial governance, agricultural organization, and political authority under pre-Hispanic hydraulic systems. Over time, this integrated relationship fragmented through colonial and modern urban transformations, reducing the canal network to a secondary infrastructural role managed by dispersed institutions and irrigation commissions. The contemporary conflicts surrounding the Surco Canal emerge not only from physical urbanization, but also from the gradual weakening of coordinated water governance across the city.
+
+**Infrastructure Disruption**
+![Historical Cartography](/projects/images/santivanez-miguel/1-infrastructure-disruption.jpg)
+
+The expansion of metropolitan transportation infrastructure has progressively altered the spatial continuity and hydraulic logic of the Surco Canal. In areas intersected by the Metropolitano system, sections of the canal were diverted, constrained, or reconfigured to accommodate urban circulation and road infrastructure. These interventions prioritize metropolitan mobility over the existing water system, generating new conditions of hydraulic disruption and increasing vulnerability to flooding within the surrounding urban fabric.
+
+**Protection vs. Downstream Risk**
+![Historical Cartography](/projects/images/santivanez-miguel/2-protection-vs-downstream.jpg)
+
+In response to informal urbanization and flood vulnerability along the canal edges, retaining walls and channel modifications have been constructed to protect specific communities and consolidate urban occupation. While these interventions reduce immediate risk in certain areas, they also narrow the hydraulic capacity of the canal and intensify flooding downstream. Protection becomes unevenly distributed, revealing how localized infrastructural decisions can transfer environmental vulnerability across the urban territory.
+
+**Pollution and Invisibilization**
+![Historical Cartography](/projects/images/santivanez-miguel/3-pollution-invisibilization.jpg)
+
+As the Surco Canal approaches its outlet toward the Pacific Ocean, its hydraulic and ecological functions become increasingly degraded through pollution, wastewater discharge, and urban neglect. Once a visible and productive water infrastructure, the canal has gradually become embedded within dense urban conditions where its presence is often concealed, fragmented, or treated as residual space. This process of invisibilization reflects a broader disconnection between the contemporary city and the hydraulic systems that continue to sustain it.
+
+#### Site-Specific View
+
+<div class="iframe-column">
+  <iframe src="https://mas2646.github.io/SCM-site-specific-view/" 
+          style="position:absolute;top:0;left:0;width:100%;height:100%;" 
+          frameborder="0">
+  </iframe>
+</div>
+
+*Comparison of urban growth across 80 years (Source: Historical Aerophotography and Satellite Imagery).*
+
+
+Water in the Surco system has historically been a form of territorial and political control. From pre-Hispanic hydraulic logics to later irrigation organizations, governance structures were embedded in the distribution of water itself. Today, that continuity has fractured. 
+
+Management is dispersed across multiple institutions, and the canal has been reclassified as secondary infrastructure within the urban system. This institutional fragmentation weakens coordinated control and produces overlapping jurisdictions, where no single authority fully governs the water body. The Surco Canal continues to sustain the city, feeding parks, agricultural remnants, and fragmented green systems that remain dependent on its flow. 
+
+Yet its original territorial logic has been gradually eroded. What once functioned as an integrated hydraulic system now operates as a fragmented urban infrastructure, managed without unified control or recognition of its historical coherence.
+
 
 
 
