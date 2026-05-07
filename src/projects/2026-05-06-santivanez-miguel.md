@@ -8,6 +8,8 @@ published: true
 
 # Historical Urban Evolution - Lima
 
+*To enjoy the complete interactive experience, please go to https://mas2646.github.io/SurcoCanalMapping/*
+
 Lima is the second driest biggest city in the world, after El Cairo. Through the Surco and extensive canal system, water transformed the desert into inhabitable and agricultural land, several centuries ago.
 
 ### From desert to agriculture fields
@@ -28,5 +30,12 @@ The Surco Canal long predates the contemporary city of Lima. Constructed as part
 
 #### Works Cited
 
-
-#### Works Cited
+Agurto, S. 1983. Cited in José Lizarzaburu. Canales de Surco y Huatica: 2000 años regando vida. Lima: Limaq Publishing, 2018.
+Alvarado, J. A. 1934. Canal de Irrigación de Surco y sus Valles: Su Transformación a Través de 15 Años. Lima: Emp. Ed. XCE.
+Canziani, José. 2013. “Territory, Pre-Hispanic Monuments, and Landscape.” In Lima: Public Space, Art and City, edited by J. Hamann, 73–90. Lima: Pontificia Universidad Católica del Perú.
+Cogorno, G. 2018. Agua e Hidráulica Urbana de Lima: Espacio y Gobierno, 1535–1596. Lima: Fondo Editorial PUCP.
+Eeckhout, Peter, and Enrique López-Hurtado. 2018. “Pachacamac and the Incas on the Coast of Peru.” In The Oxford Handbook of the Incas. Oxford: Oxford University Press.
+Inter-American Development Bank, and World Resources Institute. 2015. Aqueduct Global Maps 2.1. Accessed May 7, 2026. World Resources Institute – Aqueduct Global Maps 2.1
+Lizarzaburu, José. 2018. Canales de Surco y Huatica: 2000 Años Regando Vida. Lima: Limaq Publishing.
+Ortiz, M. 2017. The City Harms Us: Urbanization Processes and the Disappearance of the Surco Canal in Lima. Master’s thesis, Pontificia Universidad Católica del Perú.
+Regalado, L. 2000. “The Andean Worldview.” In Ancient Peruvian World: An Interdisciplinary Vision, 77–82. Lima: Faculty of Humanities, Pontificia Universidad Católica del Perú.
