@@ -44,7 +44,7 @@ This interactive slider demonstrates the rapid urban consolidation of Lima and i
   </iframe>
 </div>
 
-*Comparison of urban growth across 80 years (Source: Historical Aerophotography and Satellite Imagery).*
+*Comparison of urban growth across 80 years with 3-site locations (Source: Historical Aerophotography and Google Satellite Imagery).*
 
 
 ### Spaces in Conflict
@@ -69,13 +69,13 @@ As the Surco Canal approaches its outlet toward the Pacific Ocean, its hydraulic
 #### Site-Specific View
 
 <div class="iframe-column">
-  <iframe src="https://mas2646.github.io/SCM-site-specific-view/" 
+  <iframe src="https://mas2646.github.io/SCM-Site-Specific-View/" 
           style="position:absolute;top:0;left:0;width:100%;height:100%;" 
           frameborder="0">
   </iframe>
 </div>
 
-*Comparison of urban growth across 80 years (Source: Historical Aerophotography and Satellite Imagery).*
+*Comparison of the 3 sites and current canal trace (Source: Historical Aerophotography and Google Satellite Imagery).*
 
 
 Water in the Surco system has historically been a form of territorial and political control. From pre-Hispanic hydraulic logics to later irrigation organizations, governance structures were embedded in the distribution of water itself. Today, that continuity has fractured. 
@@ -83,6 +83,7 @@ Water in the Surco system has historically been a form of territorial and politi
 Management is dispersed across multiple institutions, and the canal has been reclassified as secondary infrastructure within the urban system. This institutional fragmentation weakens coordinated control and produces overlapping jurisdictions, where no single authority fully governs the water body. The Surco Canal continues to sustain the city, feeding parks, agricultural remnants, and fragmented green systems that remain dependent on its flow. 
 
 Yet its original territorial logic has been gradually eroded. What once functioned as an integrated hydraulic system now operates as a fragmented urban infrastructure, managed without unified control or recognition of its historical coherence.
+
 
 
 
