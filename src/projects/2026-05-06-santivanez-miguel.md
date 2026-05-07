@@ -1,6 +1,6 @@
 ---
 date: 2026-05-06
-image: "/projects/images/santivanez-miguel/cover.png"
+image: "/projects/images/santivanez-miguel/cover.jpg"
 title: "Surco Canal Mapping"
 author: "Miguel Angel Santivanez, Jie-Enn Lee, Amy Connor"
 published: true
