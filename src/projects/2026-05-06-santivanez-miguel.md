@@ -21,7 +21,7 @@ Lima is the second driest biggest city in the world, after El Cairo. Through the
 In pre-Hispanic Lima, hydraulic infrastructure structured territorial authority. Control over water distribution through the development of this system over the centuries, local curacas such as **Taulichusco** held power over the territory.
 
 ### Prehispanic Evolution
-![Season Intermediate](/projects/images/santivanez-miguel/01-Prehispanic-maps.JPG)
+![Prehispanic Evolution](/projects/images/santivanez-miguel/01-Prehispanic-maps.JPG)
 
 The Surco Canal long predates the contemporary city of Lima. Constructed as part of a broader pre-Hispanic hydraulic network, the canal transformed an arid coastal territory into productive agricultural land.
 
@@ -34,8 +34,6 @@ As Lima expanded throughout the twentieth century, the Surco Canal became increa
 ### Historical Timeline Overview
 
 The Surco Canal long predates the contemporary city of Lima. Constructed as part of a broader pre-Hispanic hydraulic network, the canal transformed an arid coastal territory into productive agricultural land and structured patterns of settlement, cultivation, and governance across the valley. For centuries, water infrastructure operated as the foundation of urban and territorial life in the desert landscape. By the late nineteenth century, Lima’s urban expansion began to absorb these agricultural landscapes into an increasingly consolidated urban fabric. As new roads, neighborhoods, and infrastructures emerged, the canal persisted within the growing city, gradually shifting from a territorial irrigation system into embedded urban infrastructure.
-
-### Urban Evolution Timeline (1944 - 2025)
 
 This interactive slider demonstrates the rapid urban consolidation of Lima and its impact on the Surco Canal's historical agricultural territory.
 
