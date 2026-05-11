@@ -1,6 +1,6 @@
 ---
 date: 2026-05-07
-image: "/projects/images/saltel-anne/cover.jpg"
+image: "/projects/images/saltel-anne/Screenshot 2026-05-06 194452.png"
 title: "A Spatial Autopsy of Capitalism"
 author: "Yvonne Mpwo, Anne Saltel, Maurico Trujillo"
 published: true

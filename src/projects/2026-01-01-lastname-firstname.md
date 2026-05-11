@@ -3,7 +3,7 @@ date: 2026-01-01
 image: "/projects/images/lastname-firstname/cover.png"
 title: "Template Post: Title of Your Final Project"
 author: "Names Of Everyone In Your Group"
-published: true
+published: false
 ---
 
 This is a document written in markdown. What is markdown? It is a 'markup language' that allows you to format plain text in a way that is easily converted to many different formats. For example, this document was written in markdown but will be used as a webpage and converted into HTML.
