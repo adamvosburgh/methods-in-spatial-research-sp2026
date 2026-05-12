@@ -9,7 +9,7 @@ published: true
 
 #### Welcome to our project!
 
-You can find the link to our project [here](https://fmichielli.github.io/methods_final_project/)
+<button class="launch-interactive" data-src="https://fmichielli.github.io/methods_final_project/">Launch Interactive</button>
 
 ---
 

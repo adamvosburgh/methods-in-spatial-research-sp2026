@@ -54,5 +54,40 @@
     {% endif %}
     {{ content | safe }}
   </main>
+
+  <div id="interactive-overlay" class="interactive-overlay" aria-hidden="true">
+    <button id="interactive-close" class="interactive-close">× Close</button>
+    <iframe id="interactive-frame" src="" frameborder="0" allowfullscreen></iframe>
+  </div>
+
+  <script>
+    (function () {
+      var overlay = document.getElementById('interactive-overlay');
+      var frame = document.getElementById('interactive-frame');
+      var closeBtn = document.getElementById('interactive-close');
+
+      document.addEventListener('click', function (e) {
+        var btn = e.target.closest('.launch-interactive');
+        if (btn) {
+          frame.src = btn.dataset.src;
+          overlay.removeAttribute('aria-hidden');
+          overlay.classList.add('active');
+          document.body.style.overflow = 'hidden';
+        }
+      });
+
+      function closeOverlay() {
+        overlay.setAttribute('aria-hidden', 'true');
+        overlay.classList.remove('active');
+        frame.src = '';
+        document.body.style.overflow = '';
+      }
+
+      closeBtn.addEventListener('click', closeOverlay);
+      document.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape') closeOverlay();
+      });
+    })();
+  </script>
 </body>
 </html>

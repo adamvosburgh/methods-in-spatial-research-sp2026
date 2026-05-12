@@ -478,6 +478,100 @@ pre code {
   border: none;
 }
 
+/* Wide iframe — breaks out of 800px column to near-full viewport width */
+.iframe-wide {
+  position: relative;
+  width: calc(80vw - 4rem);
+  margin-left: calc(-40vw + 50%);
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+  padding-bottom: 56.25%;
+  height: 40vw;
+  overflow: hidden;
+  border-radius: 4px;
+}
+
+.iframe-wide iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+/* Launch Interactive button */
+.launch-interactive {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.4rem;
+  background: white;
+  border: none;
+  border-radius: 50px;
+  padding: 1.5rem 3.3rem;
+  box-shadow: 0 0 30px 10px rgba(0, 0, 0, 0.1), 0 0 10px 3px inset rgba(0, 0, 0, 0.1);
+  font-family: inherit;
+  font-size: 2rem;
+  font-weight: 400;
+  color: #333;
+  cursor: pointer;
+  margin: 1rem auto;
+  transition: all 0.3s ease;
+  width: fit-content;
+}
+
+.launch-interactive:hover {
+  color: #000;
+  box-shadow: 0 0 30px 15px rgba(0, 0, 0, 0.15), 0 0 15px 5px inset rgba(0, 0, 0, 0.1);
+}
+
+/* Fullscreen interactive overlay */
+.interactive-overlay {
+  display: none;
+  position: fixed;
+  inset: 0;
+  z-index: 10000;
+  background: #fff;
+}
+
+.interactive-overlay.active {
+  display: block;
+}
+
+.interactive-overlay iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+  display: block;
+}
+
+.interactive-close {
+  position: fixed;
+  top: 1.25rem;
+  left: 1.25rem;
+  z-index: 10001;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  background: white;
+  border: none;
+  border-radius: 50px;
+  padding: 0.5rem 1.1rem;
+  box-shadow: 0 0 30px 10px rgba(0, 0, 0, 0.1), 0 0 10px 3px inset rgba(0, 0, 0, 0.1);
+  font-family: inherit;
+  font-size: 0.85rem;
+  font-weight: 400;
+  color: #333;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.interactive-close:hover {
+  color: #000;
+  box-shadow: 0 0 30px 15px rgba(0, 0, 0, 0.15), 0 0 15px 5px inset rgba(0, 0, 0, 0.1);
+}
+
 @media (max-width: 600px) {
   .project-grid {
     grid-template-columns: 1fr;

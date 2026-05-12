@@ -38,11 +38,17 @@ To embed images, first ensure the file is at least 740px wide. Place the image f
 
 ![description of image](/projects/images/lastname-firstname/your-image.jpg)
 
-If you want to include an interactive map or web page, host it via your personal GitHub Pages and embed it with an iframe:
+If you want to include an interactive map or web page, host it via your personal GitHub Pages and embed it inline. Use `iframe-column` for a standard 16:9 embed within the text column:
 
 <div class="iframe-column"><iframe src="https://adamvosburgh.github.io/webmap_1" style="position:absolute;top:0;left:0;width:100%;height:100%;" frameborder="0"></iframe></div>
 
-If you have a scrolly telling map (or something else that needs a full browser window,) I might suggest linking out to it (and perhaps including a screenshot for posterity.)
+Use `iframe-wide` instead to break out of the text column and fill nearly the full viewport width — good for maps that need more space:
+
+<div class="iframe-wide"><iframe src="https://adamvosburgh.github.io/webmap_1" style="position:absolute;top:0;left:0;width:100%;height:100%;" frameborder="0"></iframe></div>
+
+If your project is a full interactive experience (scrollytelling, web app, etc.), use the Launch Interactive button instead. It opens your project fullscreen with a close button in the top-left corner:
+
+<button class="launch-interactive" data-src="https://your-github-username.github.io/your-project/">Launch Interactive</button>
 
 Use Author-Date parenthetical citations following Chicago Manual of Style conventions throughout your document, and add a works cited section at the bottom of your post. See the Author-Date quick guide [here](https://www-chicagomanualofstyle-org.ezproxy.cul.columbia.edu/tools_citationguide/citation-guide-2.html).
 

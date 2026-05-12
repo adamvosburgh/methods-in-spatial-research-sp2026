@@ -8,7 +8,7 @@ published: true
 
 Copenhagen is celebrated as a global leader in cycling and climate action, yet its mobility infrastructure distributes benefits unequally across the city's 67 neighborhoods. The areas bearing the heaviest traffic noise burden are disproportionately the lowest-income — the same neighborhoods with the thinnest protected cycling infrastructure, the least metro connectivity, and the fewest resources to escape the city's worst environmental health conditions.
 
-[Explore the interactive map here](https://lgevisser.github.io/webmap_2_storytelling/)
+<button class="launch-interactive" data-src="https://lgevisser.github.io/webmap_2_storytelling/">Launch Interactive</button>
 
 ![Map of Public Transit, Noise Pollution and Income Inequality in Copenhagen](/projects/images/gevisser-leo/cover.png)
 

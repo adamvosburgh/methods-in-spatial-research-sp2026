@@ -7,7 +7,7 @@ published: true
 ---
 
 
-*To enjoy the complete interactive experience, please go to https://mas2646.github.io/SurcoCanalMapping/*
+<button class="launch-interactive" data-src="https://mas2646.github.io/SurcoCanalMapping/">Launch Interactive</button>
 
 Lima is the second driest biggest city in the world, after El Cairo. Through the Surco and extensive canal system, water transformed the desert into inhabitable and agricultural land, several centuries ago.
 
@@ -40,7 +40,7 @@ The Surco Canal long predates the contemporary city of Lima. Constructed as part
 
 This interactive slider demonstrates the rapid urban consolidation of Lima and its impact on the Surco Canal's historical agricultural territory.
 
-<div class="iframe-column">
+<div class="iframe-wide">
   <iframe src="https://mas2646.github.io/SCM-historical-timeline/" 
           style="position:absolute;top:0;left:0;width:100%;height:100%;" 
           frameborder="0">
@@ -71,7 +71,7 @@ As the Surco Canal approaches its outlet toward the Pacific Ocean, its hydraulic
 
 #### Site-Specific View
 
-<div class="iframe-column">
+<div class="iframe-wide">
   <iframe src="https://mas2646.github.io/SCM-Site-Specific-View/" 
           style="position:absolute;top:0;left:0;width:100%;height:100%;" 
           frameborder="0">
